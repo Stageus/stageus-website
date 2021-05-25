@@ -2,31 +2,59 @@
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
-    <title>스테이지어스 | 개발자 육성 센터</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content="스테이지어스는 '개발자 육성 센터'로 주입식 교육에서 벗어나 단기간에 능력 있는 개발자를 육성하는 교육 센터 입니다.">
+    <meta name="keywords" content="코딩, 프로그래밍, 개발자 육성 센터, 코딩 학원, 프로그래밍 학원, 개발자, 웹 프론트엔드, 백엔드, 서버, 웹서버, 앱, 안드로이드, 리액트, 노드, 자바스크립트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:site_name" content="스테이지어스">
+    <meta property="og:title" content="스테이지어스">
+    <meta property="og:description" content="스테이지어스는 '개발자 육성 센터'로 주입식 교육에서 벗어나 단기간에 능력 있는 개발자를 육성하는 교육 센터 입니다.">
+    <meta property="og:image" content="/img/logoWhite.png">
+    <meta property="og:url" content="http://www.stageus.co.kr">
+    <link rel="canonical" href="http://www.stageus.co.kr">
+    <link rel="icon" href="/img/logoMark.png" type="image/x-icon">
+    <title>스테이지어스 - 개발자 육성 센터</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
     <header>
         <section id="title">
-            <a href="/"><image id="logo" src="/img/logo_white.png"></image></a>
+            <a href="/"><image id="logo" src="/img/logoWhite.png"></image></a>
             <a id="contact" href="https://open.kakao.com/o/sctWRzKc"><img id="contact_image" src="/img/katalk.png"/><span id="contact_text">문의하기</span></a>
         </section>
+        <div id="header_cover">
+            <div id="header_text">
+                <p id="header_text_title">Stage Us</p>
+                <p class="header_text_index">Skill to Make Logical Choice</p>
+                <p class="header_text_index">Skill to Self-Development</p>
+            </div>
+        </div>
     </header>
+    <section id="intro">
+        <h1 class="intro_text">" 취업률이 내려가서 미래가 걱정됩니다 "</h1>
+        <h1 class="intro_text">" 코로나로 집에만 있으니 의욕도 없고 목표가 없어졌어요 "</h1>
+        <h1 class="intro_text">" 물어볼 사람도 없고 무엇을 해야할지 모르겠어요 "</h1>
+        <h1 class="intro_title">지금이 자신의 가치를 높일 때 입니다.</h1>
+    </section>
     <section id="content">
         <article id="content_intro" class="content_article">
-            <h1 class="content_title">Stage Us</h1>
+            <h1 class="content_title">Introduction</h1>
             <div class="content_expalin">
                 <p class="content_expalin_index">This is our stage</p>
                 <p class="content_expalin_index">스테이지어스는 단순한 코딩 학원이 아닙니다.</p>
                 <p class="content_expalin_index"><span>개발자 육성 센터</span>로 주입식 교육에서 벗어나 단기간에 능력 있는 개발자를 육성하는 교육 센터 입니다.</p>
             </div>
         </article>
+        <article id="distinction" class="content_article"></article>
+        <article id="target" class="content_article"></article>
+        <article id="style" class="content_article"></article>
+        <article id="benefit" class="content_article"></article>
         <article id="content_info" class="content_article">
-            <h1 class="content_title">Information</h1>
+            <h1 class="content_title">Details</h1>
             <div class="content_expalin">
                 <p class="content_expalin_index">본 페이지는 임시 사이트 입니다.</p>
                 <p class="content_expalin_index">빠른 시일 내에 완전한 홈페이지로 업데이트 하겠습니다.</p>
-                <p class="content_expalin_index">아래 이미지를 통해 스테이지어스에 대해 알아볼 수 있습니다.</p>
+                <p class="content_expalin_index">아래 이미지 링크를 통해 스테이지어스에 대해 알아볼 수 있습니다.</p>
             </div>
             <div id="content_link">
                 <a class="content_link_index" href="https://drive.google.com/file/d/1bAvylmGH1ffKrs3iCbl98L89ARn2P0GC/view?usp=sharing">
@@ -57,10 +85,22 @@
         </article>
     </section>
     <footer>
-        <div>
-            <h1 id="footer_contact">Contact</h1>
+        <h1 id="footer_contact">Contact</h1>
+        <div id="footer_contact_box">
             <div class="footer_index">
-                <p class="footer_index_title">팀장</p>
+                <p class="footer_index_title">법인명</p>
+                <p class="footer_index_value">(주)스테이지어스</p>
+            </div>
+            <div class="footer_index">
+                <p class="footer_index_title">사업자등록번호</p>
+                <p class="footer_index_value"></p>
+            </div>
+            <div class="footer_index">
+                <p class="footer_index_title">주소</p>
+                <p class="footer_index_value">인천 미추홀구 인하로 55 지하 1층</p>
+            </div>
+            <div class="footer_index">
+                <p class="footer_index_title">대표</p>
                 <p class="footer_index_value">Choi Minseok | 최민석</p>
             </div>
             <div class="footer_index">
@@ -70,10 +110,6 @@
             <div class="footer_index">
                 <p class="footer_index_title">이메일</p>
                 <p class="footer_index_value">minseckchoi@gmail.com</p>
-            </div>
-            <div class="footer_index">
-                <p class="footer_index_title">주소</p>
-                <p class="footer_index_value">인천 미추홀구 인하로 55 지하 1층 스테이지어스</p>
             </div>
         </div>
     </footer>
