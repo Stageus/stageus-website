@@ -5,7 +5,8 @@ SPA이며, 바닐라 웹 방식으로 구현되어있습니다.
 
 현재 개발 진행중이며, SEO 적용 중에 있습니다.
 
-### stageus.co.kr
+### 홈페이지 주소 : 
+stageus.co.kr
 
 
 # Version History
