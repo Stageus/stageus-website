@@ -20,10 +20,12 @@ body {
 /* header */
 
 header {
-    height: 45rem;
     background-image: url('/img/headerImage.jpg');
+    background-attachment: fixed;
+    height: 45rem;
+    background-color:#ffffff;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:contain;
 }
 
 #title {
