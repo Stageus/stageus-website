@@ -50,7 +50,7 @@
         margin-top: 1.5rem;
     }
 
-    /* content */
+    /* Common Elements */
 
     .content_article {
         padding-left: 10%;
@@ -58,8 +58,12 @@
     }
 
     .content_title {
-        margin-bottom: 2.2rem;
         font-size: 1.6rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .content_value {
+        font-size: 1.2rem;
     }
 
     /* content_introduction */
@@ -70,13 +74,10 @@
 
     /* content_distinction */
 
-    .content_value {
-        font-size: 1.2rem;
-    }
-
     .distinction_content_index {
         display: block;
     }
+    
     .distinction_content_index_number {
         font-size: 1.6rem;
         margin-bottom: 0.4rem;

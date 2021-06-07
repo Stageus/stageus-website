@@ -1,0 +1,14 @@
+@media screen and (max-width: 930px) {
+    
+    /* Global Elements */
+
+    .nav_menu {
+        font-size: 0.8rem;
+    }
+
+    /* Common Elements */
+
+    .content_title {
+        font-size: 2.8rem;
+    }
+}
