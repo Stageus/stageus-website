@@ -29,8 +29,7 @@ header {
     background-attachment: fixed;
     height: 45rem;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-size: 100%;
 }
 
 nav {
@@ -164,6 +163,7 @@ ul {
 
 #introduction_image {
     display: flex;
+    height: fit-content;
     margin: auto;
 }
 

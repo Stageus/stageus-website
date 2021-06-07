@@ -1,6 +1,12 @@
 @media screen and (max-width: 1360px) {
 
-    /* content */
+    /* header */
+    header {
+        background-size: auto 45rem;
+        background-position: top, center;
+    }
+
+    /* Common Elements */
 
     .content_article {
         padding-left: 16%;

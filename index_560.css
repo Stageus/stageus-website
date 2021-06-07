@@ -4,6 +4,8 @@
 
     header {
         height: 20rem;
+        background-size: auto 25rem;
+        background-position: top, top;
     }
 
     #title {
@@ -77,7 +79,7 @@
     .distinction_content_index {
         display: block;
     }
-    
+
     .distinction_content_index_number {
         font-size: 1.6rem;
         margin-bottom: 0.4rem;
