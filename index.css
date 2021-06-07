@@ -25,7 +25,8 @@ header {
     height: 45rem;
     background-color:#ffffff;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: cover;
+    background-position: center center;
 }
 
 #title {
@@ -266,6 +267,7 @@ nav > ul {
     text-align: left;
     display: inline-flex;
     text-decoration: none;
+    margin-top: 1rem;
 }
 
 .info_link_index_background {
