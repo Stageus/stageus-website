@@ -35,3 +35,6 @@ Menu에 연결되는 About, Curriculum, Mentor, Results 페이지 추가
 - target 부분 개발
 - 해상도별 Media-Query 파일 분할
 - footer에 copyright 및 기타 메뉴 추가
+
+### 2021 06 08
+- 백엔드 서버를 tomcat에서 node.js
