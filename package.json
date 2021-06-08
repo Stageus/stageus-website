@@ -1,0 +1,22 @@
+{
+  "name": "stageus",
+  "version": "1.0.0",
+  "description": "Stageus web site project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmsggg/stageus-website.git"
+  },
+  "author": "Choi Minseok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmsggg/stageus-website/issues"
+  },
+  "homepage": "https://github.com/cmsggg/stageus-website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
