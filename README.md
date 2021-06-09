@@ -41,3 +41,5 @@ Menu에 연결되는 About, Curriculum, Mentor, Results 페이지 추가
 
 ### 2021 06 09
 - public 폴더 생성
+- STYLE 부분 개발
+- 모바일 해상도 대응 수정
