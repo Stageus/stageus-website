@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'NanumSquare';
-    src: url('/fonts/NanumSquareR.ttf');
+    src: url('NanumSquareR.ttf');
 }
 @font-face {
     font-family: 'Ikaros';
-    src: url('/fonts/Ikaros-Regular.otf');
+    src: url('Ikaros-Regular.otf');
 }
 
 body {
@@ -25,7 +25,7 @@ p > span {
 /* header */
 
 header {
-    background-image: url('/img/headerImage.jpg');
+    background-image: url('headerImage.jpg');
     background-attachment: fixed;
     height: 45rem;
     background-repeat: no-repeat;
@@ -273,15 +273,15 @@ ul {
 }
 
 #info_link_index_background_1 {
-    background-image: url('/img/1.jpg');
+    background-image: url('1.jpg');
 }
 
 #info_link_index_background_2 {
-    background-image: url('/img/2.jpg');
+    background-image: url('2.jpg');
 }
 
 #info_link_index_background_3 {
-    background-image: url('/img/3.jpg');
+    background-image: url('3.jpg');
 }
 
 .info_link_index {
