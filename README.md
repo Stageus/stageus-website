@@ -38,3 +38,6 @@ Menu에 연결되는 About, Curriculum, Mentor, Results 페이지 추가
 
 ### 2021 06 08
 - 백엔드 서버를 tomcat에서 node.js
+
+### 2021 06 09
+- public 폴더 생성
