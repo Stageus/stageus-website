@@ -168,14 +168,16 @@ ul {
 }
 
 .image_src_border {
-    width: 100%;
+    width: 80%;
     border-radius: 1rem;
     border: 1px solid #cccccc;
     box-shadow: 0rem 0rem 1.2rem #cccccc;
+    margin: auto;
 }
 
 .image_src_borderless {
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 /* content_distinction */
