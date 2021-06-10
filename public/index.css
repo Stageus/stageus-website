@@ -325,6 +325,49 @@ ul {
 
 /* content_benefit */
 
+#benefit_contents {
+    width: fit-content;
+    margin: auto;
+}
+
+.benefit_contents_box {
+    display: flex;
+    align-items: center;
+}
+
+.benefit_contents_image {
+    display: inline-block;
+    width: auto;
+    height: 10rem;
+    margin-right: 2rem;
+    border-radius: 0.2rem;
+    box-shadow: 0rem 0rem 1.2rem #bbbbbb;
+}
+
+.benefit_contents_index_box {
+    display: inline-block;
+}
+.benefit_contents_box + .benefit_contents_box {
+    margin-top: 2rem;
+}
+
+.benefit_contents_index_title {
+    font-family: NanumSquare;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.benefit_contents_index_title + .benefit_contents_index_value {
+    margin-top: 1rem;
+}
+
+.benefit_contents_index_value {
+    font-family: NanumSquare;
+    font-size: 1.4rem;
+}
+.benefit_contents_index_value + .benefit_contents_index_value {
+    margin-top: 0.7rem;
+}
+
 /* content_info */
 
 #info {
