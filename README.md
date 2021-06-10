@@ -43,3 +43,8 @@ Menu에 연결되는 About, Curriculum, Mentor, Results 페이지 추가
 - public 폴더 생성
 - STYLE 부분 개발
 - 모바일 해상도 대응 수정
+
+### 2021 06 10
+- CSS 최적화
+- box-shadow 및 color 속성 수정
+- BENEFITS 부분 개발

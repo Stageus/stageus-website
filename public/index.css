@@ -80,21 +80,21 @@ ul {
 }
 
 #header_text_box {
-    padding-top: 23rem;
+    padding-top: 20rem;
     padding-left: 7rem;
 }
 
 #header_text_title {
     font-family: Ikaros;
-    font-size: 4rem;
-    color:#eeeeee;    
+    font-size: 5rem;
+    color:white;    
     margin-bottom: 1.2rem;
 }
 
 .header_text_index {
     font-family: Ikaros;
-    font-size: 1.4rem;
-    color:#eeeeee;
+    font-size: 1.7rem;
+    color:white;
 }
 .header_text_index + .header_text_index {
     margin-top: 0.6rem;
