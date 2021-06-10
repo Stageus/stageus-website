@@ -111,7 +111,7 @@ ul {
 .intro_text {
     font-family: NanumSquare;
     font-size: 1.6rem;
-    color: #8A929A;
+    color: #1E2022;
     font-style: italic;
     font-weight: normal;
 }
@@ -151,7 +151,7 @@ ul {
 .content_value {
     font-family: NanumSquare;
     font-size: 1.6rem;
-    color:#8A929A;
+    color:#1E2022;
     text-align: center;
 }
 .content_value + .content_value {
@@ -170,8 +170,7 @@ ul {
 .image_src_border {
     width: 80%;
     border-radius: 1rem;
-    border: 1px solid #cccccc;
-    box-shadow: 0rem 0rem 1.2rem #cccccc;
+    box-shadow: 0rem 0rem 1.2rem #dddddd;
     margin: auto;
 }
 
@@ -225,7 +224,7 @@ ul {
 .distinction_content_index_box_value {
     font-family: NanumSquare;
     font-size: 1.4rem;
-    color:#8A929A;
+    color:#1E2022;
 }
 .distinction_content_index_box_value + .distinction_content_index_box_value {
     margin-top: 0.7rem;
@@ -249,9 +248,8 @@ ul {
     flex-basis: 20rem;     
     height: 20rem;
     background-color: #ffffff;
-    border: 1px solid #cccccc;
     border-radius: 10rem;
-    box-shadow: 0rem 0rem 1.2rem #cccccc;
+    box-shadow: 0rem 0rem 1.2rem #dddddd;
     color: #1E2022;
     font-family: NanumSquare;
     font-size: 1.6rem;
@@ -310,7 +308,7 @@ ul {
 .style_contents_index_value {
     font-family: NanumSquare;
     font-size: 1.4rem;
-    color:#8A929A;
+    color:#1E2022;
 }
 .style_contents_index_value + .style_contents_index_value {
     margin-top: 0.7rem;
@@ -329,8 +327,7 @@ ul {
     align-items: center;
     background-color: white;
     border-radius: 0.8rem;
-    border: 1px solid #cccccc;
-    box-shadow: 0rem 0rem 1.2rem #cccccc;
+    box-shadow: 0rem 0rem 1.2rem #dddddd;
     font-family: NanumSquare;
     font-size: 1.4rem;
     color:#1E2022;
@@ -379,7 +376,7 @@ ul {
     margin-left: 0.4rem;
     margin-right: 0.4rem;
     border-radius: 0.3rem;
-    box-shadow: 0rem 0.5rem 0.8rem #999999;
+    box-shadow: 0rem 0rem 1.2rem #bbbbbb;
 }
 
 .info_link_index_cover {
