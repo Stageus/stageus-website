@@ -338,8 +338,8 @@ ul {
 .benefit_contents_image {
     display: inline-block;
     width: auto;
-    height: 10rem;
-    margin-right: 2rem;
+    height: 16rem;
+    margin-right: 4rem;
     border-radius: 0.2rem;
     box-shadow: 0rem 0rem 1.2rem #bbbbbb;
 }
