@@ -159,11 +159,9 @@ ul {
 
 /* content_introduction */
 
-
 .image_box {
     display: flex;
     height: fit-content;
-    margin: auto;
 }
 
 .image_src_border {
