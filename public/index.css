@@ -14,9 +14,10 @@ body {
     padding: 0;
 }
 
-h1, p {
+h1, h2, p {
     margin: 0;
     padding: 0;
+    color: #1E2022;
 }
 p > span {
     color:#FF7171;
@@ -111,7 +112,6 @@ ul {
 .intro_text {
     font-family: NanumSquare;
     font-size: 1.6rem;
-    color: #1E2022;
     font-style: italic;
     font-weight: normal;
 }
@@ -140,7 +140,6 @@ ul {
     margin-bottom: 5rem;
     font-family: NanumSquare;
     font-size: 3.2rem;
-    color: #1E2022;
     text-align: center;
 }
 
@@ -151,7 +150,6 @@ ul {
 .content_value {
     font-family: NanumSquare;
     font-size: 1.6rem;
-    color:#1E2022;
     text-align: center;
 }
 .content_value + .content_value {
@@ -202,8 +200,6 @@ ul {
     display: inline-block;
     font-family: Ikaros;
     font-size: 2.6rem;
-    color: #1E2022;
-    margin: 0;
     margin-right: 3rem;
 }
 
@@ -216,15 +212,12 @@ ul {
     font-family: NanumSquare;
     font-size: 2rem;
     font-weight: 400;
-    color:#1E2022;
-    margin-top: 0;
     margin-bottom: 1.3rem;
 }
 
 .distinction_content_index_box_value {
     font-family: NanumSquare;
     font-size: 1.4rem;
-    color:#1E2022;
 }
 .distinction_content_index_box_value + .distinction_content_index_box_value {
     margin-top: 0.7rem;
@@ -250,7 +243,6 @@ ul {
     background-color: #ffffff;
     border-radius: 10rem;
     box-shadow: 0rem 0rem 1.2rem #dddddd;
-    color: #1E2022;
     font-family: NanumSquare;
     font-size: 1.6rem;
     font-weight: 600;
@@ -277,8 +269,6 @@ ul {
 .style_contents_subtitle {
     font-family: NanumSquare;
     font-size: 2rem;
-    color:#1E2022;
-    margin-top: 0;
     margin-bottom: 3rem;
     margin-right: 2rem;
 }
@@ -293,12 +283,10 @@ ul {
 .style_contents_index_subtitle {
     display: inline-block;
     width: 5rem;
-    margin: 0;
     margin-right: 3rem;
     font-family: NanumSquare;
     font-size: 2rem;
     font-weight: 400;
-    color:#1E2022;
 }
 
 .style_contents_index_box {
@@ -308,7 +296,6 @@ ul {
 .style_contents_index_value {
     font-family: NanumSquare;
     font-size: 1.4rem;
-    color:#1E2022;
 }
 .style_contents_index_value + .style_contents_index_value {
     margin-top: 0.7rem;
@@ -330,7 +317,6 @@ ul {
     box-shadow: 0rem 0rem 1.2rem #dddddd;
     font-family: NanumSquare;
     font-size: 1.4rem;
-    color:#1E2022;
     text-align: center;
 }
 .style_contents_explain_value + .style_contents_explain_value {
@@ -435,10 +421,12 @@ footer {
     display: inline-block;
     font-weight: bold;
     margin-right: 1rem;
+    color: white;
 }
 
 .footer_index_value {
     display: inline-block;
+    color: white;
 }
 
 #footer_hr {
