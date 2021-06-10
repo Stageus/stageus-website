@@ -11,12 +11,12 @@ Next.js를 배우게되면 React로 리팩토링 할 계획입니다.
 stageus.co.kr
 
 ### To do List
-SSL Secutiry 적용
-잘못된 주소 입력 시 되돌아가기 기능 설정
-Scroll Event 기반 동적 효과 추가
-스크롤 위치에 따른 Progress Bar 기능 추가
-Main Page에 Method 파트와 Benefits 파트 추가
-Menu에 연결되는 About, Curriculum, Mentor, Results 페이지 추가
+SSL Secutiry 적용  
+잘못된 주소 입력 시 되돌아가기 기능 설정  
+Scroll Event 기반 동적 효과 추가  
+스크롤 위치에 따른 Progress Bar 기능 추가  
+Main Page에 Method 파트와 Benefits 파트 추가  
+Menu에 연결되는 About, Curriculum, Mentor, Results 페이지 추가  
 
 # Version History
 
