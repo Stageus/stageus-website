@@ -17,15 +17,35 @@ app.use(express.static(path.join(__dirname, 'img')));
 app.use(express.static(path.join(__dirname, 'files')));
 app.use(express.static(path.join(__dirname, 'fonts')));
 
+// HTTP to HTTPS Redirect
+app.get('*', (req, res, next) => {
+
+    const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+    console.log(protocol);
+
+    if (protocol == 'https') {
+        next();
+    }
+    else {
+        let from = protocol + "://" + req.hostname + req.url; 
+        let to = "https://" + req.hostname + req.url; 
+
+        console.log(from + "->" + to); 
+        res.redirect(to);
+    }
+});
+
+// Load index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// 서버 실행
+// Run HTTPS Server
 https.createServer(options, app).listen(httpsPort, (req, res) => {
     console.log("HTTP Server Started : Port " + httpsPort);
 });
 
+// Run HTTP Server
 app.listen(httpPort, (req, res) => {
     console.log("HTTPS Server Started : Port " + httpPort);
 });

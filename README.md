@@ -11,7 +11,6 @@ Next.js를 공부하고 React로 리팩토링 할 계획입니다.
 ### [스테이지어스 | 개발자 육성 센터](http://www.stageus.co.kr)
 
 # To do List
-- SSL Secutiry 적용  
 - 잘못된 주소 입력 시 되돌아가기 기능 설정  
 - Scroll Event 기반 동적 효과 추가  
 - 스크롤 위치에 따른 Progress Bar 기능 추가  
