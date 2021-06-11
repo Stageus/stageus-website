@@ -47,3 +47,7 @@ Next.js를 공부하고 React로 리팩토링 할 계획입니다.
 - CSS 최적화
 - box-shadow 및 color 속성 수정
 - BENEFIT 부분 개발
+
+### 2021 06 11
+- SSL 적용
+- HTTP to HTTPS 리디렉션 적용
