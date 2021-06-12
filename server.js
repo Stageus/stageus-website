@@ -37,10 +37,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Load robots.txt
 app.get('/robots.txt', (req, res) => {
     res.sendFile(path.join(__dirname, 'robots.txt'));
 });
 
+// If user access wrong page we will return this.
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'wrong.html'));
 });
