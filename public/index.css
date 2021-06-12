@@ -489,7 +489,7 @@ footer {
 @media screen and (min-width: 1281px) {
 
     html {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .image_src_border {
@@ -504,11 +504,11 @@ footer {
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
 
     html {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     header {
-        background-size: auto 45rem;
+        background-size: 100% auto;
     }
 
     .image_src_border {
@@ -523,11 +523,16 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
     html {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     header {
-        background-size: auto 45rem;
+        height: 37rem;
+        background-size: 100% auto;
+    }
+
+    #header_text_box {
+        padding-top: 13rem;
     }
 
     /* image css */
