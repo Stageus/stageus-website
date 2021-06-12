@@ -13,9 +13,6 @@ const options = {
 };
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'img')));
-app.use(express.static(path.join(__dirname, 'files')));
-app.use(express.static(path.join(__dirname, 'fonts')));
 
 // HTTP to HTTPS Redirect
 app.get('*', (req, res, next) => {
@@ -38,6 +35,14 @@ app.get('*', (req, res, next) => {
 // Load index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.sendFile(path.join(__dirname, 'robots.txt'));
+});
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'wrong.html'));
 });
 
 // Run HTTPS Server
