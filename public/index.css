@@ -9,6 +9,10 @@
     src: url('fonts/Ikaros-Regular.otf');
 }
 
+html {
+    font-size: 13px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -165,14 +169,14 @@ ul {
 }
 
 .image_src_border {
-    width: 80%;
+    width: 54rem;
     border-radius: 1rem;
     box-shadow: 0rem 0rem 1.2rem #dddddd;
     margin: auto;
 }
 
 .image_src_borderless {
-    width: 80%;
+    width: 54rem;
     margin: auto;
 }
 
@@ -486,21 +490,6 @@ footer {
     text-decoration: none;
 }
 
-@media screen and (min-width: 1281px) {
-
-    html {
-        font-size: 13px;
-    }
-
-    .image_src_border {
-        width: 54rem;
-    }
-
-    .image_src_borderless {
-        width: 54rem;
-    }
-}
-
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
 
     html {
@@ -509,14 +498,6 @@ footer {
 
     header {
         background-size: 100% auto;
-    }
-
-    .image_src_border {
-        width: 100%;
-    }
-
-    .image_src_borderless {
-        width: 100%;
     }
 }
 
