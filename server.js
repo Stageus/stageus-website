@@ -7,9 +7,9 @@ const app = express();   // express 등록
 const httpPort = process.env.PORT || 8000;
 const httpsPort = process.env.PORT || 8443;
 const options = {
-    key: fs.readFileSync(path.join(__dirname, '../keys/stageus.co.kr_20210611J992.key.pem')),
-    cert: fs.readFileSync(path.join(__dirname, '../keys/stageus.co.kr_20210611J992.crt.pem')),
-    ca: fs.readFileSync(path.join(__dirname, '../keys/stageus.co.kr_20210611J992.ca-bundle.pem')),
+    key: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.key.pem')),
+    cert: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.crt.pem')),
+    ca: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.ca-bundle.pem')),
 };
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -40,6 +40,22 @@ app.get('/', (req, res) => {
 // Load robots.txt
 app.get('/robots.txt', (req, res) => {
     res.sendFile(path.join(__dirname, 'robots.txt'));
+});
+
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+
+app.get('/career.pdf', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/files/career.pdf'));
+});
+
+app.get('/curriculum.pdf', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/files/curriculum.pdf'));
+});
+
+app.get('/results.pdf', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/files/results.pdf'));
 });
 
 // If user access wrong page we will return this.
