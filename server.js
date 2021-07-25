@@ -37,6 +37,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/index_test', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index_test.html'));
+});
+
 // Load robots.txt
 app.get('/robots.txt', (req, res) => {
     res.sendFile(path.join(__dirname, 'robots.txt'));
