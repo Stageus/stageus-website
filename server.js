@@ -34,10 +34,6 @@ app.get('*', (req, res, next) => {
 
 // Load index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-app.get('/index_test', (req, res) => {
     res.sendFile(path.join(__dirname, 'index_test.html'));
 });
 
