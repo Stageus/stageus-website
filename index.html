@@ -34,7 +34,15 @@
             <li><a class="nav_menu nav_hide" href="#">FAQ</a></li>
             <li><a class="nav_menu" href="https://open.kakao.com/o/sctWRzKc">문의하기</a></li>
         </ul> 
-        <input id="nav_menu_button" type="button">
+        <div id="nav_menu_open">
+            <a class="nav_menu_open_item" href="#">스테이지어스</a>
+            <a class="nav_menu_open_item" href="files/curriculum.pdf">커리큘럼</a>
+            <a class="nav_menu_open_item" href="files/career.pdf">멘토</a>
+            <a class="nav_menu_open_item" href="files/results.pdf">성과물</a>
+            <a class="nav_menu_open_item" href="#">FAQ</a>
+            <a class="nav_menu_open_item" href="https://open.kakao.com/o/sctWRzKc">문의하기</a>
+        </div>
+        <input id="nav_menu_button" type="button" onclick="menuOpenEvent()">
     </nav>
 
     <!-- header -->
@@ -295,8 +303,10 @@
     </footer>
 
     <script>
-        const registerNum = [0, 1, 0, 0, 0];
+        const registerNum = [0, 1, 0, 1, 0];   // 수강 인원 전역 변수
+        let isMenuOpen = null;   // Navigation 상태 체크 변수
 
+        // 수강 인원 삽입
         window.onload = () => {
             let list = document.getElementsByClassName("lecture_empty");
             [...list].forEach((dom, index) => {
@@ -304,15 +314,49 @@
             })
         }
 
+        // Lecture 파트 문구 변경 이벤트
         const lectureMouseOverEvent = (index) => {
             let list = document.getElementsByClassName("lecture_empty");
             list[index].innerHTML = "상세 커리큘럼";
         }
-
         const lectureMouseLeaveEvent = (index) => {
             let list = document.getElementsByClassName("lecture_empty");
             list[index].innerHTML = registerNum[index] + "/5";
         }
+
+        // Navigation 이벤트
+        const menuOpenEvent = () => {
+            if (!isMenuOpen) {
+                const target = document.getElementById("nav_menu_open");
+                target.style.height = "16rem";
+                target.style.paddingTop = "2rem"
+                target.style.paddingBottom = "2rem"
+                const target2 = document.getElementsByClassName("nav_menu_open_item");
+                [...target2].forEach((elem) => {
+                    elem.style.display = "inline-block";
+                })
+                isMenuOpen = true;
+            } else {
+                const target = document.getElementById("nav_menu_open");
+                target.style.height = "0";
+                target.style.paddingTop = "0"
+                target.style.paddingBottom = "0"
+                const target2 = document.getElementsByClassName("nav_menu_open_item");
+                [...target2].forEach((elem) => {
+                    elem.style.display = "none";
+                })
+                isMenuOpen = false;
+            }
+        }
+
+        // 스크롤 이벤트 - 스크롤 시 Navigation 닫힘
+        document.addEventListener("scroll", () => {
+            if (isMenuOpen) {
+                menuOpenEvent();
+                var currentScrollValue = document.documentElement.scrollTop;
+                console.log('currentScrollValue is ' + currentScrollValue);
+            }
+        })
     </script>
 
 </body>

@@ -62,7 +62,7 @@ p > span {
     font-family: NanumSquare;
     font-size: 1.6rem;
     text-align: center;
-    line-height: 1.7rem;
+    line-height: 2.2rem;
 }
 .content_value + .content_value {
     margin-top: 0.6rem;
@@ -89,7 +89,7 @@ p > span {
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 767px) {
+@media screen and (min-width: 410px) and (max-width: 767px) {
 
     .contents {
         padding-top: 4rem;
@@ -111,8 +111,12 @@ p > span {
 
     .content_value {
         font-family: NanumSquare;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: center;
+        line-height: 1.4rem;
+    }
+    .content_value + .content_value {
+        margin-top: 0.4rem;
     }
 }
 
@@ -141,5 +145,8 @@ p > span {
         font-size: 1rem;
         text-align: center;
         line-height: 1.4rem;
+    }
+    .content_value + .content_value {
+        margin-top: 0.3rem;
     }
 }

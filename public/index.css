@@ -37,6 +37,33 @@ nav {
     border-bottom: 0.2rem solid #4088eb;
 }
 
+#nav_menu_open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 0rem;
+    top: 6rem;
+    width: 100%;
+    height: 0; /* 16rem */
+    padding-top: 5;
+    padding-bottom: 5;
+    background-color: #4088eb;
+    transition-property: height, padding-top, padding-bottom;
+    transition-duration: 0.3s;
+}
+
+.nav_menu_open_item {
+    display:none;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: NanumSquare;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    border-bottom: 0 solid #4088eb;
+}
+
 #nav_menu_button {
     display: none;
     width: 1.4rem;
@@ -48,6 +75,7 @@ nav {
     background-position: center center;
     background-color: white;
     border: none;
+    outline: none;
     transition-property: background-image;
     transition-duration: 0.2s;
 }
@@ -437,7 +465,7 @@ header {
     height: 100% - 2.4rem;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-    background-color: white;
+    background-color: #f9fafb;
     border: 0.1rem solid #4088eb;
     border-radius: 0.4rem;
     color: black;
