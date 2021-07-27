@@ -455,13 +455,33 @@ header {
     cursor: pointer;
 }
 
-.mentor_icon_box {
+.mentor_icon {
+    background-repeat: no-repeat;
+    background-size: 2.6rem, 2.6rem;
+    background-position: center center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid #4088eb;
+    transition-property: background-image, background-color;
+    transition-duration: 0.2s;
     cursor: pointer;
 }
 
-.mentor_icon {
-    height: 100%;
-    border-radius: 0.6rem;
+#mentor_icon_youtube {
+    background-image: url('img/youtube.svg'); 
+}
+#mentor_icon_youtube:hover {
+    background-image: url('img/youtubeWhite.svg'); 
+    background-color: #4088eb;
+}
+
+#mentor_icon_blog {
+    background-image: url('img/blog.svg'); 
+}
+#mentor_icon_blog:hover {
+    background-image: url('img/blogWhite.svg'); 
+    background-color: #4088eb;
 }
 
 /* office */
