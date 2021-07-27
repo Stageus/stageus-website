@@ -1,0 +1,117 @@
+/* Font Elements */
+
+@font-face {
+    font-family: 'NanumSquare';
+    src: url('fonts/NanumSquareR.ttf');
+}
+@font-face {
+    font-family: 'Ikaros';
+    src: url('fonts/Ikaros-Regular.otf');
+}
+
+
+/* Global Elements */
+
+html {
+    font-size: 13px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+    color: #1E2022;
+}
+p > span {
+    color:#4088eb;
+}
+
+/* Common Elements */
+
+.contents {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.content_subtitle {
+    margin: 0rem;
+    margin-bottom: 1rem;
+    font-family: NanumSquare;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.content_title {
+    margin: 0rem;
+    margin-bottom: 5rem;
+    font-family: NanumSquare;
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.content_explain {
+    margin-bottom: 5rem;
+}
+
+.content_value {
+    font-family: NanumSquare;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.7rem;
+}
+.content_value + .content_value {
+    margin-top: 0.6rem;
+}
+
+.image_src_border {
+    border-radius: 0.4rem;
+    box-shadow: 0rem 0rem 1.2rem #dddddd;
+    margin: auto;
+}
+
+.image_src_borderless {
+    margin: auto;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 410px) and (max-width: 767px) {
+
+    .contents {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .content_subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .content_title {
+        margin-bottom: 3rem;
+        font-size: 1.8rem;
+    }
+
+    .content_explain {
+        margin-bottom: 2rem;
+    }
+
+    .content_value {
+        font-family: NanumSquare;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}

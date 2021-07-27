@@ -1,0 +1,507 @@
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+  
+    /* nav */
+
+    nav {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    /* header */
+
+    header {
+        height: 40rem;
+    }
+
+    #header_text_title {
+        padding-top: 23rem;
+        padding-left: 6rem;
+    }
+
+    .header_text_index {
+        padding-left: 6rem;
+    }
+
+    /* intro */
+    #intro_image {
+        width: 30rem;
+        margin-right: 3rem;
+    }
+
+    .intro_text {
+        font-size: 1.4rem;
+    }
+
+    .intro_title {
+        font-size: 2.3rem;
+    }
+
+    /* introduction */
+
+    #introduction_box {
+        display: flex;
+        width: 73rem;
+        padding: 0;
+        margin-right: auto;
+        margin-left: auto;
+        list-style: none;
+        border-radius: 0.6rem;
+    }
+
+    .introduction_text {
+        width: 17rem;
+    }
+
+    /* lecture */
+
+    #lecture_box {
+        width: 60rem;
+        height: 27rem;
+    }
+
+    #lecture_button {
+        width: 57rem;
+    }
+
+    /* content_distinction */
+
+    #distinction_box {
+        width: 68rem;
+        height: 48rem;
+    }
+
+    /* content_benefit */
+
+    .benefit_item {
+        width: 75rem;
+    }
+
+    /* footer */
+
+
+    #footer_box {
+        width: fit-content;
+        margin-left: 7.5%;
+    }
+
+    #footer_index_box {
+        width: 60rem;
+        height: 3.5rem;
+    }
+
+    #footer_hr {
+        margin-top: 2rem;
+        margin-bottom: 1.3rem;
+        background-color: #888888;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* nav */
+
+    #nav_menu_box {
+        display: none;
+    }
+
+    /* header */
+
+    header {
+        height: 35rem;
+    }
+
+    #header_cover {
+        height: 35rem;
+    }
+
+    #header_text_title {
+        padding-top: 19rem;
+        padding-left: 6rem;
+        margin-bottom: 1.2rem;
+        font-size: 5rem;
+    }
+
+    /* intro */
+
+    #intro_content {
+        display: block;
+    }
+
+    #intro_image {
+        display: block;
+        width: 40rem;
+        margin-right: 0;
+    }
+
+    #intro_box {
+        display: block;
+        margin-top: 3rem;
+    }
+
+    /* introduction */
+
+    #introduction {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    #introduction_box {
+        width: 40rem;
+        height: 27.5rem;
+    }
+
+    /* lecture */
+
+    #lecture_box {
+        width: 39.6rem;
+        height: 42rem;
+    }
+
+    #lecture_button {
+        width: 39rem;
+    }
+
+    /* content_distinction */
+
+    #distinction_box {
+        width: 43rem;
+        height: 72rem;
+    }
+
+    /* content_benefit */
+
+    .benefit_item {
+        display: block;
+        width: 50rem;
+        height: fit-content;
+    }
+    .benefit_item + .benefit_item {
+        margin-top: 4rem;
+    }
+
+    .benefit_img {
+        display: block;
+        width: 100%;
+        height: 30rem;
+    }
+
+    .benefit_content {
+        display: block;
+        width: 100%;
+        margin-top: 2.5rem;
+    }
+
+    .text_left {
+        display: none;
+    }
+
+    /* mentor */
+
+    #mentor_box {
+        display: block;
+    }
+
+    #mentor_image {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #mentor_info_box {
+        display: block;
+        text-align: center;
+    }
+
+    /* office */
+
+    #map {
+        width: 50rem;
+    }
+
+    /* footer */
+
+    #footer_box {
+        width: 50rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .footer_text {
+        font-size: 2.6rem;
+    }
+
+    #footer_button {
+        width: 20rem;
+        font-size: 2rem;
+    }
+    #footer_button:hover {
+        width: 25rem;
+    }
+
+    #footer_index_box {
+        width: 48rem;
+    }
+
+    #footer_hr {
+        margin-top: 2rem;
+    }
+
+    #footer_subvalue_box {
+        width: 50rem;
+    }
+}
+
+@media screen and (min-width: 410px) and (max-width: 767px) {
+
+     /* nav */
+
+    nav {
+        width: 100%-4rem;
+        height: 4rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    #nav_menu_box {
+        display: none;
+    }
+
+    #logo {
+        height: 2.5rem;
+    }
+
+    /* header */
+
+    header {
+        height: 18rem;
+    }
+
+    #header_cover {
+        height: 35rem;
+    }
+
+    #header_text_title {
+        padding-top: 9rem;
+        padding-left: 2.2rem;
+        margin-bottom: 0.8rem;
+        font-size: 2.2rem;
+    }
+
+    .header_text_index {
+        padding-left: 2.2rem;
+        font-size: 1.1rem;
+    }
+    .header_text_index + .header_text_index {
+        margin-top: 0.4rem;
+    }
+
+    #nav_menu_button {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    /* intro */
+
+    #intro_content {
+        display: block;
+    }
+
+    #intro_image {
+        display: block;
+        width: 24rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #intro_box {
+        display: block;
+        margin-top: 3rem;
+    }
+
+    .intro_text {
+        font-size: 1.1rem;
+    }
+
+    .intro_title {
+        font-size: 1.9rem;
+    }
+
+    /* introduction */
+
+    #introduction {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #introduction_box {
+        width: 20rem;
+        height: 28rem;
+    }
+
+    .introduction_text {
+        width: 20rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 1.2rem;
+    }
+
+    /* lecture */
+
+    #lecture {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #lecture_box {
+        width: 19rem;
+        height: 70rem;
+    }
+
+    #lecture_button {
+        width: 24rem;
+    }
+
+    /* content_distinction */
+
+    #distinction_box {
+        width: 20rem;
+        height: 90rem;
+    }
+
+    .distinction_item_image {
+        width: 5rem;
+    }
+
+    .distinction_item_title {
+        margin-top: 1.5rem;
+        color: black;
+        font-size: 1.4rem;
+    }
+    
+    .distinction_item_text {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+    /* content_benefit */
+
+    .benefit_item {
+        display: block;
+        width: 30rem;
+        height: fit-content;
+    }
+    .benefit_item + .benefit_item {
+        margin-top: 2.5rem;
+    }
+
+    .benefit_img {
+        display: block;
+        width: 100%;
+        height: 20rem;
+    }
+
+    .benefit_content {
+        display: block;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .benefit_title {
+        font-size: 1.6rem;
+    }
+
+    .benefit_text {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    .text_left {
+        display: none;
+    }
+
+    /* mentor */
+
+    #mentor_box {
+        display: block;
+    }
+
+    #mentor_image {
+        display: block;
+        width: 18rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #mentor_info_box {
+        display: block;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #mentor_personal_box {
+        margin-bottom: 2rem;
+    }
+
+    .mentor_title {
+        font-size: 1.2rem;
+    }
+    
+    .mentor_info {
+        margin-top: 0.6rem;
+        font-size: 1rem;
+    }
+
+    #mentor_aditional_box {
+        width: 29.5rem;
+    }
+
+    /* office */
+
+    #map {
+        width: 30rem;
+        height: 20rem;
+    }
+
+    /* footer */
+
+    footer {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    #footer_box {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .footer_text {
+        font-size: 1.5rem;
+    }
+
+    #footer_button {
+        width: 12rem;
+        font-size: 1.1rem;
+    }
+    #footer_button:hover {
+        width: 16rem;
+    }
+
+    #footer_index_box {
+        width: 90%;
+        height: 4.5rem;
+        margin-top: 4rem;
+    }
+
+    #footer_hr {
+        margin-top: 2rem;
+    }
+
+    #footer_subvalue_box {
+        width: 90%;
+        height: 3rem;
+    }
+}
+
