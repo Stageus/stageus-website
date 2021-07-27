@@ -34,7 +34,7 @@ app.get('*', (req, res, next) => {
 
 // Load index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index_test.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Load robots.txt
