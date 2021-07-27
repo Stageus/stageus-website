@@ -3,8 +3,8 @@
     /* nav */
 
     nav {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 
     /* header */
@@ -100,8 +100,17 @@
 
     /* nav */
 
+    nav {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
     #nav_menu_box {
         display: none;
+    }
+
+    #nav_menu_button {
+        display: inline-block;
     }
 
     /* header */
@@ -258,16 +267,20 @@
     nav {
         width: 100%-4rem;
         height: 4rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    #logo {
+        height: 2.5rem;
     }
 
     #nav_menu_box {
         display: none;
     }
 
-    #logo {
-        height: 2.5rem;
+    #nav_menu_button {
+        display: inline-block;
     }
 
     /* header */
@@ -293,11 +306,6 @@
     }
     .header_text_index + .header_text_index {
         margin-top: 0.4rem;
-    }
-
-    #nav_menu_button {
-        width: 1.4rem;
-        height: 1.4rem;
     }
 
     /* intro */
@@ -505,3 +513,313 @@
     }
 }
 
+@media screen and (max-width: 409px) {
+
+    /* nav */
+
+    nav {
+        width: 100%-4rem;
+        height: 4rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    #logo {
+    height: 2.5rem;
+    }
+
+    #nav_menu_box {
+        display: none;
+    }
+
+    #nav_menu_button {
+        display: inline-block;
+    }
+
+   /* header */
+
+    header {
+        height: 14rem;
+    }
+
+    #header_cover {
+        height: 14rem;
+    }
+
+    #header_text_title {
+        padding-top: 7.5rem;
+        padding-left: 2rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+    }
+
+    .header_text_index {
+        padding-left: 2rem;
+        font-size: 0.8rem;
+    }
+    .header_text_index + .header_text_index {
+        margin-top: 0.4rem;
+    }
+
+    /* intro */
+
+    #intro_content {
+        display: block;
+    }
+
+    #intro_image {
+        display: block;
+        width: 20rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #intro_box {
+        display: block;
+        margin-top: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .intro_text {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .intro_title {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+   /* introduction */
+
+    #introduction {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #introduction_box {
+        width: 18rem;
+        height: 22rem;
+    }
+
+    .introduction_text {
+        width: 18rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+   /* lecture */
+
+    #lecture {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #lecture_box {
+        width: 19rem;
+        height: 54rem;
+    }
+
+    .lecture_index {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .lecture_title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .lecture_info {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .lecture_empty {
+        width: 8rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        font-size: 1rem;
+    }
+    .lecture_empty:hover {
+        width: 10rem;
+    }
+
+    #lecture_button {
+        width: 19rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+   /* content_distinction */
+
+    #distinction_box {
+        width: 19rem;
+        height: 80rem;
+    }
+
+    .distinction_item_image {
+        width: 4rem;
+    }
+
+    .distinction_item_title {
+        margin-top: 1.5rem;
+        color: black;
+        font-size: 1.2rem;
+    }
+    
+    .distinction_item_text {
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+   /* content_benefit */
+
+    .benefit_item {
+        display: block;
+        width: 21rem;
+        height: fit-content;
+    }
+    .benefit_item + .benefit_item {
+        margin-top: 2rem;
+    }
+
+    .benefit_img {
+        display: block;
+        width: 100%;
+        height: 14rem;
+    }
+
+    .benefit_content {
+        display: block;
+        width: 100%;
+        margin-top: 1.6rem;
+    }
+
+    .benefit_title {
+        font-size: 1.2rem;
+    }
+
+    .benefit_text {
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .text_left {
+        display: none;
+    }
+
+   /* mentor */
+
+    #mentor_box {
+        display: block;
+    }
+
+    #mentor_image {
+        display: block;
+        width: 12rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #mentor_info_box {
+        display: block;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    #mentor_personal_box {
+        margin-bottom: 2rem;
+    }
+
+    .mentor_title {
+        font-size: 1.2rem;
+    }
+    
+    .mentor_info {
+        margin-top: 0.6rem;
+        font-size: 1rem;
+    }
+
+    #mentor_aditional_box {
+        width: 21rem;
+        height: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #mentor_career {
+        width: 13rem;
+        height: 100% - 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .mentor_icon {
+        background-size: 2.2rem, 2.2rem;
+        width: 3rem;
+        height: 100%-0.2rem;
+        border-radius: 0.4rem;
+    }
+
+   /* office */
+
+    #map {
+        width: 21rem;
+        height: 14rem;
+    }
+
+   /* footer */
+
+    footer {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    #footer_box {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .footer_text {
+        font-size: 1.3rem;
+    }
+
+    #footer_button {
+        width: 10rem;
+        margin-top: 0.5rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        font-size: 1.1rem;
+    }
+    #footer_button:hover {
+        width: 13rem;
+    }
+
+    #footer_index_box {
+        width: 80%;
+        height: 7rem;
+        margin-top: 4rem;
+    }
+
+    #footer_hr {
+        margin-top: 2rem;
+    }
+
+    #footer_subvalue_box {
+        flex-direction: row;
+        width: 90%;
+        height: 3rem;
+    }
+
+    .footer_index_subvalue {
+        font-size: 0.8rem;
+    }
+}

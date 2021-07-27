@@ -89,7 +89,7 @@ p > span {
     }
 }
 
-@media screen and (min-width: 410px) and (max-width: 767px) {
+@media screen and (min-width: 300px) and (max-width: 767px) {
 
     .contents {
         padding-top: 4rem;
@@ -113,5 +113,33 @@ p > span {
         font-family: NanumSquare;
         font-size: 1.2rem;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 409px) {
+
+    .contents {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .content_subtitle {
+        font-size: 1rem;
+    }
+    
+    .content_title {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .content_explain {
+        margin-bottom: 2rem;
+    }
+
+    .content_value {
+        font-family: NanumSquare;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.4rem;
     }
 }
