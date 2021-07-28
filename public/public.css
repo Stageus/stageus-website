@@ -70,11 +70,7 @@ p > span {
 
 .image_src_border {
     border-radius: 0.4rem;
-    box-shadow: 0rem 0rem 1.2rem #dddddd;
-    margin: auto;
-}
-
-.image_src_borderless {
+    box-shadow: 0rem 0rem 1.2rem #aaaaaa;
     margin: auto;
 }
 

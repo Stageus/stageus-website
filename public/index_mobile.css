@@ -1,5 +1,5 @@
 @media screen and (min-width: 1025px) and (max-width: 1300px) {
-  
+
     /* nav */
 
     nav {
@@ -86,13 +86,6 @@
 
     #footer_index_box {
         width: 60rem;
-        height: 3.5rem;
-    }
-
-    #footer_hr {
-        margin-top: 2rem;
-        margin-bottom: 1.3rem;
-        background-color: #888888;
     }
 }
 
@@ -253,15 +246,11 @@
     }
 
     #footer_index_box {
-        width: 48rem;
-    }
-
-    #footer_hr {
-        margin-top: 2rem;
+        width: 80%;
     }
 
     #footer_subvalue_box {
-        width: 50rem;
+        width: 80%;
     }
 }
 
@@ -517,18 +506,11 @@
     }
 
     #footer_index_box {
-        width: 90%;
-        height: 4.5rem;
-        margin-top: 4rem;
-    }
-
-    #footer_hr {
-        margin-top: 2rem;
+        width: 80%;
     }
 
     #footer_subvalue_box {
-        width: 90%;
-        height: 3rem;
+        width: 80%;
     }
 }
 
@@ -832,21 +814,9 @@
 
     #footer_index_box {
         width: 80%;
-        height: 7rem;
-        margin-top: 4rem;
-    }
-
-    #footer_hr {
-        margin-top: 2rem;
     }
 
     #footer_subvalue_box {
-        flex-direction: row;
-        width: 90%;
-        height: 3rem;
-    }
-
-    .footer_index_subvalue {
-        font-size: 0.8rem;
+        width: 80%;
     }
 }

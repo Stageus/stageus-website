@@ -566,10 +566,9 @@ footer {
 #footer_index_box {
     display: flex;
     flex-wrap: wrap;
-    width: 80rem;
-    height: 3rem;
+    width: 90rem;
+    height: fit-content;
     justify-content: space-between;
-    align-content: space-between;
     margin-top: 6.5rem;
     margin-right: auto;
     margin-left: auto;
@@ -578,7 +577,8 @@ footer {
 .footer_index {
     display: block;
     font-family: NanumSquare;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
     color: white;
 }
 
@@ -598,35 +598,35 @@ footer {
     border: 0;
     width: 85%;
     height: 0.01rem;
-    margin-bottom: 1.3rem;
+    margin-top: 1.3rem;
     background-color: #888888;
 }
 
 #footer_subvalue_box {
     display: flex;
     justify-content: space-between;
-    align-content: space-between;
     flex-wrap: wrap;
     width: 60rem;
-    height: 3rem;
+    height: fit-content;
     margin: 0;
     padding: 0;
     margin-right: auto;
     margin-left: auto;
-    align-items: center;
     list-style: none;
 }
 
 .footer_index_subvalue {
-    height:fit-content;
-    padding: 0.6rem;
+    display: inline;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
     color: #888888;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-family: NanumSquare;
     font-weight: 400;
     text-decoration: none;
-    border-bottom: 0 solid #ffffffff;
     transition-property: color;
     transition-duration: 0.2s;
 }
