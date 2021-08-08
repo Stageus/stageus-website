@@ -49,7 +49,7 @@
     }
 
     .introduction_text {
-        width: 17rem;
+        width: 14rem;
     }
 
     /* lecture */
@@ -153,7 +153,7 @@
     }
 
     #introduction_box {
-        width: 40rem;
+        width: 38.5rem;
         height: 27.5rem;
     }
 
@@ -336,6 +336,7 @@
     .intro_title {
         font-size: 1.8rem;
         text-align: center;
+        line-height: 2.6rem;
     }
 
     /* introduction */
@@ -346,8 +347,8 @@
     }
 
     #introduction_box {
-        width: 20rem;
-        height: 28rem;
+        width: 22rem;
+        height: 26rem;
     }
 
     .introduction_text {
@@ -425,7 +426,7 @@
 
     .benefit_text {
         margin-top: 1rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.6rem;
     }
 
@@ -478,6 +479,11 @@
     #map {
         width: 26rem;
         height: 18rem;
+    }
+
+    #office_addr {
+        font-size: 0.9rem;
+        margin-top: 0.6rem;
     }
 
     /* footer */
@@ -598,6 +604,7 @@
     .intro_title {
         font-size: 1.3rem;
         text-align: center;
+        line-height: 1.8rem;
     }
 
    /* introduction */
@@ -608,7 +615,7 @@
     }
 
     #introduction_box {
-        width: 18rem;
+        width: 20rem;
         height: 22rem;
     }
 
@@ -715,7 +722,7 @@
 
     .benefit_text {
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.2rem;
     }
 
@@ -782,6 +789,12 @@
     #map {
         width: 21rem;
         height: 14rem;
+    }
+
+    
+    #office_addr {
+        font-size: 0.8rem;
+        margin-top: 0.6rem;
     }
 
    /* footer */

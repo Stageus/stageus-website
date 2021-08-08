@@ -107,7 +107,7 @@ p > span {
 
     .content_value {
         font-family: NanumSquare;
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: center;
         line-height: 1.4rem;
     }
@@ -138,9 +138,9 @@ p > span {
 
     .content_value {
         font-family: NanumSquare;
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: center;
-        line-height: 1.4rem;
+        line-height: 1.3rem;
     }
     .content_value + .content_value {
         margin-top: 0.3rem;

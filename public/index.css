@@ -173,7 +173,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 83rem;
+    width: 80rem;
     padding: 0;
     margin-right: auto;
     margin-left: auto;
@@ -182,9 +182,11 @@ header {
 }
 
 .introduction_text {
-    width: 19rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    width: 16rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: center;
     color: black;
     font-size: 1.6rem;
@@ -518,6 +520,13 @@ header {
     width: fit-content;
     margin-right: auto;
     margin-left: auto;
+}
+
+#office_addr {
+    font-family: NanumSquare;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0.8rem;
 }
 
 /* footer */
