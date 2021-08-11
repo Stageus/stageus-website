@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'NanumSquare';
-    src: url('fonts/NanumSquareR.ttf');
+    src: url('../fonts/NanumSquareR.ttf');
 }
 @font-face {
     font-family: 'Ikaros';
-    src: url('fonts/Ikaros-Regular.otf');
+    src: url('../fonts/Ikaros-Regular.otf');
 }
 
 

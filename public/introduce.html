@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>스테이지어스 - 개발자 육성 센터</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="description" content="개발자 육성 센터 스테이지어스 - 코딩을 잘하는 것 만으론 부족합니다. 능력 있는 개발자가 될 수 있어야 합니다. 스테이지어스는 능력 있는 개발자가 되기 위한 여러분의 무대 입니다.">
+    <meta name="keywords" content="코딩, 프로그래밍, 개발자 육성 센터, 코딩 학원, 프로그래밍 학원, 개발자, 웹 프론트엔드, 백엔드, 서버, 웹서버, 앱, 안드로이드, 리액트, 노드, 자바스크립트">
+    <meta name="robots" content="index, follow"> 
+    <meta property="og:type" content="website"> 
+    <meta property="og:site_name" content="스테이지어스">
+    <meta property="og:title" content="스테이지어스">
+    <meta property="og:description" content="개발자 육성 센터 스테이지어스 - 코딩을 잘하는 것 만으론 부족합니다. 능력 있는 개발자가 될 수 있어야 합니다. 스테이지어스는 능력 있는 개발자가 되기 위한 여러분의 무대 입니다.">
+    <meta property="og:image" content="img/logoBlack.png">
+    <meta property="og:url" content="https://www.stageus.co.kr">
+    <link rel="canonical" href="https://www.stageus.co.kr">
+    <link rel="icon" type="image/x-icon" href="img/logoMark.png" >
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="template/header_footer_template.css">
+    <link rel="stylesheet" type="text/css" href="template/header_footer_template_mobile.css">
+</head>
+<body>
+
+    <!-- nav -->
+    <nav>
+        <a id="nav_logo" href="/">
+            <image id="logo" src="img/logoBlack.png"></image>
+        </a>
+        <ul id="nav_menu_box">   <!-- href script에서 정의 -->
+            <li><a class="nav_menu nav_hide">스테이지어스</a></li>
+            <li><a class="nav_menu nav_hide">커리큘럼</a></li>
+            <li><a class="nav_menu nav_hide">팀원 성과물</a></li>
+            <li><a class="nav_menu nav_hide">FAQ</a></li>
+            <li><a class="nav_menu">문의하기</a></li>
+        </ul> 
+        <div id="nav_menu_open">   <!-- href script에서 정의 -->
+            <a class="nav_menu_open_item">스테이지어스</a>
+            <a class="nav_menu_open_item">커리큘럼</a>
+            <a class="nav_menu_open_item">성과물</a>
+            <a class="nav_menu_open_item">FAQ</a>
+            <a class="nav_menu_open_item">문의하기</a>
+        </div>
+        <input id="nav_menu_button" type="button" onclick="menuOpenEvent()">
+    </nav>
+
+    <!-- header -->
+    <header id="header">
+        <div id="header_cover"> 
+            <p id="header_text_title">INTRODUCE</p>
+            <p class="header_text_index">스테이지어스는 개발자들이 같이 성장하는 무대입니다.</p>
+            <p class="header_text_index">언제나 능력 있는 개발자를 찾고있습니다.</p>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+
+        <!-- section intro -->
+        <section id="intro" class="contents">
+
+        </section>
+
+    </main>
+
+    <!-- footer part -->
+    <footer>
+        <div id="footer_box">
+            <p class="footer_text"><span>우리 모두</span>가 성장하는 무대</p>
+            <p class="footer_text">스테이지어스</p>
+        </div>
+
+        <div id="footer_index_box">   <!-- innerText script에서 정의 -->
+            <div class="footer_index">
+                <p class="footer_index_title">법인명</p>
+                <p class="footer_index_value"></p>
+            </div>
+            <div class="footer_index">
+                <p class="footer_index_title">사업자등록번호</p>
+                <p class="footer_index_value"></p>
+            </div>
+            <div class="footer_index">
+                <p class="footer_index_title">주소</p>
+                <p class="footer_index_value"></p>
+            </div>
+            <div class="footer_index">
+                <p class="footer_index_title">대표</p>
+                <p class="footer_index_value"></p>
+            </div>
+            <div class="footer_index">
+                <p class="footer_index_title">연락처</p>
+                <p class="footer_index_value"></p>
+            </div>
+            <div class="footer_index">
+                <p class="footer_index_title">이메일</p>
+                <p class="footer_index_value"></p>
+            </div>
+        </div>
+        <hr id="footer_hr"> 
+        <div id="footer_subvalue_box">   <!-- href script에서 정의 -->
+            <p id="footer_index_copyright">Copyright 2021. 스테이지어스. All right reserved.</p>
+            <a class="footer_index_subvalue">스테이지어스</a>
+            <a class="footer_index_subvalue">커리큘럼</a>
+            <a class="footer_index_subvalue">팀원 성과물</a>
+            <a class="footer_index_subvalue">FAQ</a>
+            <a class="footer_index_subvalue">문의하기</a>
+        </div> 
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="js/navEvent.js"></script>
+    <script src="js/initData.js"></script>
+    <script>
+        window.onload = () => {
+            
+            // 선택된 nav 밑줄 처리
+            const link1 = document.getElementsByClassName("nav_menu");
+            link1[0].style.borderBottom = "0.2rem solid #4088eb";
+        }
+    </script>
+
+</body>

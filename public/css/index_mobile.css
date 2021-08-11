@@ -137,12 +137,17 @@
     #intro_image {
         display: block;
         width: 40rem;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #intro_box {
         display: block;
         margin-top: 3rem;
+    }
+
+    .intro_text {
+        text-align: center;
     }
 
     /* introduction */

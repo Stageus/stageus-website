@@ -69,3 +69,7 @@ Next.js를 공부하고 React로 리팩토링 할 계획입니다.
 ### 2021 08 09
 - 모바일 해상도 대응 media-query 수정
 - 몇몇 내용 수정
+
+### 2021 08 11
+- 소개 / 성과물 / FAQ 페이지 미들웨어 API 추가
+- header & footer 템플릿 html 및 css 생성

@@ -32,30 +32,44 @@ app.get('*', (req, res, next) => {
     }
 });
 
-// Load index.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
 // Load robots.txt
 app.get('/robots.txt', (req, res) => {
     res.sendFile(path.join(__dirname, 'robots.txt'));
 });
 
+// Load sitemap.xml
 app.get('/sitemap.xml', (req, res) => {
     res.sendFile(path.join(__dirname, 'sitemap.xml'));
 });
 
-app.get('/career.pdf', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/files/career.pdf'));
+// Main Page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/curriculum.pdf', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/files/curriculum.pdf'));
+// "스테이지어스" Page
+app.get('/introduce', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/introduce.html'));
 });
 
-app.get('/results.pdf', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/files/results.pdf'));
+// "스테이지어스" Page
+app.get('/curriculum', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/curriculum.html'));
+});
+
+// "스테이지어스" Page
+app.get('/results', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/results.html'));
+});
+
+// "스테이지어스" Page
+app.get('/faq', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/faq.html'));
+});
+
+// header-footer template
+app.get('/testTemplate', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/header-footer-template.html'));
 });
 
 // If user access wrong page we will return this.

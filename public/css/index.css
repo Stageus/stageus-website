@@ -69,7 +69,7 @@ nav {
     width: 1.4rem;
     height: 1.4rem;
     margin-top: 0.5rem;
-    background-image: url('img/navBtn.svg'); 
+    background-image: url('../img/navBtn.svg'); 
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center center;
@@ -80,14 +80,14 @@ nav {
     transition-duration: 0.2s;
 }
 #nav_menu_button:hover {
-    background-image: url('img/navBtnBlue.svg'); 
+    background-image: url('../img/navBtnBlue.svg'); 
     cursor: pointer;
 }
 
 /* header */
 
 header {
-    background-image: url('img/headerImage.jpg'); 
+    background-image: url('../img/headerImage.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -366,19 +366,19 @@ header {
 }
 
 #benefit_img1 {
-    background-image: url('img/benefit_1.jpg'); 
+    background-image: url('../img/benefit_1.jpg'); 
 }
 
 #benefit_img2 {
-    background-image: url('img/benefit_2.jpg'); 
+    background-image: url('../img/benefit_2.jpg'); 
 }
 
 #benefit_img3 {
-    background-image: url('img/benefit_3.jpg'); 
+    background-image: url('../img/benefit_3.jpg'); 
 }
 
 #benefit_img4 {
-    background-image: url('img/benefit_4.jpg'); 
+    background-image: url('../img/benefit_4.jpg'); 
 }
 
 .benefit_content {
@@ -388,6 +388,9 @@ header {
 }
 .text_left {
     text-align: right;
+}
+.mobile {
+    display: none;
 }
 
 .benefit_title {
@@ -499,18 +502,18 @@ header {
 }
 
 #mentor_icon_youtube {
-    background-image: url('img/youtube.svg'); 
+    background-image: url('../img/youtube.svg'); 
 }
 #mentor_icon_youtube:hover {
-    background-image: url('img/youtubeWhite.svg'); 
+    background-image: url('../img/youtubeWhite.svg'); 
     background-color: #4088eb;
 }
 
 #mentor_icon_blog {
-    background-image: url('img/blog.svg'); 
+    background-image: url('../img/blog.svg'); 
 }
 #mentor_icon_blog:hover {
-    background-image: url('img/blogWhite.svg'); 
+    background-image: url('../img/blogWhite.svg'); 
     background-color: #4088eb;
 }
 
@@ -622,6 +625,20 @@ footer {
     margin-right: auto;
     margin-left: auto;
     list-style: none;
+}
+
+#footer_index_copyright {
+    display: inline;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+    color: #888888;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: NanumSquare;
+    font-weight: 400;
+    text-decoration: none;
 }
 
 .footer_index_subvalue {
