@@ -40,7 +40,7 @@
 
     #introduction_box {
         display: flex;
-        width: 73rem;
+        width: 68rem;
         padding: 0;
         margin-right: auto;
         margin-left: auto;
@@ -50,17 +50,7 @@
 
     .introduction_text {
         width: 14rem;
-    }
-
-    /* lecture */
-
-    #lecture_box {
-        width: 60rem;
-        height: 27rem;
-    }
-
-    #lecture_button {
-        width: 57rem;
+        font-size: 1.5rem;
     }
 
     /* content_distinction */
@@ -158,15 +148,15 @@
     }
 
     #introduction_box {
-        width: 38.5rem;
-        height: 27.5rem;
+        width: 37.5rem;
+        height: 26.5rem;
     }
 
     /* lecture */
 
     #lecture_box {
-        width: 39.6rem;
-        height: 42rem;
+        width: 41rem;
+        height: 40rem;
     }
 
     #lecture_button {
@@ -371,12 +361,40 @@
     }
 
     #lecture_box {
-        width: 19rem;
-        height: 70rem;
+        width: 22rem;
+        height: 56rem;
+    }
+
+    .lecture_index {
+        width: 22rem;
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
+    }
+
+    .lecture_title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .lecture_info {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .lecture_empty {
+        width: 8rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        font-size: 1rem;
+    }
+    .lecture_empty:hover {
+        width: 10rem;
     }
 
     #lecture_button {
         width: 24rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     /* content_distinction */
@@ -639,8 +657,8 @@
     }
 
     #lecture_box {
-        width: 19rem;
-        height: 54rem;
+        width: 17rem;
+        height: 65rem;
     }
 
     .lecture_index {

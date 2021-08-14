@@ -9,7 +9,7 @@
 
     /* header */
 
-    header {
+    header, #header_cover {
         height: 40rem;
     }
 
@@ -48,11 +48,7 @@
 
     /* header */
 
-    header {
-        height: 35rem;
-    }
-
-    #header_cover {
+    header, #header_cover {
         height: 35rem;
     }
 
@@ -116,12 +112,8 @@
 
     /* header */
 
-    header {
+    header, #header_cover {
         height: 18rem;
-    }
-
-    #header_cover {
-        height: 35rem;
     }
 
     #header_text_title {
@@ -196,11 +188,7 @@
 
    /* header */
 
-    header {
-        height: 14rem;
-    }
-
-    #header_cover {
+    header, #header_cover {
         height: 14rem;
     }
 

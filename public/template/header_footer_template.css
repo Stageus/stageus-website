@@ -189,7 +189,7 @@ footer {
 #footer_index_box {
     display: flex;
     flex-wrap: wrap;
-    width: 90rem;
+    width: 100rem;
     height: fit-content;
     justify-content: space-between;
     margin-top: 4rem;

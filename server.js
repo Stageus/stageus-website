@@ -52,29 +52,39 @@ app.get('/introduce', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/introduce.html'));
 });
 
-// "스테이지어스" Page
+// "커리큘럼" Page
 app.get('/curriculum', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/curriculum.html'));
 });
 
-// "스테이지어스" Page
+// "성과물" Page
 app.get('/results', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/results.html'));
 });
 
-// "스테이지어스" Page
+// "FAQ" Page
 app.get('/faq', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/faq.html'));
 });
 
+// "환불 약관" Page
+app.get('/refund', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/refund.html'));
+});
+
+// "설치 가이드" Page
+app.get('/guide', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/guide.html'));
+});
+
 // header-footer template
 app.get('/testTemplate', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/header-footer-template.html'));
+    res.sendFile(path.join(__dirname, 'public/template/header_footer_template.html'));
 });
 
 // If user access wrong page we will return this.
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'wrong.html'));
+    res.sendFile(path.join(__dirname, 'public/wrong.html'));
 });
 
 // Run HTTPS Server

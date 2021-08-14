@@ -173,7 +173,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 80rem;
+    width: 76rem;
     padding: 0;
     margin-right: auto;
     margin-left: auto;
@@ -204,11 +204,12 @@ header {
 /* lecture */
 
 #lecture_box {
+    width: 62rem;
+    height: 27rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-    width: 100rem;
     padding: 0;
     margin-right: auto;
     margin-left: auto;
@@ -217,7 +218,7 @@ header {
 }
 
 .lecture_index {
-    width: 19rem;
+    width: 20rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     text-align: center;
@@ -578,7 +579,7 @@ footer {
 #footer_index_box {
     display: flex;
     flex-wrap: wrap;
-    width: 90rem;
+    width: 100rem;
     height: fit-content;
     justify-content: space-between;
     margin-top: 6.5rem;
