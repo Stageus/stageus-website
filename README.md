@@ -73,3 +73,8 @@ Next.js를 공부하고 React로 리팩토링 할 계획입니다.
 ### 2021 08 11
 - 소개 / 성과물 / FAQ 페이지 미들웨어 API 추가
 - header & footer 템플릿 html 및 css 생성
+
+### 2021 08 15
+- FAQ 페이지 구성 완료
+- FAQ 페이지 CSS 개발 및 CSS_mobile 개발
+- index 페이지 반응형 CSS 소량 수정
