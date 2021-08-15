@@ -1,0 +1,76 @@
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 410px) and (max-width: 767px) {
+    
+    .refund_box + .refund_box {
+        margin-top: 3rem;
+    }
+
+    .refund_title {
+        width: 90%;
+        margin-bottom: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+    .refund_line {
+        width: 90%;
+        margin-bottom: 1.4rem;
+    }
+
+    .refund_value {
+        width: 90%;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    #refund_table {
+        width: 90%;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .table_title {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 409px) {
+
+    .refund_box + .refund_box {
+        margin-top: 3rem;
+    }
+
+    .refund_title {
+        width: 90%;
+        margin-bottom: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+    .refund_line {
+        width: 90%;
+        margin-bottom: 1.2rem;
+    }
+
+    .refund_value {
+        width: 90%;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    #refund_table {
+        width: 90%;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+
+    .table_title {
+        font-size: 1rem;
+    }
+
+}
