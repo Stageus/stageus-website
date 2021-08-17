@@ -31,14 +31,12 @@
         <ul id="nav_menu_box">   <!-- href script에서 정의 -->
             <li><a class="nav_menu nav_hide">스테이지어스</a></li>
             <li><a class="nav_menu nav_hide">커리큘럼</a></li>
-            <li><a class="nav_menu nav_hide">팀원 성과물</a></li>
             <li><a class="nav_menu nav_hide">FAQ</a></li>
             <li><a class="nav_menu">문의하기</a></li>
         </ul> 
         <div id="nav_menu_open">   <!-- href script에서 정의 -->
             <a class="nav_menu_open_item">스테이지어스</a>
             <a class="nav_menu_open_item">커리큘럼</a>
-            <a class="nav_menu_open_item">성과물</a>
             <a class="nav_menu_open_item">FAQ</a>
             <a class="nav_menu_open_item">문의하기</a>
         </div>
@@ -266,7 +264,6 @@
             <p id="footer_index_copyright">Copyright 2021. 스테이지어스. All right reserved.</p>
             <a class="footer_index_subvalue">스테이지어스</a>
             <a class="footer_index_subvalue">커리큘럼</a>
-            <a class="footer_index_subvalue">팀원 성과물</a>
             <a class="footer_index_subvalue">FAQ</a>
             <a class="footer_index_subvalue">문의하기</a>
         </div> 
@@ -284,7 +281,7 @@
             
             // 선택된 nav 밑줄 처리
             const link1 = document.getElementsByClassName("nav_menu");
-            link1[3].style.borderBottom = "0.2rem solid #4088eb";
+            link1[2].style.borderBottom = "0.2rem solid #4088eb";
 
             // 총 질문의 개수 설정
             const list = document.getElementsByClassName("faq_answer");

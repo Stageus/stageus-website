@@ -57,11 +57,6 @@ app.get('/curriculum', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/curriculum.html'));
 });
 
-// "성과물" Page
-app.get('/results', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/results.html'));
-});
-
 // "FAQ" Page
 app.get('/faq', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/faq.html'));

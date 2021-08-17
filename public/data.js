@@ -3,7 +3,6 @@ const registerNum = [0, 5, 0, 1, 0, 0];
 const path = [
     "introduce",
     "files/curriculum.pdf",
-    "results",
     "faq",
     "https://open.kakao.com/o/sctWRzKc"
 ]
