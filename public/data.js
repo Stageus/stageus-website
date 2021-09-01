@@ -1,4 +1,4 @@
-const registerNum = [1, 4, 0, 2, 2, 0];
+const registerNum = [3, 4, 0, 2, 2, 0];
 
 const path = [
     "introduce",
@@ -6,6 +6,12 @@ const path = [
     "faq",
     "https://open.kakao.com/o/sFu0jAwd",
     "refund"
+]
+
+const footer_img = [
+    "#",
+    "https://www.youtube.com/channel/UCktIF_yDLyBQEx5_MZuscfg",
+    "https://www.instagram.com/stageus_cono"
 ]
 
 const footer_data = [

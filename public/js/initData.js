@@ -17,3 +17,9 @@ const link3 = document.getElementsByClassName("footer_index_subvalue");
 [...link3].forEach((item, index) => {
     item.href = path[index];
 });
+
+// footer 링크 이미지 삽입 함수
+const img_link = document.getElementsByClassName("footer_link");
+[...img_link].forEach((item, index) => {
+    item.href = footer_img[index];
+})

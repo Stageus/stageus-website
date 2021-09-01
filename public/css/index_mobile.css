@@ -604,7 +604,7 @@
     }
 
     .intro_text {
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-align: center;
     }
 
@@ -770,18 +770,23 @@
     }
 
     #mentor_aditional_box {
+        flex-direction: column;
         width: 21rem;
-        height: 3rem;
+        height: 7rem;
         margin-left: auto;
         margin-right: auto;
     }
 
     #mentor_career {
-        width: 13rem;
+        width: 100%;
         height: 100% - 2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
         font-size: 1rem;
+    }
+    #mentor_career + #mentor_career {
+        margin-left: 0;
+        margin-top: 1rem;
     }
 
     .mentor_icon {
@@ -800,7 +805,7 @@
 
     
     #office_addr {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         margin-top: 0.6rem;
     }
 

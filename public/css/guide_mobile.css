@@ -1,0 +1,85 @@
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 410px) and (max-width: 767px) {
+    
+    .guide_box + .guide_box {
+        margin-top: 1.5rem;
+    }
+
+    .guide_title {
+        width: 90%;
+        margin-bottom: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+    .guide_line {
+        width: 90%;
+        margin-bottom: 1.4rem;
+    }
+
+    .guide_value {
+        width: 90%;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .guide_img {
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 0.4rem;
+    }
+    
+    .guide_explain {
+        padding-top: 0.6rem;
+        padding-bottom: 1.6rem;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 409px) {
+
+    .guide_box + .guide_box {
+        margin-top: 1.5rem;
+    }
+
+    .guide_title {
+        width: 90%;
+        margin-bottom: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+    .guide_line {
+        width: 90%;
+        margin-bottom: 1.2rem;
+    }
+
+    .guide_value {
+        width: 90%;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .guide_img {
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 0.2rem;
+    }
+    
+    .guide_explain {
+        padding-top: 0.6rem;
+        padding-bottom: 1.4rem;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+}

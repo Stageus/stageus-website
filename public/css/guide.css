@@ -1,0 +1,58 @@
+.guide_box + .guide_box {
+    margin-top: 4rem;
+}
+
+.guide_title {
+    width: 80%;
+    max-width: 100rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 1.6rem;
+    font-family: NanumSquare;
+    font-weight: 400;
+}
+
+.guide_line {
+    width: 80%;
+    max-width: 100rem;
+    background-color: black;
+    margin-bottom: 2.6rem;
+}
+
+.guide_value {
+    width: 80%;
+    height: fit-content;
+    max-width: 100rem;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+    font-size: 1.3rem;
+    font-family: NanumSquare;
+    font-weight: 400;
+    line-height: 2.6rem;
+}
+
+.guide_img {
+    display: block;
+    width: 50rem;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guide_explain {
+    width: fit-content;
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0.6rem;
+    padding-bottom: 2rem;
+    color: black;
+    font-size: 1.3rem;
+    font-family: NanumSquare;
+    line-height: 2.6rem;
+}

@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="css/public.css">
     <link rel="stylesheet" type="text/css" href="template/header_footer_template.css">
     <link rel="stylesheet" type="text/css" href="template/header_footer_template_mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/guide.css">
+    <link rel="stylesheet" type="text/css" href="css/guide_mobile.css">
 </head>
 <body>
 
@@ -51,15 +53,72 @@
         </div>
     </header>
 
-    <!-- main -->
-    <main>
+        <!-- main -->
+        <main>
 
-        <!-- section intro -->
-        <section id="intro" class="contents">
-
-        </section>
-
-    </main>
+            <!-- section refund -->
+            <section class="contents">
+                <div class="guide_box">
+                    <h2 class="guide_title">Visual Studio Code 설치 방법</h2>
+                    <hr class="guide_line">
+                    <p class="guide_value">
+                        - <span>파이썬 응용 프로그램 과정</span>과 <span>웹 기초 과정</span> 모든 팀원에게 필요합니다.<br>
+                        - 코딩 전용 문서 작업 프로그램으로, 줄여서 VSC라고 부릅니다.<br>
+                        - VSC를 통해 대부분의 프로그래밍 언어를 작성하고 실행할 수 있습니다.<br>
+                    </p>
+                </div>
+                <div class="guide_box">
+                    <img class="guide_img" src="img/guide/12.png">
+                    <p class="guide_explain">(1) Visual Studio Code의 홈페이지에 접속한 뒤 우측 상단의 Download를 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/13.png">
+                    <p class="guide_explain">(2) 자신의 컴퓨터 운영체제 맞는 버전을 설치해줍니다.<br>맥북이 아닌 이상, Windows를 설치하면됩니다.</p>
+                    <img class="guide_img" src="img/guide/14.png">
+                    <p class="guide_explain">(3) 동의합니다에 체크 후 다음을 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/15.png">
+                    <p class="guide_explain">(4) 따로 선택할 것 없이 다음을 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/16.png">
+                    <p class="guide_explain">(5) 설치를 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/17.png">
+                    <p class="guide_explain">(6) 설치가 진행됩니다.</p>
+                </div>
+                <div class="guide_box">
+                    <h2 class="guide_title">Anaconda Python 설치 방법</h2>
+                    <hr class="guide_line">
+                    <p class="guide_value">
+                        - <span>파이썬 응용 프로그램 과정</span> 팀원에게 필요합니다.<br>
+                        - 기본적인 Python과 함께 유용한 모듈을 같이 포함하고있는 Python 버전입니다.<br>
+                        - 과정 중 배우는 SQLite3와 PyQt 등도 포함되어 있어 간편한 개발 환경 구성이 가능해집니다.<br>
+                    </p>
+                </div>
+                <div class="guide_box">
+                    <img class="guide_img" src="img/guide/1.png">
+                    <p class="guide_explain">(1) Anaconda Python의 홈페이지에 접속한 뒤 우측 상단의 Get Started를 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/2.png">
+                    <p class="guide_explain">(2) Download Anaconda Installers를 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/3.png">
+                    <p class="guide_explain">(3) 자신의 컴퓨터 운영체제 맞는 버전을 설치해줍니다.<br>맥북이 아닌 이상, 64-Bit Windows를 설치하면됩니다.</p>
+                    <img class="guide_img" src="img/guide/4.png">
+                    <p class="guide_explain">(4) Next를 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/5.png">
+                    <p class="guide_explain">(5) I Agree를 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/6.png">
+                    <p class="guide_explain">(6) 따로 선택할 것 없이 Next를 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/7.png">
+                    <p class="guide_explain">(7) Next를 눌러주세요.
+                        <br>간혹 경로에 한글이 들어가면 설치가 되지 않는 경우가 있습니다.
+                        <br>이 경우 한글이 들어있지 않은 다른 경로로 변경해주세요.</p>
+                    <img class="guide_img" src="img/guide/8.png">
+                    <p class="guide_explain">(8) 꼭 <span>첫 번째 체크박스</span>를 체크하시고 Install을 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/9.png">
+                    <p class="guide_explain">(9) 설치가 진행됩니다.</p>
+                    <img class="guide_img" src="img/guide/10.png">
+                    <p class="guide_explain">(10) Next를 눌러주세요.</p>
+                    <img class="guide_img" src="img/guide/11.png">
+                    <p class="guide_explain">(11) 설치가 완료되었습니다.</p>
+                </div>
+            </section>
+    
+        </main>
 
     <!-- footer part -->
     <footer>
@@ -67,7 +126,11 @@
             <p class="footer_text"><span>우리 모두</span>가 성장하는 무대</p>
             <p class="footer_text">스테이지어스</p>
         </div>
-
+        <div id="footer_link_box">
+            <a class="footer_link"><img class="footer_img" src="img/facebook.svg"/></a>
+            <a class="footer_link"><img class="footer_img" src="img/youtube.svg"/></a>
+            <a class="footer_link"><img class="footer_img" src="img/instagram.svg"/></a>
+        </div>
         <div id="footer_index_box">   <!-- innerText script에서 정의 -->
             <div class="footer_index">
                 <p class="footer_index_title">법인명</p>
