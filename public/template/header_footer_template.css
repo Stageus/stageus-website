@@ -204,13 +204,35 @@ footer {
     text-align: center;
 }
 
+#footer_link_box {
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+}
+
+.footer_link {
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+.footer_link + .footer_link {
+    margin-left: 0.6rem;
+}
+
+.footer_img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
 #footer_index_box {
     display: flex;
     flex-wrap: wrap;
     width: 100rem;
     height: fit-content;
     justify-content: space-between;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-right: auto;
     margin-left: auto;
 }
