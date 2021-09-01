@@ -18,6 +18,15 @@
     <link rel="stylesheet" type="text/css" href="css/public.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/index_mobile.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206153151-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-206153151-1');
+    </script>
 </head>
 <body>
 
@@ -26,14 +35,15 @@
         <a id="nav_logo" href="/">
             <image id="logo" src="img/logoBlack.png"></image>
         </a>
-        <ul id="nav_menu_box">   <!-- href script에서 href정의 -->
-            <li><a class="nav_menu nav_hide">스테이지어스</a></li>
+        <ul id="nav_menu_box">
+            <li><a class="nav_menu nav_hide">스테이지어스</a></li>   <!-- href script에서 href정의 -->
             <li><a class="nav_menu nav_hide">커리큘럼</a></li>
             <li><a class="nav_menu nav_hide">FAQ</a></li>
             <li><a class="nav_menu">문의하기</a></li>
         </ul> 
-        <div id="nav_menu_open">   <!-- href script에서 href정의 -->
-            <a class="nav_menu_open_item">스테이지어스</a>
+        <input id="nav_menu_cover"type="button" onclick="menuCloseEvent()"></input>
+        <div id="nav_menu_open">
+            <a class="nav_menu_open_item">스테이지어스</a>   <!-- href script에서 href정의 -->
             <a class="nav_menu_open_item">커리큘럼</a>
             <a class="nav_menu_open_item">FAQ</a>
             <a class="nav_menu_open_item">문의하기</a>
@@ -228,7 +238,7 @@
                         <h2 class="mentor_title">학력</h2>
                         <h3 class="mentor_info">인하대학교 컴퓨터공학과(학사/석사)</h3>
                         <h2 class="mentor_title">이메일</h2>
-                        <h3 class="mentor_info">minseckchoi@gmail.com</h1>
+                        <h3 class="mentor_info">cono@stageus.co.kr</h1>
                     </div>
                     <div id="mentor_aditional_box">
                         <a id="mentor_career" href="files/career.pdf">개인 경력</a>
@@ -246,12 +256,11 @@
             <h2 class="content_subtitle">사무실 환경</h2>
             <h1 class="content_title">여러분들이 성장할 공간 입니다.</h1>
             <div class="content_explain">
-                <p class="content_value">소수정예로 진행될 수 있는 <span>오프라인 강의</span> 공간</p>
-                <p class="content_value">20명 이상이 넉넉하게 공부할 수 있는 <span>자습 공간</span></p>
-                <p class="content_value">개발 집중도를 높여줄 <span>음료수</span>와 <span>커피</span> 무료 제공</p>
+                <p class="content_value"><span>소수정예</span>로 진행될 수 있는 오프라인 강의 공간과 20명 이상이 넉넉하게 공부할 수 있는 <span>자습 공간</span></p>
+                <p class="content_value">편한 의자와 전좌석 개발용 <span>확장 모니터</span> 비치 & 개발 집중도를 높여줄 <span>음료수</span>와 <span>커피</span> 무한 제공</p>
             </div>
             <div id="office_box">
-                <iframe id="map" class="image_src_border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1331.724924064088!2d126.65433373305243!3d37.451429853729564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b79aa9c9822eb%3A0x656ee3c421e9e601!2z7J247LKc6rSR7Jet7IucIOuCqOq1rCDsmqntmIQxLjTrj5kg7J247ZWY66GcIDU1!5e0!3m2!1sko!2skr!4v1627247102299!5m2!1sko!2skr" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe id="map" class="image_src_border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.3736338616172!2d126.6522885160645!3d37.45189923844134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b794e10b52b07%3A0x5dc168b0a05eecdd!2z7Iqk7YWM7J207KeA7Ja07IqkIC0g6rCc67Cc7J6QIOycoeyEsSDshLzthLA!5e0!3m2!1sko!2skr!4v1630181210520!5m2!1sko!2skr" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <p id="office_addr">(22207) 인천광역시 미추홀구 인하로55 B1</p>
         </section>
@@ -298,6 +307,7 @@
             <a class="footer_index_subvalue">커리큘럼</a>
             <a class="footer_index_subvalue">FAQ</a>
             <a class="footer_index_subvalue">문의하기</a>
+            <a class="footer_index_subvalue">확불약관</a>
         </div> 
     </footer>
 
