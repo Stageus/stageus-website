@@ -354,7 +354,7 @@
 
     #lecture_box {
         width: 22rem;
-        height: 56rem;
+        height: 58rem;
     }
 
     .lecture_index {
@@ -485,7 +485,7 @@
         width: 26rem;
     }
 
-    #mentor_career {
+    .mentor_career {
         width: 16rem;
     }
 
@@ -569,7 +569,7 @@
     }
 
     #header_text_title {
-        padding-top: 7.5rem;
+        padding-top: 7rem;
         padding-left: 2rem;
         margin-bottom: 0.8rem;
         font-size: 1.5rem;
@@ -577,7 +577,7 @@
 
     .header_text_index {
         padding-left: 2rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .header_text_index + .header_text_index {
         margin-top: 0.4rem;
@@ -604,7 +604,7 @@
     }
 
     .intro_text {
-        font-size: 1rem;
+        font-size: 1.1rem;
         text-align: center;
     }
 
@@ -729,7 +729,7 @@
 
     .benefit_text {
         margin-top: 1rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
         line-height: 1.2rem;
     }
 
@@ -777,14 +777,14 @@
         margin-right: auto;
     }
 
-    #mentor_career {
+    .mentor_career {
         width: 100%;
         height: 100% - 2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
         font-size: 1rem;
     }
-    #mentor_career + #mentor_career {
+    .mentor_career + .mentor_career {
         margin-left: 0;
         margin-top: 1rem;
     }

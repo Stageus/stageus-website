@@ -72,8 +72,19 @@ p > span, h2 > span {
 
 .image_src_border {
     border-radius: 0.4rem;
-    /* box-shadow: 0rem 0rem 1.2rem #aaaaaa; */
     margin: auto;
+}
+
+.grey_background {
+    background-color: #f9f9f9;
+}
+
+.white_background {
+    background-color: #ffffff;
+}
+
+.black_background {
+    background-color: #1E2022;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -92,6 +103,7 @@ p > span, h2 > span {
 
     .content_subtitle {
         font-size: 1.2rem;
+        margin-bottom: 0.8rem;
     }
     
     .content_title {
@@ -123,6 +135,7 @@ p > span, h2 > span {
 
     .content_subtitle {
         font-size: 1rem;
+        margin-bottom: 0.6rem;
     }
     
     .content_title {
@@ -136,7 +149,7 @@ p > span, h2 > span {
 
     .content_value {
         font-family: NanumSquare;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: center;
         line-height: 1.3rem;
     }

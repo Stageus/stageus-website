@@ -1,4 +1,4 @@
-const registerNum = [3, 4, 0, 2, 2, 0];
+const registerNum = [0, 1, 0, 0, 0, 0];
 
 const path = [
     "introduce",

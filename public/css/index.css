@@ -8,7 +8,6 @@ nav {
     height: 6rem;
     padding-left: 12rem;
     padding-right: 12rem;
-    background-color: #ffffff;
 }
 
 #nav_menu_box {
@@ -140,11 +139,6 @@ header {
 
 /* intro */
 
-#intro {
-    width: 100%;
-    background-color: #ffffff;
-}
-
 #intro_content {
     display: flex;
     align-items: center;
@@ -181,10 +175,6 @@ header {
 }
 
 /* introduction */
-
-#introduction {
-    background-color:  #f9fafb;
-}
 
 #introduction_box {
     display: flex;
@@ -241,7 +231,6 @@ header {
     padding-bottom: 2.5rem;
     text-align: center;
     border-radius: 0.4rem;
-    background-color: #f9fafb;
 }
 
 .lecture_title {
@@ -315,10 +304,6 @@ header {
 }
 
 /* content_distinction */
-
-#distinction {
-    background-color:  #f9fafb;
-}
 
 #distinction_box {
     display: flex;
@@ -430,10 +415,6 @@ header {
 
 /* mentor */
 
-#mentor {
-    background-color: #f9fafb;
-}
-
 #mentor_box {
     display: flex;
     width: fit-content;
@@ -484,12 +465,11 @@ header {
     height: 4rem;
 }
 
-#mentor_career {
+.mentor_career {
     width: 20rem;
     height: 100% - 2.4rem;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-    background-color: #f9fafb;
     border: 0.1rem solid #4088eb;
     border-radius: 0.4rem;
     color: black;
@@ -501,12 +481,12 @@ header {
     transition-property: background-color, color;
     transition-duration: 0.2s;
 }
-#mentor_career:hover {
+.mentor_career:hover {
     background-color: #4088eb;
     color: white;
     cursor: pointer;
 }
-#mentor_career + #mentor_career {
+.mentor_career + .mentor_career {
     margin-left: 1rem;
 }
 
@@ -560,7 +540,6 @@ footer {
     width: 100%;
     padding-top: 8rem;
     padding-bottom: 2.8rem;
-    background-color: #1E2022;
 }
 
 #footer_box {
