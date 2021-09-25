@@ -424,9 +424,8 @@ header {
 
 #mentor_image {
     display: inline-block;
-    width: 26rem;
+    width: 20rem;
     margin-right: 7rem;
-    border-radius: 20rem;
 }
 
 #mentor_info_box {
