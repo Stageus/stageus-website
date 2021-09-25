@@ -13,17 +13,28 @@
 반갑습니다
 
 볼드체 : **볼드체**
+
 이텔리체 : *이텔릭체*
+
 취소선 : ~~취소선~~
+
 밑줄 : __밑줄__
 
+[네이버 바로가기](https://www.naver.com)
 
+[스테이지어스 홈페이지](https://www.stageus.co.kr)
 
+![엑스박스](./public/img/mentor_3.jpg)
 
+![엑스박스](https://stageus.co.kr/img/logoBlack.png)
 
-
-
-
+```html
+<header>
+    <div>
+        <p>내용 입니다.</p>
+    </div>
+</header>
+```
 
 
 
