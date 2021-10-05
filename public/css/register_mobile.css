@@ -1,0 +1,61 @@
+@media screen and (max-width: 767px) {
+    
+    .register_box {
+        width: 80%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
+    }
+
+    .register_title {
+        font-size: 1.3rem;
+    }
+
+    .register_value {
+        height: fit-content;
+        max-width: 100rem;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .register_form + .register_form {
+        margin-top: 2.6rem;
+    }
+
+    .register_form_contents {
+        margin-top: 1.2rem;
+    }
+
+    .register_radio {
+        width: 0.6rem;
+        height: 0.6rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .register_input_text {
+        width: 90%;
+        height: 2.6rem;
+        margin-top: 1.20rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 1.1rem;
+    }
+
+    .register_radio_label {
+        font-size: 0.9rem;
+    }
+
+    #register_button {
+        width: 90%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.2rem;
+        margin-top: 4.6rem;
+    }
+}

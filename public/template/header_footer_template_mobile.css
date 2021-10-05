@@ -55,7 +55,7 @@
     #header_text_title {
         padding-top: 19rem;
         padding-left: 6rem;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
         font-size: 5rem;
     }
 
@@ -109,9 +109,9 @@
     }
 
     #header_text_title {
-        padding-top: 9rem;
+        padding-top: 11rem;
         padding-left: 2.2rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.4rem;
         font-size: 2.2rem;
     }
 
@@ -177,15 +177,15 @@
     }
 
     #header_text_title {
-        padding-top: 7.5rem;
+        padding-top: 7.8rem;
         padding-left: 2rem;
-        margin-bottom: 0.8rem;
-        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+        font-size: 1.8rem;
     }
 
     .header_text_index {
         padding-left: 2rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .header_text_index + .header_text_index {
         margin-top: 0.4rem;
