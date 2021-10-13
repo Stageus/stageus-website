@@ -105,34 +105,34 @@
             <div class="content_explain">
                 <ul id="lecture_box">
                     <li class="lecture_index grey_background">
-                        <h2 class="lecture_title">파이썬 응용 프로그램 과정</h2>
-                        <h3 class="lecture_info">11월 15일 ~ 1월 24일 (월)</h3>
+                        <h2 class="lecture_title"></h2>
+                        <h3 class="lecture_info"></h3>
                         <a class="lecture_empty" href="files/curriculum.pdf" onmouseover="lectureMouseOverEvent(0)" onmouseout="lectureMouseLeaveEvent(0)"></a>
                     </li>
                     <li class="lecture_index grey_background">
-                        <h2 class="lecture_title">웹 기초 과정</h2>
-                        <h3 class="lecture_info">11월 16일 ~ 1월 25일 (화)</h3>
+                        <h2 class="lecture_title"></h2>
+                        <h3 class="lecture_info"></h3>
                         <a class="lecture_empty" href="files/curriculum.pdf" onmouseover="lectureMouseOverEvent(1)" onmouseout="lectureMouseLeaveEvent(1)"></a>
                     </li>
                     <li class="lecture_index grey_background">
-                        <h2 class="lecture_title">웹 프론트엔드 과정</h2>
-                        <h3 class="lecture_info">11월 17일 ~ 2월 9일 (수)</h3>
+                        <h2 class="lecture_title"></h2>
+                        <h3 class="lecture_info"></h3>
                         <a class="lecture_empty" href="files/curriculum.pdf" onmouseover="lectureMouseOverEvent(2)" onmouseout="lectureMouseLeaveEvent(2)"></a>
                     </li>
                     <li class="lecture_index grey_background">
-                        <h2 class="lecture_title">백엔드 서버 과정</h2>
-                        <h3 class="lecture_info">11월 18일 ~ 2월 10일 (목)</h3>
+                        <h2 class="lecture_title"></h2>
+                        <h3 class="lecture_info"></h3>
                         <a class="lecture_empty" href="files/curriculum.pdf" onmouseover="lectureMouseOverEvent(3)" onmouseout="lectureMouseLeaveEvent(3)"></a>
                     </li>
                     <li class="lecture_index grey_background">
-                        <h2 class="lecture_title">안드로이드 앱 과정</h2>
-                        <h3 class="lecture_info">11월 19일 ~ 2월 11일 (일)</h3>
-                        <a class="lecture_empty" href="files/curriculum.pdf" onmouseover="lectureMouseOverEvent(5)" onmouseout="lectureMouseLeaveEvent(5)"></a>                       
+                        <h2 class="lecture_title"></h2>
+                        <h3 class="lecture_info"></h3>
+                        <a class="lecture_empty" href="files/curriculum.pdf" onmouseover="lectureMouseOverEvent(4)" onmouseout="lectureMouseLeaveEvent(5)"></a>                       
                     </li>
                     <li class="lecture_index grey_background">
-                        <h2 class="lecture_title">웹 기초 과정</h2>
-                        <h3 class="lecture_info">11월 21일 ~ 1월 30일 (일)</h3>
-                        <a class="lecture_empty" href="files/curriculum.pdf" onmouseover="lectureMouseOverEvent(4)" onmouseout="lectureMouseLeaveEvent(4)"></a>
+                        <h2 class="lecture_title"></h2>
+                        <h3 class="lecture_info"></h3>
+                        <a class="lecture_empty" href="files/curriculum.pdf" onmouseover="lectureMouseOverEvent(5)" onmouseout="lectureMouseLeaveEvent(4)"></a>
                     </li>
                 </ul>
             </div>
@@ -318,10 +318,22 @@
     <script>        
         window.onload = () => {
 
-            // Lecture 수강 인원 삽입 함수
-            let list = document.getElementsByClassName("lecture_empty");
-            [...list].forEach((item, index) => {
-                item.innerHTML = registerNum[index] + "/5";
+            // Lecture 명 삽입
+            let lectureName = document.getElementsByClassName("lecture_title");
+            [...lectureName].forEach((item, index) => {
+                item.innerHTML = lecture.information[index].name;
+            })
+
+            // Lecture 기간 삽입
+            let lectureDuration = document.getElementsByClassName("lecture_info");
+            [...lectureDuration].forEach((item, index) => {
+                item.innerHTML = lecture.information[index].duration;
+            })
+
+            // Lecture 수강 인원 삽입
+            let lectureNumber = document.getElementsByClassName("lecture_empty");
+            [...lectureNumber].forEach((item, index) => {
+                item.innerHTML = lecture.information[index].number + "/5";
             })
         }
 
@@ -332,7 +344,7 @@
         }
         const lectureMouseLeaveEvent = (index) => {
             let list = document.getElementsByClassName("lecture_empty");
-            list[index].innerHTML = registerNum[index] + "/5";
+            list[index].innerHTML = lecture.information[index].number + "/5";
         }
     </script>
 
