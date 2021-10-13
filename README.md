@@ -1,59 +1,4 @@
-# 스테이지어스
-## 스테이지어스
-### 스테이지어스
-#### 스테이지어스
-##### 스테이지어스
-###### 스테이지어스
-
-
-안녕하세요.
-
-스테이지어스 홈페이지 깃허브 입니다.
-
-반갑습니다
-
-볼드체 : **볼드체**
-
-이텔리체 : *이텔릭체*
-
-취소선 : ~~취소선~~
-
-밑줄 : __밑줄__
-
-[네이버 바로가기](https://www.naver.com)
-
-[스테이지어스 홈페이지](https://www.stageus.co.kr)
-
-![엑스박스](./public/img/mentor_3.jpg)
-
-![엑스박스](https://stageus.co.kr/img/logoBlack.png)
-
-```html
-<header>
-    <div>
-        <p>내용 입니다.</p>
-    </div>
-</header>
-```
-
-|번호|이름|아이디|비밀번호|
-|---|---|---|---|
-|1|코노|cono|1234|
-|2|카티|kati|1234|
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Introduction
+# Introduction
 주식회사 스테이지어스의 소개 홈페이지 입니다.
 
 SPA이며, 효율적인 SEO를 위해 바닐라 웹 방식으로 구현되어있습니다.
@@ -132,4 +77,9 @@ Next.js를 공부하고 React로 리팩토링 할 계획입니다.
 ### 2021 08 15
 - FAQ 페이지 구성 완료
 - FAQ 페이지 CSS 개발 및 CSS_mobile 개발
-- index 페이지 반응형 CSS 소량 수정 -->
+- index 페이지 반응형 CSS 소량 수정
+
+### 2021 10 14
+- postgreSQL 기반 RDB 구축
+- register page 개발
+- register API 개발
