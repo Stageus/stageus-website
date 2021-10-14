@@ -2,7 +2,7 @@ const path = require('path');
 const router = require('express').Router();
 const { Client } = require('pg');
 
-// 페이지 출력 api
+// Insert register api
 router.post('', (req, res) => {
 
     // request AJAX data
@@ -43,6 +43,55 @@ router.post('', (req, res) => {
         if (!err) {
             result.success = true
             res.send(result);
+        } else {
+            console.log(err);
+        }
+        pg.end();
+    })
+});
+
+// Select register api
+router.get('', (req, res) => {
+
+    // Init response data
+    const result = {
+        "list" : []
+    };
+
+    // Init psql account
+    const pg = new Client({
+        user: "ubuntu",
+        host: "localhost",
+        database: "stageus",
+        password: "stageus0104",
+        prot: 5432
+    })
+    const query = "select * from homepage.register";
+
+    pg.connect((err) => {
+        if (err) {
+            console.log(err);
+        }
+    });
+    pg.query(query, (err, res2) => {
+        if (!err) {
+
+            const rowList = res2.rows;
+
+            rowList.forEach((elem, index) => {
+                const row = [
+                    res2.rows[index].name,
+                    res2.rows[index].contact,
+                    res2.rows[index].job,
+                    res2.rows[index].option,
+                    res2.rows[index].subject,
+                    res2.rows[index].register_date
+                ];
+                result.list.push(row);
+            })
+
+            res.send(result);
+
         } else {
             console.log(err);
         }

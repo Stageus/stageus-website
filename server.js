@@ -73,24 +73,19 @@ app.get('/guide', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/guide.html'));
 });
 
+// 신청서 관련 API
+const register = require('./router/register');
+app.use('/register', register);
+
 // "신청서" Page
 app.get('/7265676973746572', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/register.html'));
 });
 
-// "신청서 입력" API
-const register = require('./router/register');
-app.use('/register', register);
-
-// // "팀원 목록" Page
-// app.get('/6d656d6265724c697374', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public/memberList.html'));
-// });
-
-// // "팀원 목록 읽기" API
-// app.post('/memberList', (req, res) => {
-// });
-
+// "팀원 목록" Page
+app.get('/6d656d6265724c697374', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/management.html'));
+});
 
 // header-footer template
 app.get('/testTemplate', (req, res) => {

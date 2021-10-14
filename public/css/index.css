@@ -24,7 +24,7 @@ nav {
     padding: 0.6rem;
     margin-left: 3.4rem;
     text-decoration: none;
-    color: black;
+    color: #1E2022;
     font-size: 1.2rem;
     font-family: NanumSquare;
     font-weight: 600;
@@ -196,7 +196,7 @@ header {
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
-    color: black;
+    color: #1E2022;
     font-size: 1.6rem;
     font-family: NanumSquare;
     border-radius: 0.4rem;
@@ -238,7 +238,7 @@ header {
     margin: 0;
     font-size: 1.4rem;
     font-weight: 600;
-    color: black;
+    color: #1E2022;
     font-family: NanumSquare;
     margin-bottom: 1.4rem;
 }
@@ -248,7 +248,7 @@ header {
     margin: 0;
     font-size: 1.2rem;
     font-weight: 400;
-    color: black;
+    color: #1E2022;
     font-family: NanumSquare;
     margin-bottom: 1.4rem;
 }
@@ -289,7 +289,7 @@ header {
     padding-bottom: 1.5rem;
     border: 0.1rem solid #4088eb;
     border-radius: 0.4rem;
-    color: black;
+    color: #1E2022;
     font-size: 1.6rem;
     font-family: NanumSquare;
     text-decoration: none;
@@ -328,7 +328,7 @@ header {
 .distinction_item_title {
     margin: 0;
     margin-top: 3rem;
-    color: black;
+    color: #1E2022;
     font-size: 1.8rem;
     font-family: NanumSquare;
     text-align: center;
@@ -337,7 +337,7 @@ header {
 .distinction_item_text {
     margin: 0;
     margin-top: 2rem;
-    color: black;
+    color: #1E2022;
     font-size: 1.4rem;
     font-family: NanumSquare;
     line-height: 2.2rem;
@@ -399,7 +399,7 @@ header {
 
 .benefit_title {
     margin: 0;  
-    color: black;
+    color: #1E2022;
     font-size: 2rem;
     font-family: NanumSquare;
 }
@@ -407,7 +407,7 @@ header {
 .benefit_text {
     margin: 0;
     margin-top: 2rem;
-    color: black;
+    color: #1E2022;
     font-size: 1.6rem;
     font-family: NanumSquare;
     line-height: 2.2rem;
@@ -439,7 +439,7 @@ header {
 
 .mentor_title {
     margin: 0;
-    color: black;
+    color: #1E2022;
     font-size: 1.6rem;
     font-family: NanumSquare;
     font-weight: 600;
@@ -448,7 +448,7 @@ header {
 .mentor_info {
     margin: 0;
     margin-top: 0.6rem;
-    color: black;
+    color: #1E2022;
     font-size: 1.4rem;
     font-family: NanumSquare;
     font-weight: 400;
@@ -471,7 +471,7 @@ header {
     padding-bottom: 1.2rem;
     border: 0.1rem solid #4088eb;
     border-radius: 0.4rem;
-    color: black;
+    color: #1E2022;
     font-size: 1.4rem;
     font-family: Nanumsquare;;
     text-align: center;

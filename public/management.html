@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>스테이지어스 - 개발자 육성 센터</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="description" content="개발자 육성 센터 스테이지어스 - 코딩을 잘하는 것 만으론 부족합니다. 능력 있는 개발자가 될 수 있어야 합니다. 스테이지어스는 능력 있는 개발자가 되기 위한 여러분의 무대 입니다.">
+    <meta name="keywords" content="코딩, 프로그래밍, 개발자 육성 센터, 코딩 학원, 프로그래밍 학원, 개발자, 웹 프론트엔드, 백엔드, 서버, 웹서버, 앱, 안드로이드, 리액트, 노드, 자바스크립트">
+    <meta name="robots" content="index, follow"> 
+    <meta property="og:type" content="website"> 
+    <meta property="og:site_name" content="스테이지어스">
+    <meta property="og:title" content="스테이지어스">
+    <meta property="og:description" content="개발자 육성 센터 스테이지어스 - 코딩을 잘하는 것 만으론 부족합니다. 능력 있는 개발자가 될 수 있어야 합니다. 스테이지어스는 능력 있는 개발자가 되기 위한 여러분의 무대 입니다.">
+    <meta property="og:image" content="img/logoBlack.png">
+    <meta property="og:url" content="https://www.stageus.co.kr">
+    <link rel="canonical" href="https://www.stageus.co.kr">
+    <link rel="icon" type="image/x-icon" href="img/logoMark.png" >
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="template/header_footer_template.css">
+    <link rel="stylesheet" type="text/css" href="template/header_footer_template_mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/management.css">
+    
+</head>
+<body>
+
+    <script>
+        window.onload = () => {
+
+            fetch("register")
+            .then ((response) => response.json())
+            .then ((result) => {
+
+                result.list.forEach((item, index) => {
+
+                    const tmpTr = document.createElement("tr");
+                    tmpTr.className = "table_row";
+
+                    item[4] = lecture.information[item[4]].name;
+
+                    for (let num = 0; num<6; num++) {
+                        let tmpTd = document.createElement("td");
+                        tmpTd.className = "table_column";
+                        tmpTd.innerHTML = item[num];
+                        tmpTr.appendChild(tmpTd);
+                    }
+
+                    const tmpTd = document.createElement("td");
+                    tmpTd.className = "table_column";
+
+                    const editBtn = document.createElement("input");
+                    editBtn.type = "button";
+                    editBtn.className = "table_column_button";
+                    editBtn.value = "EDIT";
+                    tmpTd.appendChild(editBtn);
+
+                    const delBtn = document.createElement("input");
+                    delBtn.type = "button";
+                    delBtn.className = "table_column_button";
+                    delBtn.value = "DEL";
+                    tmpTd.appendChild(delBtn);
+
+                    tmpTr.appendChild(tmpTd);
+
+                    document.getElementById("membem_list").appendChild(tmpTr);
+                })
+            })
+            .catch((error) => {
+                alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
+            });
+        }
+    </script>
+
+    <!-- nav -->
+    <nav>
+        <a id="nav_logo" href="/">
+            <image id="logo" src="img/logoBlack.png"></image>
+        </a>
+        <ul id="nav_menu_box">   <!-- href script에서 정의 -->
+            <li><a class="nav_menu nav_hide">스테이지어스</a></li>
+            <li><a class="nav_menu nav_hide">커리큘럼</a></li>
+            <li><a class="nav_menu nav_hide">FAQ</a></li>
+            <li><a class="nav_menu">문의하기</a></li>
+        </ul> 
+        <input id="nav_menu_cover"type="button" onclick="menuCloseEvent()"></input>
+        <div id="nav_menu_open">
+            <a class="nav_menu_open_item">스테이지어스</a>   <!-- href script에서 href정의 -->
+            <a class="nav_menu_open_item">커리큘럼</a>
+            <a class="nav_menu_open_item">FAQ</a>
+            <a class="nav_menu_open_item">문의하기</a>
+        </div>
+        <input id="nav_menu_button" type="button" onclick="menuOpenEvent()">
+    </nav>
+
+    <!-- main -->
+    <main>
+
+        <!-- section refund -->
+        <section class="contents">
+            <table id="membem_list">
+                <tr class="table_row">
+                    <td class="table_column table_column_title">이름</td>
+                    <td class="table_column table_column_title">연락처</td>
+                    <td class="table_column table_column_title">직업</td>
+                    <td class="table_column table_column_title">옵션</td>
+                    <td class="table_column table_column_title">신청 과목</td>
+                    <td class="table_column table_column_title">가입일</td>
+                    <td class="table_column table_column_title">관리</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="js/navEvent.js"></script>
+    <script src="js/initData.js"></script>
+
+</body>

@@ -16,7 +16,6 @@ const menuOpenEvent = () => {
 }
 
 // Navigastion 닫힘 이벤트
-
 const menuCloseEvent = () => {
     const target = document.getElementById("nav_menu_open");
     target.style.left = "110%";

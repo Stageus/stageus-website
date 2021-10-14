@@ -23,6 +23,18 @@
 </head>
 <body>
 
+    <script>
+        window.onload = () => {
+            // 선택된 nav 밑줄 처리
+            const link1 = document.getElementsByClassName("nav_menu");
+            link1[0].style.borderBottom = "0.2rem solid #4088eb";
+
+            // 추후 지울 부분
+            alert("죄송합니다.\n현재 페이지 단장 중입니다.")
+            location.href = "/";
+        }
+    </script>
+
     <!-- nav -->
     <nav>
         <a id="nav_logo" href="/">
@@ -168,13 +180,5 @@
     <script src="data.js"></script>
     <script src="js/navEvent.js"></script>
     <script src="js/initData.js"></script>
-    <script>
-        window.onload = () => {
-            
-            // 선택된 nav 밑줄 처리
-            const link1 = document.getElementsByClassName("nav_menu");
-            link1[0].style.borderBottom = "0.2rem solid #4088eb";
-        }
-    </script>
 
 </body>

@@ -1,0 +1,53 @@
+section {
+    background-color: #f9f9f9;
+}
+
+#membem_list {
+    width: 80%;
+    max-width: 140rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+    background-color: white;
+    color: #1E2022;
+    font-size: 1.3rem;
+    font-family: NanumSquare;
+    font-weight: 400;
+    border-spacing: 0;
+}
+
+.table_row {
+    height: 3.6rem;
+}
+
+.table_column_title {
+    background-color: #4088eb;
+    color: white;
+}
+
+.table_column {
+    width: fit-content;
+    text-align: center;
+    border-bottom: 1px solid #1E2022;
+}
+
+.table_column_button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: white;
+    border: 1px solid #4088eb;
+    border-radius: 0.4rem;
+    color: #1E2022;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+}
+.table_column_button:hover {
+    background-color: #4088eb;
+    color: white;
+    cursor: pointer;
+}
+.table_column_button + .table_column_button {
+    margin-left: 0.6rem;
+}

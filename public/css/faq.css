@@ -4,7 +4,7 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1rem;
-    color: black;
+    color: #1E2022;
     font-size: 1.6rem;
     font-family: NanumSquare;
     font-weight: 400;
@@ -13,7 +13,7 @@
 .faq_line {
     width: 80%;
     max-width: 83rem;
-    background-color: black;
+    background-color: #1E2022;
     margin-bottom: 2.6rem;
 }
 
@@ -68,7 +68,7 @@
     padding: 1.6rem;
     background-color: #f4f6f7;
     border-radius: 0.4rem;
-    color: black;
+    color: #1E2022;
     font-size: 1.3rem;
     font-family: NanumSquare;
     font-weight: 400;
