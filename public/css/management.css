@@ -1,5 +1,50 @@
+main {
+    display: none;
+}
+
 section {
     background-color: #f9f9f9;
+}
+
+#auth_box {
+    width: fit-content;
+    margin-top: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auth_input {
+    display: block;
+    width: 40rem;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.4rem;
+    font-family: NanumSquare;
+    font-weight: 400;
+    color: #1E2022;
+    border: 1px solid #1E2022;
+    border-radius: 0.4rem;
+}
+.auth_input + .auth_input {
+    margin-top: 1rem;
+}
+
+.auth_button {
+    display: block;
+    width: 42.16rem;
+    height: 3.8rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-family: NanumSquare;
+    font-weight: 400;
+    color: white;
+    background-color: #4088eb;
+    border: none;
+    border-radius: 0.4rem;
+}
+.auth_button {
+    cursor: pointer;
 }
 
 #membem_list {

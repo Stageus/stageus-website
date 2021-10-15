@@ -91,8 +91,14 @@
         <input id="nav_menu_button" type="button" onclick="menuOpenEvent()">
     </nav>
 
+    <div id="auth_box">
+        <input id="auth_id_input" class="auth_input" type="text" placeholder="아이디">
+        <input id="auth_pw_input" class="auth_input" type="text" placeholder="비밀번호">
+        <input class="auth_button" type="button" value="관리자 인증" onclick="getAuth()">
+    </div>
+
     <!-- main -->
-    <main>
+    <main id="auth_contents">
 
         <!-- section refund -->
         <section class="contents">
@@ -113,5 +119,37 @@
     <script src="data.js"></script>
     <script src="js/navEvent.js"></script>
     <script src="js/initData.js"></script>
+
+    <script>
+        const getAuth = () => {
+            const idValue = document.getElementById("auth_id_input").value;
+            const pwValue = document.getElementById("auth_pw_input").value;
+
+            fetch("/auth", {
+                method: "POST", 
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify ({   
+                    "idValue": idValue,
+                    "pwValue": pwValue,
+                })
+            })
+            .then ((response) => response.json())
+            .then ((result) => {
+
+                if (result.success) {
+                    document.getElementById("auth_contents").style.display = "block";
+                    document.getElementById("auth_box").style.display = "none";
+                }
+                else if (!result.success) {
+                    alert("계정 정보 오류");
+                }
+            })
+            .catch((error) => {   // 통신에 실패 했을 때
+                alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
+            });
+        }
+    </script>
 
 </body>

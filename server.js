@@ -73,7 +73,7 @@ app.get('/guide', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/guide.html'));
 });
 
-// 신청서 관련 API
+// 신청서 API
 const register = require('./router/register');
 app.use('/register', register);
 
@@ -86,6 +86,10 @@ app.get('/7265676973746572', (req, res) => {
 app.get('/6d656d6265724c697374', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/management.html'));
 });
+
+// 관리자 인증 API
+const auth = require("./router/auth");
+app.use('/auth', auth);
 
 // header-footer template
 app.get('/testTemplate', (req, res) => {
