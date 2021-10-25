@@ -243,7 +243,9 @@
                     "contactValue": contactValue,
                     "jobValue": jobValue,
                     "optionValue": optionValue,
-                    "subjectValue": subjectValue
+                    "subjectValue": lecture.information[subjectValue].name,
+                    "generationValue": lecture.generation,
+                    "durationValue": lecture.information[subjectValue].duration,
                 })
             })
             .then ((response) => response.json())

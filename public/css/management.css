@@ -47,12 +47,42 @@ section {
     cursor: pointer;
 }
 
+#auth_logout {
+    display: block;
+    margin-left: auto;
+    margin-right: 10%;
+    width: 10rem;
+    height: 2.6rem;
+    background-color: white;
+    color: #1E2022;
+    border: 1px solid #4088eb;
+    border-radius: 0.4rem;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+}
+#auth_logout:hover {
+    background-color: #4088eb;
+    color: white;
+    cursor: pointer;
+}
+
+.contents_title {
+    width: 80%;
+    max-width: 140rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: NanumSquare;
+    font-size: 1.6rem;
+    text-align: left;
+    font-weight: 400;
+}
+
 #membem_list {
     width: 80%;
     max-width: 140rem;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 3rem;
     background-color: white;
     color: #1E2022;
     font-size: 1.3rem;

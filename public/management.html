@@ -26,47 +26,24 @@
     <script>
         window.onload = () => {
 
-            fetch("register")
-            .then ((response) => response.json())
-            .then ((result) => {
-
-                result.list.forEach((item, index) => {
-
-                    const tmpTr = document.createElement("tr");
-                    tmpTr.className = "table_row";
-
-                    item[4] = lecture.information[item[4]].name;
-
-                    for (let num = 0; num<6; num++) {
-                        let tmpTd = document.createElement("td");
-                        tmpTd.className = "table_column";
-                        tmpTd.innerHTML = item[num];
-                        tmpTr.appendChild(tmpTd);
+            // 토큰 존재시 검증 과정
+            if (localStorage.getItem("management_token")) {
+                fetch("/auth/varify", {
+                    "method": "POST",
+                    "headers": {
+                        "auth": localStorage.getItem("management_token")
                     }
-
-                    const tmpTd = document.createElement("td");
-                    tmpTd.className = "table_column";
-
-                    const editBtn = document.createElement("input");
-                    editBtn.type = "button";
-                    editBtn.className = "table_column_button";
-                    editBtn.value = "EDIT";
-                    tmpTd.appendChild(editBtn);
-
-                    const delBtn = document.createElement("input");
-                    delBtn.type = "button";
-                    delBtn.className = "table_column_button";
-                    delBtn.value = "DEL";
-                    tmpTd.appendChild(delBtn);
-
-                    tmpTr.appendChild(tmpTd);
-
-                    document.getElementById("membem_list").appendChild(tmpTr);
                 })
-            })
-            .catch((error) => {
-                alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
-            });
+                .then ((response) => response.json())
+                .then ((result) => {
+                    if (result.success) {
+                        loadData();
+                    } else if (!result.success) {
+                        alert(result.message);
+                        localStorage.removeItem("management_token");
+                    }
+                })
+            }
         }
     </script>
 
@@ -94,22 +71,27 @@
     <div id="auth_box">
         <input id="auth_id_input" class="auth_input" type="text" placeholder="아이디">
         <input id="auth_pw_input" class="auth_input" type="text" placeholder="비밀번호">
-        <input class="auth_button" type="button" value="관리자 인증" onclick="getAuth()">
+        <input class="auth_button" type="button" value="관리자 인증" onclick="authEvent()">
     </div>
 
     <!-- main -->
-    <main id="auth_contents">
+    <main id="contents_box">
 
-        <!-- section refund -->
+        <!-- section Member List -->
         <section class="contents">
+            <input id="auth_logout" type="button" value="LOGOUT" onclick="logoutEvent()">
+            <h1 class="contents_title">팀원 목록</h1>
             <table id="membem_list">
                 <tr class="table_row">
                     <td class="table_column table_column_title">이름</td>
                     <td class="table_column table_column_title">연락처</td>
                     <td class="table_column table_column_title">직업</td>
                     <td class="table_column table_column_title">옵션</td>
-                    <td class="table_column table_column_title">신청 과목</td>
+                    <td class="table_column table_column_title">기수</td>
+                    <td class="table_column table_column_title">과정명</td>
+                    <td class="table_column table_column_title">기간</td>
                     <td class="table_column table_column_title">가입일</td>
+                    <td class="table_column table_column_title">메모</td>
                     <td class="table_column table_column_title">관리</td>
                 </tr>
             </table>
@@ -119,9 +101,16 @@
     <script src="data.js"></script>
     <script src="js/navEvent.js"></script>
     <script src="js/initData.js"></script>
-
     <script>
-        const getAuth = () => {
+
+        // 로그아웃 이벤트
+        const logoutEvent = () => {
+            localStorage.removeItem("management_token");
+            location.reload();
+        }
+
+        // 관리자 계정 인증 이벤트
+        const authEvent = () => {
             const idValue = document.getElementById("auth_id_input").value;
             const pwValue = document.getElementById("auth_pw_input").value;
 
@@ -139,16 +128,110 @@
             .then ((result) => {
 
                 if (result.success) {
-                    document.getElementById("auth_contents").style.display = "block";
-                    document.getElementById("auth_box").style.display = "none";
+                    localStorage.setItem("management_token", result.token);
+                    loadData();
                 }
                 else if (!result.success) {
-                    alert("계정 정보 오류");
+                    alert(result.message);
                 }
             })
             .catch((error) => {   // 통신에 실패 했을 때
+                console.log("error");
                 alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
             });
+        }
+
+        // 회원 정보 로드 함수
+        const loadData = () => {
+
+            document.getElementById("contents_box").style.display = "block";
+            document.getElementById("auth_box").style.display = "none";
+
+            fetch("register")
+            .then ((response) => response.json())
+            .then ((result) => {
+
+                result.list.forEach((item, index) => {
+
+                    const tmpTr = document.createElement("tr");
+                    tmpTr.className = "table_row";
+
+                    for (let num = 0; num<9; num++) {
+                        let items = document.createElement("td");
+                        items.className = "table_column";
+                        items.innerHTML = item[num];
+                        tmpTr.appendChild(items);
+                    }
+
+                    const btnItem = document.createElement("td");
+                    btnItem.className = "table_column";
+
+                    const editBtn = document.createElement("input");
+                    editBtn.id = item[item.length - 1];
+                    editBtn.type = "button";
+                    editBtn.className = "table_column_button";
+                    editBtn.value = "EDIT";
+                    editBtn.addEventListener("click", () => {
+                        memberEditEvent(item[item.length - 1]);
+                    });
+                    btnItem.appendChild(editBtn);
+
+                    const delBtn = document.createElement("input");
+                    delBtn.id = item[item.length - 1];
+                    delBtn.type = "button";
+                    delBtn.className = "table_column_button";
+                    delBtn.value = "DEL";
+                    delBtn.addEventListener("click", () => {
+                        memberDeleteEvent(item[item.length - 1]);
+                    });
+                    btnItem.appendChild(delBtn);
+
+                    tmpTr.appendChild(btnItem);
+
+                    document.getElementById("membem_list").appendChild(tmpTr);
+                })
+            })
+            .catch((error) => {
+                console.log(error);
+                alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
+            });
+        }
+
+        // 회원 정보 수정 이벤트
+        const memberEditEvent = (seq) => {
+            console.log(seq);
+        }
+
+        // 회원 목록 삭제 이벤트
+        const memberDeleteEvent = (seq) => {
+
+            const confirmDialog = confirm("정말 삭제할까요?");
+            
+            if (confimr == true) {
+
+                fetch("/register", {
+                    method: "DELETE", 
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify ({   
+                        "seqValue": seq
+                    })
+                })
+                .then ((response) => response.json())
+                .then ((result) => {
+
+                    if (result.success) {
+                        location.reload();
+                    }
+                    else if (!result.success) {
+                        alert(result.message);
+                    }
+                })
+                .catch((error) => {
+                    alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
+                });
+            }
         }
     </script>
 
