@@ -14,6 +14,22 @@ Next.js를 공부하고 React로 리팩토링 할 계획입니다.
 - 스크롤 위치에 따른 Progress Bar 기능 추가  
 - Menu에 연결되는 About, Curriculum, Mentor, Results 페이지 추가  
 
+# Database Table
+
+### homepage.register table
+|Column|data type|
+|---|---|
+|seq|serial|
+|name|varchar(10)|
+|contact|varchar(11)|
+|job|varchar(14)|
+|option|varchar(50)|
+|register_date|timestamp|
+|generation|smallint|
+|duration|varchar(50)|
+|memo|varchar(100)|
+|subject|varchar(20)|
+
 # Version History
 
 ### 2021 05 25
