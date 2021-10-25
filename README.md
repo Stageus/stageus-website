@@ -82,4 +82,10 @@ Next.js를 공부하고 React로 리팩토링 할 계획입니다.
 ### 2021 10 14
 - postgreSQL 기반 RDB 구축
 - register page 개발
-- register API 개발
+- register API POST & GET 개발
+
+### 2021 10 25
+- register 테이블 수정
+- management page 개발
+- JWT Auth 기능 추가
+- register API DELETE & PUT 개발
