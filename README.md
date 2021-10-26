@@ -1,23 +1,16 @@
 # Introduction
-주식회사 스테이지어스의 소개 홈페이지 입니다.
+주식회사 스테이지어스의 소개 홈페이지
 
-SPA이며, 효율적인 SEO를 위해 바닐라 웹 방식으로 구현되어있습니다.
+SEO를 위해 바닐라 웹으로 개발
 
-Next.js를 공부하고 React로 리팩토링 할 계획입니다.
+Next.js공부 후 React로 리팩토링 예정
 
 # Address
 ### [스테이지어스 | 개발자 육성 센터](http://www.stageus.co.kr)
 
-# To do List
-- 잘못된 주소 입력 시 되돌아가기 기능 설정  
-- Scroll Event 기반 동적 효과 추가  
-- 스크롤 위치에 따른 Progress Bar 기능 추가  
-- Menu에 연결되는 About, Curriculum, Mentor, Results 페이지 추가  
-
 # Database Table
-
-### homepage.register table
-|Column|data type|
+#### homepage.register table
+|Column|Data Type|
 |---|---|
 |seq|serial|
 |name|varchar(10)|

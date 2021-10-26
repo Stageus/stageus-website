@@ -102,8 +102,19 @@ section {
 
 .table_column {
     width: fit-content;
+    height: 3.6rem;
     text-align: center;
     border-bottom: 1px solid #1E2022;
+}
+
+.table_column_input {
+    height: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: NanumSquare;
+    font-weight: 400;
+    color : #4088eb;
+    border: none;
 }
 
 .table_column_button {

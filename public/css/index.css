@@ -434,7 +434,7 @@ header {
 }
 
 #mentor_personal_box {
-    margin-bottom: 3rem;
+    margin-bottom: 2.2rem;
 }
 
 .mentor_title {
@@ -460,19 +460,18 @@ header {
 #mentor_aditional_box {
     display: flex;
     justify-content: space-between;
-    width: 31rem;
-    height: 4rem;
+    width: 28rem;
 }
 
 .mentor_career {
-    width: 20rem;
-    height: 100% - 2.4rem;
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
+    width: 16rem;
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border: 0.1rem solid #4088eb;
     border-radius: 0.4rem;
     color: #1E2022;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: Nanumsquare;;
     text-align: center;
     text-decoration: none;

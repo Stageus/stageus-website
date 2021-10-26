@@ -71,7 +71,7 @@ router.get('/', (req, res) => {
         password: "stageus0104",
         prot: 5432
     })
-    const query = "select * from homepage.register";
+    const query = "select * from homepage.register ORDER BY seq";
 
     pg.connect((err) => {
         if (err) {
@@ -147,6 +147,49 @@ router.delete('/', (req, res) => {
 
 router.put('/', (req, res) => {
 
+    // request AJAX data
+    const nameValue = req.body.nameValue;
+    const contactValue = req.body.contactValue;
+    const jobValue = req.body.jobValue;
+    const optionValue = req.body.optionValue;
+    const subjectValue = req.body.subjectValue;
+    const generationValue = req.body.generationValue;
+    const durationValue = req.body.durationValue;
+    const memoValue = req.body.memoValue;
+    const seqValue = req.body.seqValue;
+
+    // Init response data
+    const result = {
+        "success" : false
+    };
+
+    // Init psql account
+    const pg = new Client({
+        user: "ubuntu",
+        host: "localhost",
+        database: "stageus",
+        password: "stageus0104",
+        prot: 5432
+    })
+    const query = "UPDATE homepage.register set name=$1, contact=$2, job=$3, option=$4, generation=$5, subject=$6, duration=$7, memo=$8 WHERE seq = $9;";
+    const values = [
+        nameValue, contactValue, jobValue, optionValue, generationValue, subjectValue, durationValue, memoValue, seqValue
+    ];
+
+    pg.connect((err) => {
+        if (err) {
+            console.log(err);
+        }
+    });
+    pg.query(query, values, (err, res2) => {
+        if (!err) {
+            result.success = true
+            res.send(result);
+        } else {
+            console.log(err);
+        }
+        pg.end();
+    })
 });
 
 module.exports = router;

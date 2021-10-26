@@ -172,7 +172,8 @@
                     editBtn.className = "table_column_button";
                     editBtn.value = "EDIT";
                     editBtn.addEventListener("click", () => {
-                        memberEditEvent(item[item.length - 1]);
+                        editBtn.value == "EDIT" ? editBtn.value = "CONFIRM" : editBtn.value = "EDIT";
+                        memberEditEvent(item[item.length - 1], tmpTr, editBtn.value);
                     });
                     btnItem.appendChild(editBtn);
 
@@ -198,8 +199,64 @@
         }
 
         // 회원 정보 수정 이벤트
-        const memberEditEvent = (seq) => {
-            console.log(seq);
+        const memberEditEvent = (seq, tr, flag) => {
+
+            if (flag == "CONFIRM") {
+            
+                const list = tr.children;
+
+                [...list].forEach((item, index) => {
+
+                    if (index != list.length - 1 && index != list.length - 3) {
+
+                        const tmp = document.createElement("input")
+                        tmp.type = "text";
+                        tmp.value = item.innerHTML;
+                        tmp.className = "table_column_input";
+                        tmp.style.width = window.getComputedStyle(item).width;
+
+                        item.innerHTML = "";
+                        item.appendChild(tmp);
+                    }
+                })
+            } else if (flag == "EDIT") {
+
+                const list = document.getElementsByClassName("table_column_input");
+                [...list].forEach((item) => {
+                    console.log(item.value);
+                })
+
+                fetch("/register", {
+                    method: "PUT", 
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify ({   
+                        "nameValue": list[0].value,
+                        "contactValue": list[1].value,
+                        "jobValue": list[2].value,
+                        "optionValue": list[3].value,
+                        "subjectValue": list[5].value,
+                        "generationValue": list[4].value,
+                        "durationValue": list[6].value,
+                        "memoValue": list[7].value,
+                        "seqValue": seq
+                    })
+                })
+                .then ((response) => response.json())
+                .then ((result) => {
+
+                    if (result.success) {
+                        location.reload();
+                    }
+                    else if (!result.success) {
+                        alert("수정에 실패했습니다.");
+                    }
+                })
+                .catch((error) => {
+                    alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
+                });
+            }
         }
 
         // 회원 목록 삭제 이벤트
@@ -207,7 +264,7 @@
 
             const confirmDialog = confirm("정말 삭제할까요?");
             
-            if (confimr == true) {
+            if (confirmDialog == true) {
 
                 fetch("/register", {
                     method: "DELETE", 
