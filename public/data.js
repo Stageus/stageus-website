@@ -4,7 +4,7 @@ const lecture = {
         {
             "name": "파이썬 응용 프로그램 과정",
             "duration": "11월 15일 ~ 1월 24일 (월)",
-            "number": 0
+            "number": 2
         },
         {
             "name": "웹 기초 과정",
@@ -14,22 +14,22 @@ const lecture = {
         {
             "name": "웹 프론트엔드 과정",
             "duration": "11월 17일 ~ 2월 9일 (수)",
-            "number": 0
+            "number": 2
         },
         {
             "name": "백엔드 서버 과정",
             "duration": "11월 18일 ~ 2월 10일 (목)",
-            "number": 0
+            "number": 1
         },
         {
             "name": "안드로이드 앱 과정",
             "duration": "11월 19일 ~ 2월 11일 (금)",
-            "number": 0
+            "number": 3
         },
         {
             "name": "웹 기초 과정",
             "duration": "11월 21일 ~ 1월 30일 (일)",
-            "number": 1
+            "number": 2
         }
     ]
 };

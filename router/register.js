@@ -71,7 +71,7 @@ router.get('/', (req, res) => {
         password: "stageus0104",
         prot: 5432
     })
-    const query = "select * from homepage.register ORDER BY seq";
+    const query = "select * from homepage.register ORDER BY seq DESC";
 
     pg.connect((err) => {
         if (err) {
