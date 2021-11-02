@@ -203,7 +203,6 @@
             })
         }
 
-        // 
         const registerEvent = () => {
             const nameValue = document.getElementById("register_name_value").value;
             const contactValue = document.getElementById("register_contact_value").value;
@@ -226,49 +225,54 @@
                     optionValue = optionList[index];
                 }
             })
-            let subjectValue = "";
+            let subjectValue = -1;
             [...document.getElementsByClassName("register_subject_value")].forEach((item, index) => {
                 if(item.checked) {
                     subjectValue = index;
                 }
             })
 
-            fetch("register", {
-                method: "POST", 
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify ({   
-                    "nameValue": nameValue,
-                    "contactValue": contactValue,
-                    "jobValue": jobValue,
-                    "optionValue": optionValue,
-                    "subjectValue": lecture.information[subjectValue].name,
-                    "generationValue": lecture.generation,
-                    "durationValue": lecture.information[subjectValue].duration,
+            if (nameValue != "" && contactValue != "" && jobValue != "" && optionValue != "" && subjectValue != -1) {
+                fetch("register", {
+                    method: "POST", 
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify ({   
+                        "nameValue": nameValue,
+                        "contactValue": contactValue,
+                        "jobValue": jobValue,
+                        "optionValue": optionValue,
+                        "subjectValue": lecture.information[subjectValue].name,
+                        "generationValue": lecture.generation,
+                        "durationValue": lecture.information[subjectValue].duration,
+                    })
                 })
-            })
-            .then ((response) => response.json())
-            .then ((result) => {
+                .then ((response) => response.json())
+                .then ((result) => {
 
-                let message = "";
-                message += "스테이지어스 " + lecture.generation + "기 팀원이 되신 " + nameValue + "님 환영합니다.\n\n"
-                message += "==========\n"
-                message += "신청 과정 : " + lecture.information[subjectValue].name + "\n"
-                message += "과정 일정 : " + lecture.information[subjectValue].duration + "\n"
-                message += "==========\n"
+                    let message = "";
+                    message += "스테이지어스 " + lecture.generation + "기 팀원이 되신 " + nameValue + "님 환영합니다.\n\n"
+                    message += "==========\n"
+                    message += "신청 과정 : " + lecture.information[subjectValue].name + "\n"
+                    message += "과정 일정 : " + lecture.information[subjectValue].duration + "\n"
+                    message += "==========\n"
 
-                if (result.success) {
-                    alert(message);
-                    location.href = "/"
-                }
-                else if (!result.success) {
-                    alert("데이터베이스에 문제가 있습니다.\n관리자에게 문의해주세요.");
-                }
-            })
-            .catch((error) => {   // 통신에 실패 했을 때
-                alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
-            });
+                    if (result.success) {
+                        alert(message);
+                        location.href = "/"
+                    }
+                    else if (!result.success) {
+                        alert("입력하신 값에 문제가 있습니다.\n관리자에게 문의해주세요.");
+                    }
+                })
+                .catch((error) => {   // 통신에 실패 했을 때
+                    alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
+                });
+            }
+            else {
+                alert ("모든 값을 입력해주세요.")
+            }
         }
 
     </script>

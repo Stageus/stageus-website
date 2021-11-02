@@ -19,40 +19,48 @@ router.post('/', (req, res) => {
         "success" : false
     };
 
-    // Cal timestamp
-    const today = new Date();
-    const utc = today.getTime() + (today.getTimezoneOffset() * 60 * 1000);
-    const krTime = 9 * 60 * 60 * 1000;
-    const newTime = new Date(utc + krTime);
+    // 강제로 빈 값을 입력했을 때 예외 처리
+    if (nameValue == "" || contactValue == "" || jobValue == "" || optionValue == "" || subjectValue == "") {
+        console.log("error")
+        res.send(result);
+    }
+    else {
 
-    // Init psql account
-    const pg = new Client({
-        user: "ubuntu",
-        host: "localhost",
-        database: "stageus",
-        password: "stageus0104",
-        prot: 5432
-    })
-    const query = "INSERT INTO homepage.register(name, contact, job, option, register_date, generation, duration, memo, subject) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9);";
-    const values = [
-        nameValue, contactValue, jobValue, optionValue, newTime.toISOString(), 
-        generationValue, durationValue, "", subjectValue
-    ];
+        // Cal timestamp
+        const today = new Date();
+        const utc = today.getTime() + (today.getTimezoneOffset() * 60 * 1000);
+        const krTime = 9 * 60 * 60 * 1000;
+        const newTime = new Date(utc + krTime);
 
-    pg.connect((err) => {
-        if (err) {
-            console.log(err);
-        }
-    });
-    pg.query(query, values, (err, res2) => {
-        if (!err) {
-            result.success = true
-            res.send(result);
-        } else {
-            console.log(err);
-        }
-        pg.end();
-    })
+        // Init psql account
+        const pg = new Client({
+            user: "ubuntu",
+            host: "localhost",
+            database: "stageus",
+            password: "stageus0104",
+            prot: 5432
+        })
+        const query = "INSERT INTO homepage.register(name, contact, job, option, register_date, generation, duration, memo, subject) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9);";
+        const values = [
+            nameValue, contactValue, jobValue, optionValue, newTime.toISOString(), 
+            generationValue, durationValue, "", subjectValue
+        ];
+
+        pg.connect((err) => {
+            if (err) {
+                console.log(err);
+            }
+        });
+        pg.query(query, values, (err, res2) => {
+            if (!err) {
+                result.success = true
+                res.send(result);
+            } else {
+                console.log(err);
+            }
+            pg.end();
+        })
+    }
 });
 
 // Select register api
