@@ -1,6 +1,7 @@
 const secretKey = "THISISOURSTAGE-STAGEUS";
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
+const { Client } = require('pg');
 
 // Insert register api
 router.post('/', (req, res) => {
@@ -11,31 +12,60 @@ router.post('/', (req, res) => {
 
     // Init response data
     const result = {
-        "success": true,
+        "success": false,
         "message": "",
         "token": null
     }
 
-    if (idValue == "stageus" && pwValue == "stageus0104") {
+    // Init psql account
+    const pg = new Client({
+        user: "ubuntu",
+        host: "localhost",
+        database: "stageus",
+        password: "stageus0104",
+        prot: 5432
+    })
+    const query = "select * from homepage.account WHERE id=$1 and pw=$2;";
+    const values = [idValue, pwValue];
 
-        const jwtToken = jwt.sign(
-            {
-                id: idValue
-            }, 
-            secretKey,
-            {
-                expiresIn: "30d",
-                issuer: "stageus"
+    pg.connect((err) => {
+
+        if (err) {
+            console.log(err);
+        }
+    });
+    pg.query(query, values, (err, res2) => {
+
+        if (!err) {
+
+            const rowList = res2.rows;
+
+            if (rowList.length > 0) {
+                const jwtToken = jwt.sign(
+                    {
+                        id: idValue,
+                        role: rowList[0].role,
+                        name: rowList[0].name
+                    }, 
+                    secretKey,
+                    {
+                        expiresIn: "30d",
+                        issuer: "stageus"
+                    }
+                )
+                result.success = true;
+                result.token = jwtToken;
+            } else {
+                result.message = "회원 정보가 잘못되었습니다."
             }
-        )
 
-        result.success = true;
-        result.token = jwtToken;
-    } else {
-        result.message = "회원 정보가 잘못되었습니다."
-    }
-    
-    res.send(result);
+            res.send(result);
+
+        } else {
+            console.log(err);
+        }
+        pg.end();
+    })
 });
 
 // Insert register api
