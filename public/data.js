@@ -39,7 +39,7 @@ const lecture = {
         {
             "name": "웹 기초 과정",
             "duration": "11월 21일 ~ 1월 30일 (일)",
-            "number": "마감"
+            "number": 5
         }
     ]
 };

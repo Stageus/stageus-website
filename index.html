@@ -334,7 +334,11 @@
             // Lecture 수강 인원 삽입
             let lectureNumber = document.getElementsByClassName("lecture_empty");
             [...lectureNumber].forEach((item, index) => {
-                item.innerHTML = lecture.information[index].number + "/5";
+                if (5-lecture.information[index].number == 0) {
+                    item.innerHTML = "신청 마감";
+                } else {
+                    item.innerHTML = "여석 " + (5-lecture.information[index].number);
+                }
             })
         }
 
@@ -345,7 +349,11 @@
         }
         const lectureMouseLeaveEvent = (index) => {
             let list = document.getElementsByClassName("lecture_empty");
-            list[index].innerHTML = lecture.information[index].number + "/5";
+            if (5-lecture.information[index].number == 0) {
+                list[index].innerHTML = "신청 마감";
+            } else {
+                list[index].innerHTML = "여석 " + (5-lecture.information[index].number);
+            }
         }
     </script>
 
