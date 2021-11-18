@@ -102,3 +102,6 @@ Next.js공부 후 React로 리팩토링 예정
 ### 2021 10 26
 - management page 수정 기능 개발
 - PUT register API 개발
+
+### 2021 11 18
+- 스테이지어스 커뮤니티 사이트 회의
