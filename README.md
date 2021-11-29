@@ -6,10 +6,17 @@
 ###### STAGEUS
 STAGEUS
 
+**볼드체**
 
+*이텔릭체*
 
+~~취소선~~
 
+[스테이지어스 홈페이지](https://www.stageus.co.kr)
 
+![이미지를 찾을 수 없음](https://stageus.co.kr/img/logoBlack.png)
+
+![이미지를 찾을 수 없음](public/img/logoBlack.png)
 
 
 
