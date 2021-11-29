@@ -1,4 +1,42 @@
-# Introduction
+# STAGEUS
+## STAGEUS
+### STAGEUS
+#### STAGEUS
+##### STAGEUS
+###### STAGEUS
+STAGEUS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- # Introduction
 주식회사 스테이지어스의 소개 홈페이지
 
 SEO를 위해 바닐라 웹으로 개발
@@ -104,4 +142,4 @@ Next.js공부 후 React로 리팩토링 예정
 - PUT register API 개발
 
 ### 2021 11 18
-- 스테이지어스 커뮤니티 사이트 회의
+- 스테이지어스 커뮤니티 사이트 회의 -->
