@@ -18,7 +18,19 @@ STAGEUS
 
 ![이미지를 찾을 수 없음](public/img/logoBlack.png)
 
+```
+hello world !
+```
 
+```html
+<div>
+    <h1> hello world ! </h1>
+</div>
+```
+
+```python
+print("hello world")
+```
 
 
 
