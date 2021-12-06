@@ -1,61 +1,4 @@
-# STAGEUS
-## STAGEUS
-### STAGEUS
-#### STAGEUS
-##### STAGEUS
-###### STAGEUS
-STAGEUS
-
-**볼드체**
-
-*이텔릭체*
-
-~~취소선~~
-
-[스테이지어스 홈페이지](https://www.stageus.co.kr)
-
-![이미지를 찾을 수 없음](https://stageus.co.kr/img/logoBlack.png)
-
-![이미지를 찾을 수 없음](public/img/logoBlack.png)
-
-```
-hello world !
-```
-
-```html
-<div>
-    <h1> hello world ! </h1>
-</div>
-```
-
-```python
-print("hello world")
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Introduction
+# Introduction
 주식회사 스테이지어스의 소개 홈페이지
 
 SEO를 위해 바닐라 웹으로 개발
@@ -159,6 +102,3 @@ Next.js공부 후 React로 리팩토링 예정
 ### 2021 10 26
 - management page 수정 기능 개발
 - PUT register API 개발
-
-### 2021 11 18
-- 스테이지어스 커뮤니티 사이트 회의 -->
