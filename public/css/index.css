@@ -303,6 +303,17 @@ header {
     cursor: pointer;
 }
 
+#lecture_notice_box {
+    margin-top: 2rem;
+}
+
+.lecture_notice {
+    font-family: NanumSquare;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
 /* content_distinction */
 
 #distinction_box {

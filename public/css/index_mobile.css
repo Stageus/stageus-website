@@ -389,6 +389,15 @@
         padding-bottom: 1rem;
     }
 
+    #lecture_notice_box {
+        margin-top: 1rem;
+    }
+
+    .lecture_notice {
+        font-size: 0.9rem;
+        margin-top: 0.6rem;
+    }
+
     /* content_distinction */
 
     #distinction_box {
@@ -675,6 +684,15 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         font-size: 1.2rem;
+    }
+
+    #lecture_notice_box {
+        margin-top: 1rem;
+    }
+
+    .lecture_notice {
+        font-size: 0.9rem;
+        margin-top: 0.6rem;
     }
 
    /* content_distinction */
