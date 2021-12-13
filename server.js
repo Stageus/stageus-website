@@ -91,10 +91,6 @@ app.get('/6d656d6265724c697374', (req, res) => {
 const auth = require("./router/auth");
 app.use('/auth', auth);
 
-// 추후 지울 내용
-const login = require("./router/login");
-app.use('/login', login);
-
 // header-footer template
 app.get('/testTemplate', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/template/header_footer_template.html'));
