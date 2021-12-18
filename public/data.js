@@ -36,7 +36,8 @@ const lecture = {
 };
 
 const path = [
-    "introduce",
+    // "introduce",
+    "files/education.pdf",
     "files/curriculum.pdf",
     "faq",
     "https://open.kakao.com/o/sFu0jAwd",
