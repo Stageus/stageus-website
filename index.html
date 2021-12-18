@@ -107,7 +107,7 @@
             <h1 class="content_title">7기 개강 과정</h1>
             <div class="content_explain">
                 <p class="content_value">기초 과정에서 심화 과정으로 이어지는 Step by Step 커리큘럼</p>
-                <p class="content_value">기초 10주, 심화 11주의 구성으로 이루어진 총 <span>5개월 + 1주간</span>의 교육 과정</p>
+                <p class="content_value">기초 10주, 심화 12주의 구성으로 이루어진 총 <span>5개월 + 2주간</span>의 교육 과정</p>
                 <p class="content_value"><span>코드 리뷰</span>와 <span>모의 외주</span>, <span>협업 프로젝트</span>를 통한 주입식 교육 탈피</p>
             </div>
             <div class="content_explain">
@@ -347,7 +347,7 @@
             let lectureNumber = document.getElementsByClassName("lecture_empty");
             [...lectureNumber].forEach((item, index) => {
                 if (lecture.information[index].number == -1) {
-                    item.innerHTML = "모집 예정";
+                    item.innerHTML = "휴강";
                 } else if (lecture.information[index].number == 5) {
                     item.innerHTML = "신청 마감";
                 } else {
@@ -364,7 +364,7 @@
         const lectureMouseLeaveEvent = (index) => {
             let list = document.getElementsByClassName("lecture_empty");
             if (lecture.information[index].number == -1) {
-                list[index].innerHTML = "모집 예정";
+                list[index].innerHTML = "휴강";
             } else if (lecture.information[index].number == 5) {
                 list[index].innerHTML = "신청 마감";
             } else {
