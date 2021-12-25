@@ -35,18 +35,17 @@ const lecture = {
 };
 
 const path = [
-    // "introduce",
-    "files/education.pdf",
-    "files/curriculum.pdf",
-    "faq",
-    "https://open.kakao.com/o/sFu0jAwd",
-    "refund"
+    "education",                          // 교육 메뉴
+    "curriculum",                         // 커리큘럼 메뉴
+    "faq",                                // FAQ 메뉴
+    "https://open.kakao.com/o/sFu0jAwd",  // 문의하기 메뉴
+    "refund"                              // 환불약관 메뉴
 ]
 
 const footer_img = [
-    "#",
-    "https://www.youtube.com/channel/UCktIF_yDLyBQEx5_MZuscfg",
-    "https://www.instagram.com/stageus_cono"
+    "#",                                                         // 페이스북 링크
+    "https://www.youtube.com/channel/UCktIF_yDLyBQEx5_MZuscfg",  // 유튜브 링크
+    "https://www.instagram.com/stageus_cono"                     // 인스타그랭 링크
 ]
 
 const footer_data = [

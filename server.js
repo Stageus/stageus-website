@@ -3,17 +3,20 @@ const path = require('path');
 const fs = require('fs');
 const https = require('https');
 
-const app = express();   // express 등록
 const httpPort = process.env.PORT || 8000;
 const httpsPort = process.env.PORT || 8443;
+
 const options = {
     key: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.key.pem')),
     cert: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.crt.pem')),
     ca: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.ca-bundle.pem')),
 };
 
+const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// =======================================================================================
 
 // HTTP to HTTPS Redirect
 app.get('*', (req, res, next) => {
@@ -43,19 +46,21 @@ app.get('/sitemap.xml', (req, res) => {
     res.sendFile(path.join(__dirname, 'sitemap.xml'));
 });
 
+// =======================================================================================
+
 // Main Page
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// "스테이지어스" Page
-app.get('/introduce', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/introduce.html'));
+// "소개" Page
+app.get('/education', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/files/education.pdf'));
 });
 
 // "커리큘럼" Page
 app.get('/curriculum', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/curriculum.html'));
+    res.sendFile(path.join(__dirname, 'public/files/curriculum.pdf'));
 });
 
 // "FAQ" Page
@@ -73,40 +78,39 @@ app.get('/guide', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/guide.html'));
 });
 
-// 신청서 API
-const register = require('./router/register');
-app.use('/register', register);
-
-// "신청서" Page
+// "팀원 신청서" Page
 app.get('/7265676973746572', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/register.html'));
 });
 
-// "팀원 목록" Page
+// "관리자" Page
 app.get('/6d656d6265724c697374', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/management.html'));
 });
+
+// =======================================================================================
+
+// 신청서 API
+const register = require('./router/register');
+app.use('/register', register);
 
 // 관리자 인증 API
 const auth = require("./router/auth");
 app.use('/auth', auth);
 
-// header-footer template
-app.get('/testTemplate', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/template/header_footer_template.html'));
-});
+// =======================================================================================
 
-// If user access wrong page we will return this.
+// Wrong REST Request API
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/wrong.html'));
 });
 
-// Run HTTPS Server
+// HTTPS Server listen API
 https.createServer(options, app).listen(httpsPort, (req, res) => {
     console.log("HTTP Server Started : Port " + httpsPort);
 });
 
-// Run HTTP Server
+// HTTP Server listen API
 app.listen(httpPort, (req, res) => {
     console.log("HTTPS Server Started : Port " + httpPort);
 });
