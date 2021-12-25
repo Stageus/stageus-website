@@ -4,7 +4,7 @@ const lecture = {
         {
             "name": "파이썬 응용 프로그램 과정",
             "duration": "1월 10일 ~ 3월 14일 (월 18시)",
-            "number": 0
+            "number": 5
         },
         {
             "name": "안드로이드 앱 과정",

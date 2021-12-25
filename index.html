@@ -351,7 +351,7 @@
                 } else if (lecture.information[index].number == 5) {
                     item.innerHTML = "신청 마감";
                 } else {
-                    item.innerHTML = "여석 " + (5-lecture.information[index].number);
+                    item.innerHTML = (lecture.information[index].number) + "/5";
                 }
             })
         }
@@ -368,7 +368,7 @@
             } else if (lecture.information[index].number == 5) {
                 list[index].innerHTML = "신청 마감";
             } else {
-                list[index].innerHTML = "여석 " + (5-lecture.information[index].number);
+                list[index].innerHTML = (lecture.information[index].number) + "/5";
             }
         }
     </script>
