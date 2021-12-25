@@ -2,7 +2,7 @@
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
-    <title>스테이지어스 - 소개</title>
+    <title>스테이지어스 - 환불 약관</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta name="description" content="개발자 육성 센터 스테이지어스 - 코딩을 잘하는 것 만으론 부족합니다. 능력 있는 개발자가 될 수 있어야 합니다. 스테이지어스는 능력 있는 개발자가 되기 위한 여러분의 무대 입니다.">
     <meta name="keywords" content="코딩, 프로그래밍, 개발자 육성 센터, 코딩 학원, 프로그래밍 학원, 개발자, 웹 프론트엔드, 백엔드, 서버, 웹서버, 앱, 안드로이드, 리액트, 노드, 자바스크립트">
@@ -16,24 +16,13 @@
     <link rel="canonical" href="https://www.stageus.co.kr">
     <link rel="icon" type="image/x-icon" href="img/logoMark.png" >
     <link rel="stylesheet" type="text/css" href="css/public.css">
-    <link rel="stylesheet" type="text/css" href="template/header_footer_template.css">
-    <link rel="stylesheet" type="text/css" href="template/header_footer_template_mobile.css">
-    <link rel="stylesheet" type="text/css" href="css/introduce.css">
-    <link rel="stylesheet" type="text/css" href="css/introduce_mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/header_footer_template.css">
+    <link rel="stylesheet" type="text/css" href="css/header_footer_template_mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/refund.css">
+    <link rel="stylesheet" type="text/css" href="css/refund_mobile.css">
+    
 </head>
 <body>
-
-    <script>
-        window.onload = () => {
-            // 선택된 nav 밑줄 처리
-            const link1 = document.getElementsByClassName("nav_menu");
-            link1[0].style.borderBottom = "0.2rem solid #4088eb";
-
-            // 추후 지울 부분
-            alert("죄송합니다.\n현재 페이지 단장 중입니다.")
-            location.href = "/";
-        }
-    </script>
 
     <!-- nav -->
     <nav>
@@ -59,72 +48,68 @@
     <!-- header -->
     <header id="header">
         <div id="header_cover"> 
-            <p id="header_text_title">Introduction</p>
-            <p class="header_text_index">스테이지어스는 개발자들이 같이 성장하는 무대입니다.</p>
-            <p class="header_text_index">언제나 능력 있는 개발자를 찾고있습니다.</p>
+            <p id="header_text_title">REFUND POLICY</p>
+            <p class="header_text_index">환불 약관</p>
         </div>
     </header>
 
     <!-- main -->
     <main>
 
-        <!-- section brand -->
-        <section id="brand" class="contents">
-            <h2 class="content_subtitle">상호와 로고</h2>
-            <h1 class="content_title">스테이지어스의 의미</h1>
-            <div class="content_explain">
-                <div id="brand_box" class="image_src_border"></div>
+        <!-- section refund -->
+        <section class="contents">
+            <div class="refund_box">
+                <h2 class="refund_title">환불 약관</h2>
+                <hr class="refund_line">
+                <p class="refund_value">
+                    - 팀원의 신중한 결정과 의지 신장을 위해 환불 약관을 운영합니다.<br>
+                    - 환불은 환불 접수 후 7일 이내에 처리해드립니다.<br>
+                    - 환불시 입금자명과 동일한 계좌로 환불 처리됩니다.<br>
+                    - 환불 절차는 "유선 환불 신청" - "환불 여부 확인" - "환불금 처리" 로 진행됩니다.
+                </p>
             </div>
-            <div class="content_explain">
-                <h2 class="content_subtitle"><span>상호의 의미</span></h2>
-                <p class="content_value">스테이지어스는 STAGE와 US의 합성어로, 우리의 무대라는 의미를 가집니다.</p>
-                <p class="content_value">스테이지어스의 슬로건인 This is our stage에 이를 담고 있으며, 프로 개발자가 되기 위한 팀원들의 무대가 되길 희망하는 마음이 담겨있습니다.</p>
+            <div class="refund_box">
+                <h2 class="refund_title">환불 여부</h2>
+                <hr class="refund_line">
+                <p class="refund_value">
+                    - 수강한 기간에 따라 환불이 불가할 수 있습니다.<br>
+                    - 환불 신청 시기에 따라 환불금이 차등 적용되어 환불 처리가 이루어집니다.
+                </p>
+                <table id="refund_table">
+                    <tr class="refund_row">
+                        <td class="refund_table_title table_title">기간</td>
+                        <td class="refund_table_value table_title">금액</td>
+                    </tr>
+                    <tr class="refund_row grey_background">
+                        <td class="refund_table_title">과정 개강 8일전 자정부터 과정 개강 1일전 자정까지</td>
+                        <td class="refund_table_value">80%의 금액 환불</td>
+                    </tr>
+                    <tr class="refund_row">
+                        <td class="refund_table_title">과정 개강 1일전 자정부터 3주차 강의 1일전 자정까지 </td>
+                        <td class="refund_table_value">60%의 금액 환불</td>
+                    </tr>
+                    <tr class="refund_row grey_background">
+                        <td class="refund_table_title">3주차 강의 1일전 자정부터 5주차 강의 1일전 자정까지</td>
+                        <td class="refund_table_value">40%의 금액 환불</td>
+                    </tr>
+                    <tr class="refund_row">
+                        <td class="refund_table_title">5주차 강의 1일전 자정부터 7주차 강의 1일전 자정까지</td>
+                        <td class="refund_table_value">20%의 금액 환불</td>
+                    </tr>
+                    <tr class="refund_row grey_background">
+                        <td class="refund_table_title">7주차 강의 1일전 자정 이후</td>
+                        <td class="refund_table_value">환불 불가</td>
+                    </tr>
+                </table>
             </div>
-            <div class="content_explain">
-                <h2 class="content_subtitle"><span>로고의 의미</span></h2>
-                <p class="content_value">스테이지어스의 로고는 영어 철자 S를 두 개 이어붙인 모양입니다.</p>
-                <p class="content_value">Stageus의 앞뒤 단어 조합이자 스테이지어스의 교육상을 담고 있습니다.</p>
+            <div class="refund_box">
+                <h2 class="refund_title">전액 환불이 가능한 경우</h2>
+                <hr class="refund_line">
+                <p class="refund_value">
+                    - 과정 개강 8일전 자정 까지 환불 신청의 경우 전액 환불 가능합니다.<br>
+                    - 해당 시기 이후로는 위 환불 약관에 따라 이루어집니다.
+                </p>
             </div>
-            <div id="brand_option">
-                <p class="content_value">Skill to make logical choice with basis.</p>
-                <p class="content_value">Skill to identify causes and self-solve problems.</p>
-                <p class="content_value">Skill to learn and grow on your own about unfamiliar technologies.</p>
-            </div>
-        </section>
-
-        <!-- section purpose -->
-        <section id="purpose" class="contents">
-            <h2 class="content_subtitle">설립 목적</h2>
-            <h1 class="content_title">능력 있는 개발자 육성과 채용</h1>
-            
-            <p style="color:red; text-align: center; font-size: 1.4rem; font-family: NanumSquare;">현재 준비 중인 페이지 입니다. 빠른 시일 내에 업데이트하도록 하겠습니다.</p>
-        </section>
-
-        <!-- section goal -->
-        <section id="goal" class="contents">
-            <h2 class="content_subtitle">기업 목표</h2>
-            <h1 class="content_title">우리가 추구하는 방향과 목표</h1>
-
-            <p style="color:red; text-align: center; font-size: 1.4rem; font-family: NanumSquare;">현재 준비 중인 페이지 입니다. 빠른 시일 내에 업데이트하도록 하겠습니다.</p>
-
-        </section>
-
-        <!-- section history -->
-        <section id="history" class="contents">
-            <h2 class="content_subtitle">연혁</h2>
-            <h1 class="content_title">스테이지어스가 지내온 길</h1>
-
-            <p style="color:red; text-align: center; font-size: 1.4rem; font-family: NanumSquare;">현재 준비 중인 페이지 입니다. 빠른 시일 내에 업데이트하도록 하겠습니다.</p>
-
-        </section>
-
-        <!-- section member -->
-        <section id="history" class="contents">
-            <h2 class="content_subtitle">주요 멤버</h2>
-            <h1 class="content_title">연계 프로젝트 참여 팀원</h1>
-
-            <p style="color:red; text-align: center; font-size: 1.4rem; font-family: NanumSquare;">현재 준비 중인 페이지 입니다. 빠른 시일 내에 업데이트하도록 하겠습니다.</p>
-
         </section>
 
     </main>
@@ -177,7 +162,7 @@
         </div> 
     </footer>
 
-    <script src="data.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/navEvent.js"></script>
     <script src="js/initData.js"></script>
 

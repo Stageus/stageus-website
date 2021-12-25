@@ -55,37 +55,37 @@ app.get('/', (req, res) => {
 
 // "소개" Page
 app.get('/education', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/files/education.pdf'));
+    res.sendFile(path.join(__dirname, 'public/file/education.pdf'));
 });
 
 // "커리큘럼" Page
 app.get('/curriculum', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/files/curriculum.pdf'));
+    res.sendFile(path.join(__dirname, 'public/file/curriculum.pdf'));
 });
 
 // "FAQ" Page
 app.get('/faq', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/faq.html'));
+    res.sendFile(path.join(__dirname, 'html/faq.html'));
 });
 
 // "환불 약관" Page
 app.get('/refund', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/refund.html'));
+    res.sendFile(path.join(__dirname, 'html/refund.html'));
 });
 
 // "설치 가이드" Page
 app.get('/guide', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/guide.html'));
+    res.sendFile(path.join(__dirname, 'html/guide.html'));
 });
 
 // "팀원 신청서" Page
 app.get('/7265676973746572', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/register.html'));
+    res.sendFile(path.join(__dirname, 'html/register.html'));
 });
 
 // "관리자" Page
 app.get('/6d656d6265724c697374', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/management.html'));
+    res.sendFile(path.join(__dirname, 'html/management.html'));
 });
 
 // =======================================================================================
@@ -102,7 +102,7 @@ app.use('/auth', auth);
 
 // Wrong REST Request API
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/wrong.html'));
+    res.sendFile(path.join(__dirname, 'html/wrong.html'));
 });
 
 // HTTPS Server listen API
