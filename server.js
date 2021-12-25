@@ -36,14 +36,18 @@ app.get('*', (req, res, next) => {
     }
 });
 
-// Load robots.txt
+// For SEO Middleware
 app.get('/robots.txt', (req, res) => {
     res.sendFile(path.join(__dirname, 'robots.txt'));
 });
-
-// Load sitemap.xml
 app.get('/sitemap.xml', (req, res) => {
     res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+app.get('/google4ffea86c370813df.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'google4ffea86c370813df.html'));
+});
+app.get('/navere71e1113cc4dd2005886d98b01e4c601.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'navere71e1113cc4dd2005886d98b01e4c601.html'));
 });
 
 // =======================================================================================
@@ -90,11 +94,11 @@ app.get('/6d656d6265724c697374', (req, res) => {
 
 // =======================================================================================
 
-// 신청서 API
+// Register Middleware API
 const register = require('./router/register');
 app.use('/register', register);
 
-// 관리자 인증 API
+// Admin Auth Middleware API
 const auth = require("./router/auth");
 app.use('/auth', auth);
 
