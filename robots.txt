@@ -1,11 +1,9 @@
 User-agent: *
-Disallow: /
-Allow: /$
-Allow: /guide
-Allow: /education
-Allow: /curriculum
-Allow: /faq
-Allow: /file
+Allow: /
+Disallow: /css
+Disallow: /js
+Disallow: /font
+Disallow: /img
 Allow: /img/logoBlack.png
 Allow: /img/introductionImage.jpg
 Allow: /img/headerImage.jpg

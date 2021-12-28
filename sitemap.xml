@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.stageus.co.kr/</loc>
-  </url>
-  <url>
-    <loc>https://www.stageus.co.kr/education</loc>
-  </url>
-  <url>
-    <loc>https://www.stageus.co.kr/curriculum</loc>
-  </url>
-  <url>
-    <loc>https://www.stageus.co.kr/faq</loc>
-  </url>
-  <url>
-    <loc>https://www.stageus.co.kr/guide</loc>
-  </url>
-  <url>
-    <loc>https://www.stageus.co.kr/file/career.pdf</loc>
-  </url>
+<urlset
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	  	  
+<url>
+   <loc>https://www.stageus.co.kr/</loc>
+   <changefreq>weekly</changefreq>
+   <priority>1.0000</priority>
+</url>
+<url>
+   <loc>https://www.stageus.co.kr/education</loc>
+   <changefreq>weekly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.stageus.co.kr/curriculum</loc>
+   <changefreq>weekly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.stageus.co.kr/faq</loc>
+   <changefreq>weekly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.stageus.co.kr/guide</loc>
+   <changefreq>weekly</changefreq>
+   <priority>0.8000</priority>
+</url>
+<url>
+   <loc>https://www.stageus.co.kr/file/career.pdf</loc>
+   <changefreq>weekly</changefreq>
+   <priority>0.8000</priority>
+</url>
 </urlset>

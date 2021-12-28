@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // =======================================================================================
 
-// HTTP to HTTPS Redirect
+// Redirect from HTTP to HTTPS 
 app.get('*', (req, res, next) => {
 
     const protocol = req.headers['x-forwarded-proto'] || req.protocol;
@@ -104,7 +104,7 @@ app.use('/auth', auth);
 
 // =======================================================================================
 
-// Wrong REST Request API
+// Wrong Path Request API
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'html/wrong.html'));
 });
