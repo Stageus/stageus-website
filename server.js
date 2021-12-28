@@ -36,20 +36,6 @@ app.get('*', (req, res, next) => {
     }
 });
 
-// For SEO Middleware
-app.get('/robots.txt', (req, res) => {
-    res.sendFile(path.join(__dirname, 'robots.txt'));
-});
-app.get('/sitemap.xml', (req, res) => {
-    res.sendFile(path.join(__dirname, 'sitemap.xml'));
-});
-app.get('/google4ffea86c370813df.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'google4ffea86c370813df.html'));
-});
-app.get('/navere71e1113cc4dd2005886d98b01e4c601.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'navere71e1113cc4dd2005886d98b01e4c601.html'));
-});
-
 // =======================================================================================
 
 // Main Page
@@ -57,7 +43,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// "소개" Page
+// "교육" Page
 app.get('/education', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/file/education.pdf'));
 });
@@ -72,14 +58,14 @@ app.get('/faq', (req, res) => {
     res.sendFile(path.join(__dirname, 'html/faq.html'));
 });
 
-// "환불 약관" Page
-app.get('/refund', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html/refund.html'));
-});
-
 // "설치 가이드" Page
 app.get('/guide', (req, res) => {
     res.sendFile(path.join(__dirname, 'html/guide.html'));
+});
+
+// "환불 약관" Page
+app.get('/refund', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html/refund.html'));
 });
 
 // "팀원 신청서" Page
