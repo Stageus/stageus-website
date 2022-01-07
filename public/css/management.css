@@ -91,10 +91,6 @@ section {
     border-spacing: 0;
 }
 
-.table_row {
-    height: 3.6rem;
-}
-
 .table_column_title {
     background-color: #4088eb;
     color: white;
@@ -102,7 +98,13 @@ section {
 
 .table_column {
     width: fit-content;
-    height: 3.6rem;
+    height: 3rem;
+    text-align: center;
+}
+
+.table_column_divide {
+    width: fit-content;
+    height: 3rem;
     text-align: center;
     border-bottom: 1px solid #1E2022;
 }
@@ -120,8 +122,8 @@ section {
 .table_column_button {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
     background-color: white;
     border: 1px solid #4088eb;
     border-radius: 0.4rem;

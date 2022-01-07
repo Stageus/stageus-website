@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /img
+Disallow: /js/
+Disallow: /img/
 Allow: /img/logoBlack.png
 Allow: /img/introductionImage.jpg
 Allow: /img/headerImage.jpg
@@ -8,3 +9,7 @@ Allow: /img/benefit_1.jpg
 Allow: /img/benefit_2.jpg
 Allow: /img/benefit_3.jpg
 Allow: /img/benefit_4.jpg
+Disallow: /file/
+Allow: /file/career.pdf
+Allow: /file/curriculum.pdf
+Allow: /file/education.pdf

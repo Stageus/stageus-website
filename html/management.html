@@ -151,51 +151,65 @@
             .then ((response) => response.json())
             .then ((result) => {
 
-                result.list.forEach((item, index) => {
+                for(var a = 0; a < result.list.length; a++) {
+
+                    let isDivider = false;   // 기수를 기준으로 마지막 row인지 체크
 
                     const tmpTr = document.createElement("tr");
-                    tmpTr.className = "table_row";
 
                     for (let num = 0; num<9; num++) {
                         let items = document.createElement("td");
-                        items.className = "table_column";
-                        items.innerHTML = item[num];
+                        items.innerHTML = result.list[a][num];
+                        if (a+1 != result.list.length) {
+                            if (result.list[a][4] != result.list[a+1][4]){
+                                items.className = "table_column_divide";
+                                isDivider = true;
+                            } else {
+                                items.className = "table_column";
+                            }
+                        } else {
+                            items.className = "table_column_divide";
+                            isDivider = true;
+                        }
                         tmpTr.appendChild(items);
                     }
 
                     const btnItem = document.createElement("td");
-                    btnItem.className = "table_column";
-
-                    const editBtn = document.createElement("input");
-                    editBtn.id = item[item.length - 1];
-                    editBtn.type = "button";
-                    editBtn.className = "table_column_button";
-                    editBtn.value = "EDIT";
-                    editBtn.addEventListener("click", () => {
-                        editBtn.value == "EDIT" ? editBtn.value = "CONFIRM" : editBtn.value = "EDIT";
-                        memberEditEvent(item[item.length - 1], tmpTr, editBtn.value);
-                    });
-                    btnItem.appendChild(editBtn);
-
-                    const delBtn = document.createElement("input");
-                    delBtn.id = item[item.length - 1];
-                    delBtn.type = "button";
-                    delBtn.className = "table_column_button";
-                    delBtn.value = "DEL";
-                    delBtn.addEventListener("click", () => {
-                        memberDeleteEvent(item[item.length - 1]);
-                    });
-                    btnItem.appendChild(delBtn);
-
+                    isDivider == true ? btnItem.className = "table_column_divide" : btnItem.className = "table_column"
+                    createButton(btnItem, tmpTr, result.list[a])
                     tmpTr.appendChild(btnItem);
 
                     document.getElementById("membem_list").appendChild(tmpTr);
-                })
+                }
             })
             .catch((error) => {
                 console.log(error);
                 alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
             });
+        }
+
+        const createButton = (btnItem, tmpTr, item) => {
+
+            const editBtn = document.createElement("input");
+            editBtn.id = item[item.length - 1];
+            editBtn.type = "button";
+            editBtn.className = "table_column_button";
+            editBtn.value = "E";
+            editBtn.addEventListener("click", () => {
+                editBtn.value == "EDIT" ? editBtn.value = "CONFIRM" : editBtn.value = "EDIT";
+                memberEditEvent(item[item.length - 1], tmpTr, editBtn.value);
+            });
+            btnItem.appendChild(editBtn);
+
+            const delBtn = document.createElement("input");
+            delBtn.id = item[item.length - 1];
+            delBtn.type = "button";
+            delBtn.className = "table_column_button";
+            delBtn.value = "D";
+            delBtn.addEventListener("click", () => {
+                memberDeleteEvent(item[item.length - 1]);
+            });
+            btnItem.appendChild(delBtn);
         }
 
         // 회원 정보 수정 이벤트

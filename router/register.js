@@ -2,7 +2,6 @@ const path = require('path');
 const router = require('express').Router();
 const { Client } = require('pg');
 
-// Insert register api
 router.post('/', (req, res) => {
 
     // request AJAX data
@@ -11,8 +10,8 @@ router.post('/', (req, res) => {
     const jobValue = req.body.jobValue;
     const optionValue = req.body.optionValue;
     const subjectValue = req.body.subjectValue;
-    const generationValue = req.body.generationValue;
-    const durationValue = req.body.durationValue;
+    const generationValue = req.body.generationValue;   // 나중에 DB에서 가져오는 걸로 변경 요망 (Javascript Injection)
+    const durationValue = req.body.durationValue;   // 나중에 DB에서 가져오는 걸로 변경 요망 (Javascript Injection)
 
     // Init response data
     const result = {
@@ -63,7 +62,6 @@ router.post('/', (req, res) => {
     }
 });
 
-// Select register api
 router.get('/', (req, res) => {
 
     // Init response data
