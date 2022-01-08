@@ -103,6 +103,10 @@
     <script src="js/initData.js"></script>
     <script>
 
+        const editButtonValue = "E";
+        const confirmButtonValue = "C";
+        const deleteButtonValue = "D";
+
         // 로그아웃 이벤트
         const logoutEvent = () => {
             localStorage.removeItem("management_token");
@@ -194,9 +198,9 @@
             editBtn.id = item[item.length - 1];
             editBtn.type = "button";
             editBtn.className = "table_column_button";
-            editBtn.value = "E";
+            editBtn.value = editButtonValue;
             editBtn.addEventListener("click", () => {
-                editBtn.value == "EDIT" ? editBtn.value = "CONFIRM" : editBtn.value = "EDIT";
+                editBtn.value == editButtonValue ? editBtn.value = confirmButtonValue : editBtn.value = editButtonValue;
                 memberEditEvent(item[item.length - 1], tmpTr, editBtn.value);
             });
             btnItem.appendChild(editBtn);
@@ -205,7 +209,7 @@
             delBtn.id = item[item.length - 1];
             delBtn.type = "button";
             delBtn.className = "table_column_button";
-            delBtn.value = "D";
+            delBtn.value = deleteButtonValue;
             delBtn.addEventListener("click", () => {
                 memberDeleteEvent(item[item.length - 1]);
             });
@@ -215,7 +219,7 @@
         // 회원 정보 수정 이벤트
         const memberEditEvent = (seq, tr, flag) => {
 
-            if (flag == "CONFIRM") {
+            if (flag == confirmButtonValue) {
             
                 const list = tr.children;
 
@@ -233,7 +237,7 @@
                         item.appendChild(tmp);
                     }
                 })
-            } else if (flag == "EDIT") {
+            } else if (flag == editButtonValue) {
 
                 const list = document.getElementsByClassName("table_column_input");
                 [...list].forEach((item) => {
