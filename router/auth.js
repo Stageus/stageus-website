@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const { Client } = require('pg');
 
 // Insert register api
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
 
     // request AJAX data
     let idValue = req.body.idValue;
@@ -25,19 +25,17 @@ router.post('/', (req, res) => {
         password: "stageus0104",
         prot: 5432
     })
-    const query = "select * from homepage.account WHERE id=$1 and pw=$2;";
-    const values = [idValue, pwValue];
+    const err = await pg.connect()
 
-    pg.connect((err) => {
+    if (err) {
+        console.log("ERR: ", err);
+        result.message = "데이터베이스 서버와의 연결에 문제가 있습니다."
+    } else {
+        const sql = "select * from homepage.account WHERE id=$1 and pw=$2;";
+        const values = [idValue, pwValue];
+        let err2, res2 = await pg.query(sql, values);
 
-        if (err) {
-            console.log(err);
-        }
-    });
-    pg.query(query, values, (err, res2) => {
-
-        if (!err) {
-
+        if (!err2) {
             const rowList = res2.rows;
 
             if (rowList.length > 0) {
@@ -58,14 +56,13 @@ router.post('/', (req, res) => {
             } else {
                 result.message = "회원 정보가 잘못되었습니다."
             }
-
-            res.send(result);
-
         } else {
-            console.log(err);
+            console.log("ERR : ", err2);
+            result.message = "데이터베이스 서버와의 통신 과정 중에 오류가 발생했습니다."
         }
-        pg.end();
-    })
+        await pg.end();
+    }
+    await res.send(result);
 });
 
 // Insert register api
@@ -78,7 +75,7 @@ router.post('/varify', (req, res) => {
     };
 
     try {
-        req.decoded = jwt.verify(req.headers.auth, secretKey);
+        jwt.verify(req.headers.auth, secretKey);
         result.success = true;
     }
     catch(error) {
