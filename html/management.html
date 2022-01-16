@@ -272,13 +272,13 @@
                         "seqValue": seq
                     })
                 })
-                const result =  response.json()
+                const result = await response.json()
 
                 if (result.success) {
                     location.reload();
                 }
                 else if (!result.success) {
-                    alert(result.message);
+                    alert("삭제에 실패했습니다.");
                 }
             }
         }
