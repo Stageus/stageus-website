@@ -78,7 +78,7 @@ router.get('/', async (req, res) => {
 
     const err = await pg.connect();
     if (err) {
-        console.log("ERR: ", err);
+        console.log("DBServerConnectionError: ", err);
     } else {
         const sql = "select * from homepage.register ORDER BY seq DESC";
         
@@ -102,7 +102,7 @@ router.get('/', async (req, res) => {
                 result.list.push(row);
             })
         } else {
-            console.log("ERR: ", err);
+            console.log("SQLSyntaxError: ", err);
         }
         await pg.end();
     }
@@ -130,7 +130,7 @@ router.delete('/', async (req, res) => {
 
     const err = await pg.connect()
     if (err) {
-        console.log("ERR: ", err);
+        console.log("DBServerConnectionError: ", err);
     } else {
         const sql = "DELETE FROM homepage.register WHERE seq = $1;";
         const values = [seqValue];
@@ -139,7 +139,7 @@ router.delete('/', async (req, res) => {
         if (!err2) {
             result.success = true
         } else {
-            console.log("ERR: ", err);
+            console.log("SQLSyntaxError: ", err);
         }
         await pg.end();
     }
@@ -175,7 +175,7 @@ router.put('/', async (req, res) => {
 
     const err = await pg.connect();
     if (err) {
-        console.log("ERR: ", err);
+        console.log("DBServerConnectionError: ", err);
     } else {
         const sql = "UPDATE homepage.register set name=$1, contact=$2, job=$3, option=$4, generation=$5, subject=$6, duration=$7, memo=$8 WHERE seq = $9;";
         const values = [
@@ -186,7 +186,7 @@ router.put('/', async (req, res) => {
         if (!err2) {
             result.success = true
         } else {
-            console.log("ERR: ", err);
+            console.log("SQLSyntaxError: ", err);
         }
         await pg.end();
     }

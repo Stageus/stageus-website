@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
     const err = await pg.connect()
 
     if (err) {
-        console.log("ERR: ", err);
+        console.log("DBServerConnectionError: ", err);
         result.message = "데이터베이스 서버와의 연결에 문제가 있습니다."
     } else {
         const sql = "select * from homepage.account WHERE id=$1 and pw=$2;";
@@ -57,7 +57,7 @@ router.post('/', async (req, res) => {
                 result.message = "회원 정보가 잘못되었습니다."
             }
         } else {
-            console.log("ERR : ", err2);
+            console.log("SQLSyntaxError: ", err);
             result.message = "데이터베이스 서버와의 통신 과정 중에 오류가 발생했습니다."
         }
         await pg.end();
