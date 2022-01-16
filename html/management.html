@@ -24,25 +24,24 @@
 <body>
 
     <script>
-        window.onload = () => {
+        window.onload = async () => {
 
             // 토큰 존재시 검증 과정
             if (localStorage.getItem("management_token")) {
-                fetch("/auth/varify", {
+                const response = await fetch("/auth/varify", {
                     "method": "POST",
                     "headers": {
                         "auth": localStorage.getItem("management_token")
                     }
                 })
-                .then ((response) => response.json())
-                .then ((result) => {
-                    if (result.success) {
-                        loadData();
-                    } else if (!result.success) {
-                        alert(result.message);
-                        localStorage.removeItem("management_token");
-                    }
-                })
+                const result = await response.json()
+
+                if (result.success) {
+                    loadData();
+                } else if (!result.success) {
+                    alert(result.message);
+                    localStorage.removeItem("management_token");
+                }
             }
         }
     </script>
@@ -114,11 +113,11 @@
         }
 
         // 관리자 계정 인증 이벤트
-        const authEvent = () => {
+        const authEvent = async () => {
             const idValue = document.getElementById("auth_id_input").value;
             const pwValue = document.getElementById("auth_pw_input").value;
 
-            fetch("/auth", {
+            const response = await fetch("/auth", {
                 method: "POST", 
                 headers: {
                     "Content-Type": "application/json",
@@ -128,68 +127,56 @@
                     "pwValue": pwValue,
                 })
             })
-            .then ((response) => response.json())
-            .then ((result) => {
+            const result = await response.json()
 
-                if (result.success) {
-                    localStorage.setItem("management_token", result.token);
-                    loadData();
-                }
-                else if (!result.success) {
-                    alert(result.message);
-                }
-            })
-            .catch((error) => {   // 통신에 실패 했을 때
-                console.log("error");
-                alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
-            });
+            if (result.success) {
+                localStorage.setItem("management_token", result.token);
+                loadData();
+            }
+            else if (!result.success) {
+                alert(result.message);
+            }
         }
 
         // 회원 정보 로드 함수
-        const loadData = () => {
+        const loadData = async () => {
 
             document.getElementById("contents_box").style.display = "block";
             document.getElementById("auth_box").style.display = "none";
 
-            fetch("register")
-            .then ((response) => response.json())
-            .then ((result) => {
+            const response = await fetch("register")
+            const result = await response.json()
 
-                for(var a = 0; a < result.list.length; a++) {
+            for(var a = 0; a < result.list.length; a++) {
 
-                    let isDivider = false;   // 기수를 기준으로 마지막 row인지 체크
+                let isDivider = false;   // 기수를 기준으로 마지막 row인지 체크
 
-                    const tmpTr = document.createElement("tr");
+                const tmpTr = document.createElement("tr");
 
-                    for (let num = 0; num<9; num++) {
-                        let items = document.createElement("td");
-                        items.innerHTML = result.list[a][num];
-                        if (a+1 != result.list.length) {
-                            if (result.list[a][4] != result.list[a+1][4]){
-                                items.className = "table_column_divide";
-                                isDivider = true;
-                            } else {
-                                items.className = "table_column";
-                            }
-                        } else {
+                for (let num = 0; num<9; num++) {
+                    let items = document.createElement("td");
+                    items.innerHTML = result.list[a][num];
+                    if (a+1 != result.list.length) {
+                        if (result.list[a][4] != result.list[a+1][4]){
                             items.className = "table_column_divide";
                             isDivider = true;
+                        } else {
+                            items.className = "table_column";
                         }
-                        tmpTr.appendChild(items);
+                    } else {
+                        items.className = "table_column_divide";
+                        isDivider = true;
                     }
-
-                    const btnItem = document.createElement("td");
-                    isDivider == true ? btnItem.className = "table_column_divide" : btnItem.className = "table_column"
-                    createButton(btnItem, tmpTr, result.list[a])
-                    tmpTr.appendChild(btnItem);
-
-                    document.getElementById("membem_list").appendChild(tmpTr);
+                    tmpTr.appendChild(items);
                 }
-            })
-            .catch((error) => {
-                console.log(error);
-                alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
-            });
+
+                const btnItem = document.createElement("td");
+                isDivider == true ? btnItem.className = "table_column_divide" : btnItem.className = "table_column"
+                createButton(btnItem, tmpTr, result.list[a])
+                tmpTr.appendChild(btnItem);
+
+                document.getElementById("membem_list").appendChild(tmpTr);
+            }
         }
 
         const createButton = (btnItem, tmpTr, item) => {
@@ -217,7 +204,7 @@
         }
 
         // 회원 정보 수정 이벤트
-        const memberEditEvent = (seq, tr, flag) => {
+        const memberEditEvent = async (seq, tr, flag) => {
 
             if (flag == confirmButtonValue) {
             
@@ -240,11 +227,8 @@
             } else if (flag == editButtonValue) {
 
                 const list = document.getElementsByClassName("table_column_input");
-                [...list].forEach((item) => {
-                    console.log(item.value);
-                })
 
-                fetch("/register", {
+                const response = await fetch("/register", {
                     method: "PUT", 
                     headers: {
                         "Content-Type": "application/json",
@@ -261,30 +245,25 @@
                         "seqValue": seq
                     })
                 })
-                .then ((response) => response.json())
-                .then ((result) => {
+                const result = await response.json()
 
-                    if (result.success) {
-                        location.reload();
-                    }
-                    else if (!result.success) {
-                        alert("수정에 실패했습니다.");
-                    }
-                })
-                .catch((error) => {
-                    alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
-                });
+                if (result.success) {
+                    location.reload();
+                }
+                else if (!result.success) {
+                    alert("수정에 실패했습니다.");
+                }
             }
         }
 
         // 회원 목록 삭제 이벤트
-        const memberDeleteEvent = (seq) => {
+        const memberDeleteEvent = async (seq) => {
 
             const confirmDialog = confirm("정말 삭제할까요?");
             
             if (confirmDialog == true) {
 
-                fetch("/register", {
+                const response = await fetch("/register", {
                     method: "DELETE", 
                     headers: {
                         "Content-Type": "application/json",
@@ -293,19 +272,14 @@
                         "seqValue": seq
                     })
                 })
-                .then ((response) => response.json())
-                .then ((result) => {
+                const result =  response.json()
 
-                    if (result.success) {
-                        location.reload();
-                    }
-                    else if (!result.success) {
-                        alert(result.message);
-                    }
-                })
-                .catch((error) => {
-                    alert("서버에 문제가 있습니다.\n관리자에게 문의해주세요.");
-                });
+                if (result.success) {
+                    location.reload();
+                }
+                else if (!result.success) {
+                    alert(result.message);
+                }
             }
         }
     </script>

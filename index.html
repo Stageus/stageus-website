@@ -96,7 +96,7 @@
         <!-- section lecture -->
         <section class="contents white_background">
             <h2 class="content_subtitle">과정 소개</h2>
-            <h1 class="content_title">7기 개강 과정</h1>
+            <h1 id="lecture_generation" class="content_title"></h1>
             <div class="content_explain">
                 <p class="content_value">기초 과정에서 심화 과정으로 이어지는 Step by Step 커리큘럼</p>
                 <p class="content_value">기초 10주, 심화 12주의 구성으로 이루어진 총 <span>5개월 + 2주간</span>의 교육 과정</p>
@@ -140,7 +140,7 @@
                 <a id="lecture_button" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
             </div>
             <div id="lecture_notice_box">
-                <p class="lecture_notice">※ 스테이지어스의 과정은 1년에 <span>여섯 기수</span> 운영됩니다.</p>
+                <p class="lecture_notice">※ 스테이지어스의 과정은 1년에 <span>4회 기수</span> 운영됩니다. ( 1월, 3월, 7월, 9월 )</p>
                 <p class="lecture_notice">※ 대학생 시험기간이 포함된 기수는 <span>쉬는주 2주</span>가 포함됩니다.</p>
             </div>
         </section>
@@ -323,44 +323,51 @@
     <script>        
         window.onload = () => {
 
+            // lecutre 기수 삽입
+            const lectureGeneration = document.getElementById("lecture_generation");
+            lectureGeneration.innerHTML = lecture.generation + "기 개강 과정"
+
             // Lecture 명 삽입
-            let lectureName = document.getElementsByClassName("lecture_title");
+            const lectureName = document.getElementsByClassName("lecture_title");
             [...lectureName].forEach((item, index) => {
                 item.innerHTML = lecture.information[index].name;
             })
 
             // Lecture 기간 삽입
-            let lectureDuration = document.getElementsByClassName("lecture_info");
+            const lectureDuration = document.getElementsByClassName("lecture_info");
             [...lectureDuration].forEach((item, index) => {
                 item.innerHTML = lecture.information[index].duration;
             })
 
             // Lecture 수강 인원 삽입
-            let lectureNumber = document.getElementsByClassName("lecture_empty");
+            const lectureNumber = document.getElementsByClassName("lecture_empty");
             [...lectureNumber].forEach((item, index) => {
-                if (lecture.information[index].number == -1) {
-                    item.innerHTML = "휴강";
-                } else if (lecture.information[index].number == 5) {
-                    item.innerHTML = "신청 마감";
-                } else {
-                    item.innerHTML = (lecture.information[index].number) + "/5";
-                }
+                setLectureNumber(item, index);
             })
         }
 
-        // Lecture 파트 문구 변경 이벤트
+        // Lecture Mouse Enter Event
         const lectureMouseOverEvent = (index) => {
             let list = document.getElementsByClassName("lecture_empty");
             list[index].innerHTML = "상세 커리큘럼";
         }
+
+        // Lecture Moude Leave Event
         const lectureMouseLeaveEvent = (index) => {
             let list = document.getElementsByClassName("lecture_empty");
+            setLectureNumber(list[index], index);
+        }
+
+        // 수강 인원 삽입 함수
+        const setLectureNumber = (item, index) => {
             if (lecture.information[index].number == -1) {
-                list[index].innerHTML = "휴강";
+                item.innerHTML = "휴강";
+            } else if (lecture.information[index].number == -2) {
+                item.innerHTML = "개강 예정";
             } else if (lecture.information[index].number == 5) {
-                list[index].innerHTML = "신청 마감";
+                item.innerHTML = "신청 마감";
             } else {
-                list[index].innerHTML = (lecture.information[index].number) + "/5";
+                item.innerHTML = (lecture.information[index].number) + "/5";
             }
         }
     </script>

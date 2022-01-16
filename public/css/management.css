@@ -91,6 +91,10 @@ section {
     border-spacing: 0;
 }
 
+.table_row {
+    background-color: #4088eb;
+}
+
 .table_column_title {
     background-color: #4088eb;
     color: white;
