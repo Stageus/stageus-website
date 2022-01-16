@@ -6,7 +6,7 @@ const https = require('https');
 const httpPort = process.env.PORT || 8000;
 const httpsPort = process.env.PORT || 8443;
 
-const options = {
+const SSLOptions = {
     key: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.key.pem')),
     cert: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.crt.pem')),
     ca: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.ca-bundle.pem')),
@@ -78,6 +78,11 @@ app.get('/6d656d6265724c697374', (req, res) => {
     res.sendFile(path.join(__dirname, 'html/management.html'));
 });
 
+// Wrong Page
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'html/wrong.html'));
+});
+
 // =======================================================================================
 
 // Register Middleware API
@@ -90,13 +95,8 @@ app.use('/auth', auth);
 
 // =======================================================================================
 
-// Wrong Path Request API
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html/wrong.html'));
-});
-
 // HTTPS Server listen API
-https.createServer(options, app).listen(httpsPort, (req, res) => {
+https.createServer(SSLOptions, app).listen(httpsPort, (req, res) => {
     console.log("HTTP Server Started : Port " + httpsPort);
 });
 
