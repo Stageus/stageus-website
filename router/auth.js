@@ -4,12 +4,19 @@ const router = require('express').Router();
 const jwt = require('jsonwebtoken');
 const pg = require('pg');
 
+const dbControl = require("../module/dbControl")
+
 // Insert register api
 router.post('/', async (req, res) => {
 
     // request AJAX data
-    let idValue = req.body.idValue;
-    let pwValue = req.body.pwValue;
+    let idValue = req.body.idValue
+    let pwValue = req.body.pwValue
+
+    const queryResult = await dbControl(
+        "select * from homepage.account WHERE id=$1 and pw=$2",
+        [idValue, pwValue]
+    )
 
     // Init response data
     const result = {
@@ -18,52 +25,25 @@ router.post('/', async (req, res) => {
         "token": null
     }
 
-    // Init psql account
-    const client = new pg.Client({
-        user: "ubuntu",
-        host: "localhost",
-        database: "stageus",
-        password: "stageus0104",
-        prot: 5432
-    })
-    const err = await client.connect()
-
-    if (err) {
-        console.log("DBServerConnectionError: ", err);
-        result.message = "데이터베이스 서버와의 연결에 문제가 있습니다."
-    } else {
-        const sql = "select * from homepage.account WHERE id=$1 and pw=$2;";
-        const values = [idValue, pwValue];
-        let err2, res2 = await client.query(sql, values);
-
-        if (!err2) {
-            const rowList = res2.rows;
-
-            if (rowList.length > 0) {
-                const jwtToken = jwt.sign(
-                    {
-                        id: idValue,
-                        role: rowList[0].role,
-                        name: rowList[0].name
-                    }, 
-                    secretKey,
-                    {
-                        expiresIn: "30d",
-                        issuer: "stageus"
-                    }
-                )
-                result.success = true;
-                result.token = jwtToken;
-            } else {
-                result.message = "회원 정보가 잘못되었습니다."
+    if (queryResult.list.length > 0) {
+        const jwtToken = jwt.sign(
+            {
+                id: idValue,
+                role: queryResult.list[0].role,
+                name: queryResult.list[0].name
+            }, 
+            secretKey,
+            {
+                expiresIn: "30d",
+                issuer: "stageus"
             }
-        } else {
-            console.log("SQLSyntaxError: ", err);
-            result.message = "데이터베이스 서버와의 통신 과정 중에 오류가 발생했습니다."
-        }
-        await client.end();
+        )
+        result.success = queryResult.success;
+        result.message = queryResult.message;
+        result.token = jwtToken;
     }
-    await res.send(result);
+            
+    res.send(result);
 });
 
 // Insert register api
@@ -78,12 +58,13 @@ router.post('/varify', (req, res) => {
     try {
         jwt.verify(req.headers.auth, secretKey);
         result.success = true;
-    }
-    catch(error) {
-        if (error.name == "TokenExpiredError") {
-            result.message = "만료된 로그인 토큰 입니다."
+    } catch (err) {
+        if (err.name == "TokenExpiredError") {
+            result.message = "TokenExpiredError"
+            console.log("TokenExpiredError: ", err);
         } else {
-            result.message = "유효하지 않은 로그인 토큰 입니다."
+            result.message = "InvalidToken"
+            console.log("InvalidToken: ", err);
         }
     }
     res.send(result);
