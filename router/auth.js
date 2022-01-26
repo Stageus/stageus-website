@@ -1,7 +1,8 @@
 const secretKey = "THISISOURSTAGE-STAGEUS";
+
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
-const { Client } = require('pg');
+const pg = require('pg');
 
 // Insert register api
 router.post('/', async (req, res) => {
@@ -18,14 +19,14 @@ router.post('/', async (req, res) => {
     }
 
     // Init psql account
-    const pg = new Client({
+    const client = new pg.Client({
         user: "ubuntu",
         host: "localhost",
         database: "stageus",
         password: "stageus0104",
         prot: 5432
     })
-    const err = await pg.connect()
+    const err = await client.connect()
 
     if (err) {
         console.log("DBServerConnectionError: ", err);
@@ -33,7 +34,7 @@ router.post('/', async (req, res) => {
     } else {
         const sql = "select * from homepage.account WHERE id=$1 and pw=$2;";
         const values = [idValue, pwValue];
-        let err2, res2 = await pg.query(sql, values);
+        let err2, res2 = await client.query(sql, values);
 
         if (!err2) {
             const rowList = res2.rows;
@@ -60,7 +61,7 @@ router.post('/', async (req, res) => {
             console.log("SQLSyntaxError: ", err);
             result.message = "데이터베이스 서버와의 통신 과정 중에 오류가 발생했습니다."
         }
-        await pg.end();
+        await client.end();
     }
     await res.send(result);
 });

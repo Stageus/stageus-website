@@ -38,60 +38,22 @@ app.get('*', (req, res, next) => {
 
 // =======================================================================================
 
-// Main Page
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+// Pages Middleware API
+const pagesApi = require('./router/pages');
+app.use('/', pagesApi);
 
-// "교육" Page
-app.get('/education', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/file/education.pdf'));
-});
+// Register Middleware API
+const registerApi = require('./router/register');
+app.use('/register', registerApi);
 
-// "커리큘럼" Page
-app.get('/curriculum', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/file/curriculum.pdf'));
-});
-
-// "FAQ" Page
-app.get('/faq', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html/faq.html'));
-});
-
-// "설치 가이드" Page
-app.get('/guide', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html/guide.html'));
-});
-
-// "환불 약관" Page
-app.get('/refund', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html/refund.html'));
-});
-
-// "팀원 신청서" Page
-app.get('/7265676973746572', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html/register.html'));
-});
-
-// "관리자" Page
-app.get('/6d656d6265724c697374', (req, res) => {
-    res.sendFile(path.join(__dirname, 'html/management.html'));
-});
+// Admin Auth Middleware API
+const authApi = require("./router/auth");
+app.use('/auth', authApi);
 
 // Wrong Page
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'html/wrong.html'));
 });
-
-// =======================================================================================
-
-// Register Middleware API
-const register = require('./router/register');
-app.use('/register', register);
-
-// Admin Auth Middleware API
-const auth = require("./router/auth");
-app.use('/auth', auth);
 
 // =======================================================================================
 

@@ -23,29 +23,6 @@
 </head>
 <body>
 
-    <script>
-        window.onload = async () => {
-
-            // 토큰 존재시 검증 과정
-            if (localStorage.getItem("management_token")) {
-                const response = await fetch("/auth/varify", {
-                    "method": "POST",
-                    "headers": {
-                        "auth": localStorage.getItem("management_token")
-                    }
-                })
-                const result = await response.json()
-
-                if (result.success) {
-                    loadData();
-                } else if (!result.success) {
-                    alert(result.message);
-                    localStorage.removeItem("management_token");
-                }
-            }
-        }
-    </script>
-
     <!-- nav -->
     <nav>
         <a id="nav_logo" href="/">
@@ -106,6 +83,27 @@
         const confirmButtonValue = "C";
         const deleteButtonValue = "D";
 
+        window.onload = async () => {
+
+            // 토큰 존재시 검증 과정
+            if (localStorage.getItem("management_token")) {
+                const response = await fetch("/auth/varify", {
+                    "method": "POST",
+                    "headers": {
+                        "auth": localStorage.getItem("management_token")
+                    }
+                })
+                const result = await response.json()
+
+                if (result.success) {
+                    loadData();
+                } else if (!result.success) {
+                    alert(result.message);
+                    localStorage.removeItem("management_token");
+                }
+            }
+        }
+
         // 로그아웃 이벤트
         const logoutEvent = () => {
             localStorage.removeItem("management_token");
@@ -144,7 +142,7 @@
             document.getElementById("contents_box").style.display = "block";
             document.getElementById("auth_box").style.display = "none";
 
-            const response = await fetch("register")
+            const response = await fetch("/register")
             const result = await response.json()
 
             for(var a = 0; a < result.list.length; a++) {
