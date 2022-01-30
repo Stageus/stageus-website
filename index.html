@@ -140,7 +140,8 @@
                 <a id="lecture_button" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
             </div>
             <div id="lecture_notice_box">
-                <p class="lecture_notice">※ 스테이지어스의 과정은 1년에 <span>4회 기수</span> 운영됩니다. ( 1월, 3월, 7월, 9월 )</p>
+                <p class="lecture_notice">※ 기초 과정은 <span>1년에 6회</span> 운영됩니다. ( 매 홀수 월 )</p>
+                <p class="lecture_notice">※ 심화 과정은 <span>1년에 4회</span> 운영됩니다. ( 2월, 6월, 8월, 12월 )</p>
                 <p class="lecture_notice">※ 대학생 시험기간이 포함된 기수는 <span>쉬는주 2주</span>가 포함됩니다.</p>
             </div>
         </section>
@@ -325,7 +326,7 @@
 
             // lecutre 기수 삽입
             const lectureGeneration = document.getElementById("lecture_generation");
-            lectureGeneration.innerHTML = lecture.generation + "기 개강 과정"
+            lectureGeneration.innerHTML = lecture.generation + "기 " + lecture.degree + "차 개강 과정"
 
             // Lecture 명 삽입
             const lectureName = document.getElementsByClassName("lecture_title");

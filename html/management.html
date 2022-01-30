@@ -64,6 +64,7 @@
                     <td class="table_column table_column_title">직업</td>
                     <td class="table_column table_column_title">옵션</td>
                     <td class="table_column table_column_title">기수</td>
+                    <td class="table_column table_column_title">차수</td>
                     <td class="table_column table_column_title">과정명</td>
                     <td class="table_column table_column_title">기간</td>
                     <td class="table_column table_column_title">가입일</td>
@@ -145,31 +146,41 @@
             const response = await fetch("/register")
             const result = await response.json()
 
-            for(var a = 0; a < result.list.length; a++) {
+            for(let a = 0; a < result.list.length; a++) {
 
-                let isDivider = false;   // 기수를 기준으로 마지막 row인지 체크
+                let isDivider = "no";   // 기수를 기준으로 마지막 row인지 체크
 
                 const tmpTr = document.createElement("tr");
 
-                for (let num = 0; num<9; num++) {
+                for (let num = 0; num < result.list[a].length - 1; num++) {
                     let items = document.createElement("td");
                     items.innerHTML = result.list[a][num];
                     if (a+1 != result.list.length) {
-                        if (result.list[a][4] != result.list[a+1][4]){
-                            items.className = "table_column_divide";
-                            isDivider = true;
+                        if (result.list[a][4] != result.list[a+1][4]){   // 직전 row와 generation 비교
+                            items.className = "table_column_generation_divide";
+                            isDivider = "generation";
+                        } 
+                        else if (result.list[a][5] != result.list[a+1][5]) {   // 직전 row와 degree 비교
+                            items.className = "table_column_degree_divide";
+                            isDivider = "degree";
                         } else {
                             items.className = "table_column";
                         }
                     } else {
-                        items.className = "table_column_divide";
-                        isDivider = true;
+                        items.className = "table_column_generation_divide";
+                        isDivider = "generation";
                     }
                     tmpTr.appendChild(items);
                 }
 
                 const btnItem = document.createElement("td");
-                isDivider == true ? btnItem.className = "table_column_divide" : btnItem.className = "table_column"
+                if (isDivider == "generation") {   // 설정 버튼들의 밑줄 결정
+                    btnItem.className = "table_column_generation_divide"
+                } else if (isDivider == "degree") {
+                    btnItem.className = "table_column_degree_divide";
+                } else {
+                    btnItem.className = "table_column"
+                }
                 createButton(btnItem, tmpTr, result.list[a])
                 tmpTr.appendChild(btnItem);
 
@@ -236,10 +247,11 @@
                         "contactValue": list[1].value,
                         "jobValue": list[2].value,
                         "optionValue": list[3].value,
-                        "subjectValue": list[5].value,
                         "generationValue": list[4].value,
-                        "durationValue": list[6].value,
-                        "memoValue": list[7].value,
+                        "degreeValue": list[5].value,
+                        "subjectValue": list[6].value,
+                        "durationValue": list[7].value,
+                        "memoValue": list[8].value,
                         "seqValue": seq
                     })
                 })

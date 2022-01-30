@@ -1,5 +1,6 @@
 const lecture = {
-    "generation": 8,
+    "generation": 2,
+    "degree": 2,
     "information": [
         {
             "name": "파이썬 응용 프로그램 과정",
