@@ -1,28 +1,12 @@
 @media screen and (min-width: 1025px) and (max-width: 1300px) {
 
-    /* nav */
-
-    nav {
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
-
-    /* header */
-
-    header, #header_cover {
-        height: 40rem;
-    }
-
-    #header_text_title {
-        padding-top: 23rem;
-        padding-left: 6rem;
-    }
-
-    .header_text_index {
-        padding-left: 6rem;
-    }
-
     /* footer */
+
+
+    #footer_box {
+        width: fit-content;
+        margin-left: 7.5%;
+    }
 
     #footer_index_box {
         width: 60rem;
@@ -34,8 +18,11 @@
     /* nav */
 
     nav {
-        padding-left: 6rem;
-        padding-right: 6rem;
+        height: 5rem;
+    }
+
+    #logo {
+        height: 3rem;
     }
 
     #nav_menu_box {
@@ -43,31 +30,38 @@
     }
 
     #nav_menu_button {
-        display: inline-block;
+        display: block;
     }
 
     /* header */
 
-    header, #header_cover {
+    header {
         height: 35rem;
     }
 
-    #header_text_title {
-        padding-top: 19rem;
-        padding-left: 6rem;
-        margin-bottom: 1rem;
-        font-size: 5rem;
-    }
-
-    .header_text_index {
-        padding-left: 6rem;
-        font-size: 1.3rem;
+    .header_text_title {
+        padding-top: 18rem;
+        font-size: 5.5rem;
     }
 
     /* footer */
 
+    #footer_box {
+        width: 50rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     .footer_text {
         font-size: 2.6rem;
+    }
+
+    #footer_button {
+        width: 20rem;
+        font-size: 2rem;
+    }
+    #footer_button:hover {
+        width: 25rem;
     }
 
     #footer_index_box {
@@ -81,13 +75,10 @@
 
 @media screen and (min-width: 410px) and (max-width: 767px) {
 
-    /* nav */
+     /* nav */
 
     nav {
-        width: 100%-4rem;
         height: 4rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
     }
 
     #logo {
@@ -104,23 +95,13 @@
 
     /* header */
 
-    header, #header_cover {
-        height: 18rem;
+    header {
+        height: 20rem;
     }
 
-    #header_text_title {
-        padding-top: 11rem;
-        padding-left: 2.2rem;
-        margin-bottom: 0.4rem;
-        font-size: 2.2rem;
-    }
-
-    .header_text_index {
-        padding-left: 2.2rem;
-        font-size: 1.1rem;
-    }
-    .header_text_index + .header_text_index {
-        margin-top: 0.4rem;
+    .header_text_title {
+        padding-top: 10rem;
+        font-size: 2.6rem;
     }
 
     /* footer */
@@ -132,10 +113,20 @@
 
     #footer_box {
         width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .footer_text {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    #footer_button {
+        width: 12rem;
+        font-size: 1.1rem;
+    }
+    #footer_button:hover {
+        width: 16rem;
     }
 
     #footer_index_box {
@@ -152,14 +143,11 @@
     /* nav */
 
     nav {
-        width: 100%-4rem;
         height: 4rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
     }
 
     #logo {
-    height: 2.5rem;
+        height: 2.5rem;
     }
 
     #nav_menu_box {
@@ -170,25 +158,15 @@
         display: inline-block;
     }
 
-   /* header */
+    /* header */
 
-    header, #header_cover {
+    header {
         height: 14rem;
     }
 
-    #header_text_title {
-        padding-top: 7.8rem;
-        padding-left: 2rem;
-        margin-bottom: 0.4rem;
-        font-size: 1.8rem;
-    }
-
-    .header_text_index {
-        padding-left: 2rem;
-        font-size: 1rem;
-    }
-    .header_text_index + .header_text_index {
-        margin-top: 0.4rem;
+    .header_text_title {
+        padding-top: 5.6rem;
+        font-size: 2.2rem;
     }
 
    /* footer */
@@ -200,10 +178,23 @@
 
     #footer_box {
         width: 90%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .footer_text {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
+    }
+
+    #footer_button {
+        width: 10rem;
+        margin-top: 0.5rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        font-size: 1.1rem;
+    }
+    #footer_button:hover {
+        width: 13rem;
     }
 
     #footer_index_box {

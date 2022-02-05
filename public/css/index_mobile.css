@@ -1,6 +1,5 @@
 @media screen and (min-width: 1025px) and (max-width: 1300px) {
 
-
     /* content_distinction */
 
     #distinction_box {
@@ -13,50 +12,9 @@
     .benefit_item {
         width: 75rem;
     }
-
-    /* footer */
-
-
-    #footer_box {
-        width: fit-content;
-        margin-left: 7.5%;
-    }
-
-    #footer_index_box {
-        width: 60rem;
-    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
-    /* nav */
-
-    nav {
-        height: 5rem;
-    }
-
-    #logo {
-        height: 3rem;
-    }
-
-    #nav_menu_box {
-        display: none;
-    }
-
-    #nav_menu_button {
-        display: block;
-    }
-
-    /* header */
-
-    header {
-        height: 35rem;
-    }
-
-    .header_text_title {
-        padding-top: 18rem;
-        font-size: 5.5rem;
-    }
 
     /* intro */
 
@@ -148,66 +106,9 @@
     #map {
         width: 50rem;
     }
-
-    /* footer */
-
-    #footer_box {
-        width: 50rem;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .footer_text {
-        font-size: 2.6rem;
-    }
-
-    #footer_button {
-        width: 20rem;
-        font-size: 2rem;
-    }
-    #footer_button:hover {
-        width: 25rem;
-    }
-
-    #footer_index_box {
-        width: 80%;
-    }
-
-    #footer_subvalue_box {
-        width: 80%;
-    }
 }
 
 @media screen and (min-width: 410px) and (max-width: 767px) {
-
-     /* nav */
-
-    nav {
-        height: 4rem;
-    }
-
-    #logo {
-        height: 2.5rem;
-    }
-
-    #nav_menu_box {
-        display: none;
-    }
-
-    #nav_menu_button {
-        display: inline-block;
-    }
-
-    /* header */
-
-    header {
-        height: 20rem;
-    }
-
-    .header_text_title {
-        padding-top: 10rem;
-        font-size: 2.6rem;
-    }
 
     /* intro */
 
@@ -387,71 +288,9 @@
         font-size: 0.9rem;
         margin-top: 0.6rem;
     }
-
-    /* footer */
-
-    footer {
-        padding-top: 5rem;
-        padding-bottom: 3rem;
-    }
-
-    #footer_box {
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .footer_text {
-        font-size: 1.5rem;
-    }
-
-    #footer_button {
-        width: 12rem;
-        font-size: 1.1rem;
-    }
-    #footer_button:hover {
-        width: 16rem;
-    }
-
-    #footer_index_box {
-        width: 80%;
-    }
-
-    #footer_subvalue_box {
-        width: 80%;
-    }
 }
 
 @media screen and (max-width: 409px) {
-
-    /* nav */
-
-    nav {
-        height: 4rem;
-    }
-
-    #logo {
-        height: 2.5rem;
-    }
-
-    #nav_menu_box {
-        display: none;
-    }
-
-    #nav_menu_button {
-        display: inline-block;
-    }
-
-    /* header */
-
-    header {
-        height: 14rem;
-    }
-
-    .header_text_title {
-        padding-top: 5.6rem;
-        font-size: 2.2rem;
-    }
 
     /* intro */
 
@@ -649,41 +488,5 @@
     #office_addr {
         font-size: 0.9rem;
         margin-top: 0.6rem;
-    }
-
-   /* footer */
-
-    footer {
-        padding-top: 5rem;
-        padding-bottom: 3rem;
-    }
-
-    #footer_box {
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .footer_text {
-        font-size: 1.3rem;
-    }
-
-    #footer_button {
-        width: 10rem;
-        margin-top: 0.5rem;
-        padding-top: 0.7rem;
-        padding-bottom: 0.7rem;
-        font-size: 1.1rem;
-    }
-    #footer_button:hover {
-        width: 13rem;
-    }
-
-    #footer_index_box {
-        width: 80%;
-    }
-
-    #footer_subvalue_box {
-        width: 80%;
     }
 }

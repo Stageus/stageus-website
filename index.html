@@ -15,6 +15,8 @@
     <link rel="canonical" href="https://www.stageus.co.kr">
     <link rel="icon" type="image/x-icon" href="img/logoMark.png">
     <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/header_footer_template.css">
+    <link rel="stylesheet" type="text/css" href="css/header_footer_template_mobile.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/index_mobile.css">
 
@@ -53,7 +55,7 @@
 
     <!-- header -->
     <header>
-        <div id="header_cover"> 
+        <div class="header_cover"> 
             <h1 class="header_text_title">스테이지어스</h1>
             <p class="header_text_index content_subvalue">코딩을 잘하는 것 만으론 부족합니다.</p>
             <p class="header_text_index content_subvalue">능력 있는 개발자가 될 수 있어야 합니다.</p>
@@ -142,7 +144,7 @@
                 </ul>
             </div>
             <div id="lecture_button_box">
-                <a id="lecture_button" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
+                <a id="lecture_button" class="contents_button" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
             </div>
             <div id="lecture_notice_box">
                 <p class="content_subvalue">※ 기초 과정은 <span>1년에 6회</span> 운영됩니다. ( 매 홀수 월 )</p>
@@ -251,9 +253,9 @@
                         <h3 class="mentor_info">cono@stageus.co.kr</h1>
                     </div>
                     <div id="mentor_aditional_box">
-                        <a class="mentor_career grey_background" href="file/career.pdf">Career</a>
-                        <a class="mentor_career grey_background" href="#">Blog</a>
-                        <a class="mentor_career grey_background" href="https://github.com/cmsggg">Github</a>
+                        <a class="mentor_career contents_button" href="file/career.pdf">Career</a>
+                        <a class="mentor_career contents_button" href="#">Blog</a>
+                        <a class="mentor_career contents_button" href="https://github.com/cmsggg">Github</a>
                     </div>
                 </div>
             </div>
@@ -324,7 +326,6 @@
     </footer>
 
     <script src="js/data.js"></script>
-    <script src="js/navEvent.js"></script>
     <script src="js/initData.js"></script>
     <script>        
         window.onload = () => {

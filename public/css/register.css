@@ -1,7 +1,7 @@
 /* Global */
 
 main {
-    background-color: #f9f9f9;
+    background-color: var(--grey);
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -17,31 +17,22 @@ main {
     margin-left: auto;
     margin-right: auto;
     border-radius: 0.4rem;
-    color: black;
-    font-family: NanumSquare;
-    font-weight: 400;
 }
 .register_box + .register_box {
     margin-top: 3rem;
 }
 
 .register_title {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 1rem;
-    color: black;
+    margin-bottom: 1.6rem;
     font-size: 1.6rem;
-    font-family: NanumSquare;
-    font-weight: 400;
 }
 
 .register_value {
-    height: fit-content;
     max-width: 100rem;
-    margin-right: auto;
-    margin-left: auto;
     font-size: 1.3rem;
-    line-height: 2.6rem;
+}
+.register_value + .register_value {
+    margin-top: 1rem;
 }
 
 /* Register Form */
@@ -84,24 +75,8 @@ main {
 #register_button {
     display: block;
     width: 30rem;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 6rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    border: 0.1rem solid #4088eb;
-    border-radius: 0.4rem;
-    color: black;
     font-size: 1.6rem;
-    font-family: NanumSquare;
-    text-decoration: none;
-    text-align: center;
-    transition-property: background-color, color;
-    transition-duration: 0.2s;
-}
-#register_button:hover {
-    background-color: #4088eb;
-    color: white;
-    cursor: pointer;
 }

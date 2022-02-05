@@ -8,16 +8,14 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1rem;
-    color: #1E2022;
     font-size: 1.6rem;
-    font-family: NanumSquare;
     font-weight: 400;
 }
 
 .guide_line {
     width: 80%;
     max-width: 100rem;
-    background-color: #1E2022;
+    background-color: var(--black);
     margin-bottom: 2.6rem;
 }
 
@@ -27,9 +25,7 @@
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    color: #1E2022;
     font-size: 1.3rem;
-    font-family: NanumSquare;
     font-weight: 400;
     line-height: 2.6rem;
 }
@@ -40,8 +36,6 @@
     height: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .guide_explain {
@@ -51,8 +45,6 @@
     margin-left: auto;
     padding-top: 0.6rem;
     padding-bottom: 2rem;
-    color: #1E2022;
     font-size: 1.3rem;
-    font-family: NanumSquare;
     line-height: 2.6rem;
 }

@@ -9,35 +9,30 @@
 @media screen and (min-width: 410px) and (max-width: 767px) {
 
     .faq_title {
-        width: 90%;
         margin-bottom: 0.6rem;
         font-size: 1.2rem;
     }
 
     .faq_line {
-        width: 90%;
         margin-bottom: 1.4rem;
     }
 
     .faq {
-        width: 90%;
+        max-width: 36rem;
         margin-bottom: 1.8rem;
     }
 
     .faq_box {
+        width: 100%;
         margin-bottom: 0.8rem;
     }
 
     .faq_question {
-        width: 26rem;
-        height: 1.8rem;
-        padding: 0.6rem;
+        height: fit-content;
         font-size: 1rem;
     }
 
     .faq_answer {
-        width: 26rem;
-        padding: 0.6rem;
         font-size: 1rem;
         line-height: 1.8rem;
     }
@@ -47,35 +42,29 @@
 @media screen and (max-width: 409px) {
 
     .faq_title {
-        width: 90%;
         margin-bottom: 0.5rem;
         font-size: 1.2rem;
     }
 
     .faq_line {
-        width: 90%;
         margin-bottom: 1.2rem;
     }
 
     .faq {
-        width: 90%;
         margin-bottom: 1.6rem;
     }
 
     .faq_box {
+        width: 100%;
         margin-bottom: 0.6rem;
     }
 
     .faq_question {
-        width: 20rem;
-        height: 1.8rem;
-        padding: 0.4rem;
-        font-size: 0.9rem;
+        height: fit-content;
+        font-size: 0.8rem;
     }
 
     .faq_answer {
-        width: 20rem;
-        padding: 0.4rem;
         font-size: 0.9rem;
         line-height: 1.6rem;
     }

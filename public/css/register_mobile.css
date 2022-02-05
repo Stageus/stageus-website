@@ -12,15 +12,16 @@
 
     .register_title {
         font-size: 1.3rem;
+        line-height: 1.8rem;
     }
 
     .register_value {
-        height: fit-content;
         max-width: 100rem;
-        margin-right: auto;
-        margin-left: auto;
         font-size: 1rem;
-        line-height: 1.8rem;
+        line-height: 1.4rem;
+    }
+    .register_value + .register_value {
+        margin-top: 0.6rem;
     }
 
     .register_form + .register_form {

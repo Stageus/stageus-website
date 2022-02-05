@@ -27,15 +27,15 @@
         <a id="nav_logo" href="/">
             <image id="logo" src="img/logoBlack.png"></image>
         </a>
-        <ul id="nav_menu_box">   <!-- href script에서 정의 -->
-            <li><a class="nav_menu nav_hide">스테이지어스</a></li>
-            <li><a class="nav_menu nav_hide">커리큘럼</a></li>
-            <li><a class="nav_menu nav_hide">FAQ</a></li>
-            <li><a class="nav_menu">문의하기</a></li>
-        </ul> 
-        <input id="nav_menu_cover"type="button" onclick="menuCloseEvent()"></input>
+        <div id="nav_menu_box">
+            <h1><a class="nav_menu">교육</a></h1>   <!-- href script에서 href정의 -->
+            <h1><a class="nav_menu">커리큘럼</a></h1>
+            <h1><a class="nav_menu">FAQ</a></h1>
+            <h1><a class="nav_menu">문의하기</a></li>
+        </div> 
+        <input id="nav_menu_cover" type="button" onclick="menuCloseEvent()"></input>
         <div id="nav_menu_open">
-            <a class="nav_menu_open_item">스테이지어스</a>   <!-- href script에서 href정의 -->
+            <a class="nav_menu_open_item">교육</a>   <!-- href script에서 href정의 -->
             <a class="nav_menu_open_item">커리큘럼</a>
             <a class="nav_menu_open_item">FAQ</a>
             <a class="nav_menu_open_item">문의하기</a>
@@ -44,86 +44,87 @@
     </nav>
 
     <!-- header -->
-    <header id="header">
-        <div id="header_cover"> 
-            <p id="header_text_title">INSTALL GUIDE</p>
-            <p class="header_text_index">과정 시작 전 설치해야하는 프로그램들의 설치 가이드입니다.</p>
-            <p class="header_text_index">꼭 아래 설명대로 설치하여 준비해주시면 감사하겠습니다.</p>
+    <header>
+        <div class="header_cover darken"> 
+            <h1 class="header_text_title">INSTALL GUIDE</h1>
+            <p class="header_text_index content_subvalue">과정 시작 전 설치해야하는 프로그램들의 설치 가이드입니다.</p>
+            <p class="header_text_index content_subvalue">꼭 아래 설명대로 설치하여 준비해주시면 감사하겠습니다.</p>
         </div>
     </header>
 
-        <!-- main -->
-        <main>
+    <!-- main -->
+    <main>
 
-            <!-- section refund -->
-            <section class="contents">
-                <div class="guide_box">
-                    <h2 class="guide_title">Visual Studio Code 설치 방법</h2>
-                    <hr class="guide_line">
-                    <p class="guide_value">
-                        - <span>파이썬 응용 프로그램 과정</span>과 <span>웹 기초 과정</span> 모든 팀원에게 필요합니다.<br>
-                        - 코딩 전용 문서 작업 프로그램으로, 줄여서 VSC라고 부릅니다.<br>
-                        - VSC를 통해 대부분의 프로그래밍 언어를 작성하고 실행할 수 있습니다.<br>
-                    </p>
-                </div>
-                <div class="guide_box">
-                    <img class="guide_img" src="img/guide/12.png">
-                    <p class="guide_explain">(1) Visual Studio Code의 홈페이지에 접속한 뒤 우측 상단의 Download를 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/13.png">
-                    <p class="guide_explain">(2) 자신의 컴퓨터 운영체제 맞는 버전을 설치해줍니다.<br>맥북이 아닌 이상, Windows를 설치하면됩니다.</p>
-                    <img class="guide_img" src="img/guide/14.png">
-                    <p class="guide_explain">(3) 동의합니다에 체크 후 다음을 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/15.png">
-                    <p class="guide_explain">(4) 따로 선택할 것 없이 다음을 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/16.png">
-                    <p class="guide_explain">(5) 설치를 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/17.png">
-                    <p class="guide_explain">(6) 설치가 진행됩니다.</p>
-                </div>
-                <div class="guide_box">
-                    <h2 class="guide_title">Anaconda Python 설치 방법</h2>
-                    <hr class="guide_line">
-                    <p class="guide_value">
-                        - <span>파이썬 응용 프로그램 과정</span> 팀원에게 필요합니다.<br>
-                        - 기본적인 Python과 함께 유용한 모듈을 같이 포함하고있는 Python 버전입니다.<br>
-                        - 과정 중 배우는 SQLite3와 PyQt 등도 포함되어 있어 간편한 개발 환경 구성이 가능해집니다.<br>
-                    </p>
-                </div>
-                <div class="guide_box">
-                    <img class="guide_img" src="img/guide/1.png">
-                    <p class="guide_explain">(1) Anaconda Python의 홈페이지에 접속한 뒤 우측 상단의 Get Started를 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/2.png">
-                    <p class="guide_explain">(2) Download Anaconda Installers를 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/3.png">
-                    <p class="guide_explain">(3) 자신의 컴퓨터 운영체제 맞는 버전을 설치해줍니다.<br>맥북이 아닌 이상, 64-Bit Windows를 설치하면됩니다.</p>
-                    <img class="guide_img" src="img/guide/4.png">
-                    <p class="guide_explain">(4) Next를 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/5.png">
-                    <p class="guide_explain">(5) I Agree를 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/6.png">
-                    <p class="guide_explain">(6) 따로 선택할 것 없이 Next를 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/7.png">
-                    <p class="guide_explain">(7) Next를 눌러주세요.
-                        <br>간혹 경로에 한글이 들어가면 설치가 되지 않는 경우가 있습니다.
-                        <br>이 경우 한글이 들어있지 않은 다른 경로로 변경해주세요.</p>
-                    <img class="guide_img" src="img/guide/8.png">
-                    <p class="guide_explain">(8) 꼭 <span>첫 번째 체크박스</span>를 체크하시고 Install을 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/9.png">
-                    <p class="guide_explain">(9) 설치가 진행됩니다.</p>
-                    <img class="guide_img" src="img/guide/10.png">
-                    <p class="guide_explain">(10) Next를 눌러주세요.</p>
-                    <img class="guide_img" src="img/guide/11.png">
-                    <p class="guide_explain">(11) 설치가 완료되었습니다.</p>
-                </div>
-            </section>
-    
-        </main>
+        <!-- section refund -->
+        <section class="contents">
+            <div class="guide_box">
+                <h2 class="guide_title">Visual Studio Code 설치 방법</h2>
+                <hr class="guide_line">
+                <p class="guide_value">
+                    - <span>파이썬 응용 프로그램 과정</span>과 <span>웹 기초 과정</span> 모든 팀원에게 필요합니다.<br>
+                    - 코딩 전용 문서 작업 프로그램으로, 줄여서 VSC라고 부릅니다.<br>
+                    - VSC를 통해 대부분의 프로그래밍 언어를 작성하고 실행할 수 있습니다.<br>
+                </p>
+            </div>
+            <div class="guide_box">
+                <img class="guide_img" src="img/guide/12.png">
+                <p class="guide_explain">(1) Visual Studio Code의 홈페이지에 접속한 뒤 우측 상단의 Download를 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/13.png">
+                <p class="guide_explain">(2) 자신의 컴퓨터 운영체제 맞는 버전을 설치해줍니다.<br>맥북이 아닌 이상, Windows를 설치하면됩니다.</p>
+                <img class="guide_img" src="img/guide/14.png">
+                <p class="guide_explain">(3) 동의합니다에 체크 후 다음을 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/15.png">
+                <p class="guide_explain">(4) 따로 선택할 것 없이 다음을 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/16.png">
+                <p class="guide_explain">(5) 설치를 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/17.png">
+                <p class="guide_explain">(6) 설치가 진행됩니다.</p>
+            </div>
+            <div class="guide_box">
+                <h2 class="guide_title">Anaconda Python 설치 방법</h2>
+                <hr class="guide_line">
+                <p class="guide_value">
+                    - <span>파이썬 응용 프로그램 과정</span> 팀원에게 필요합니다.<br>
+                    - 기본적인 Python과 함께 유용한 모듈을 같이 포함하고있는 Python 버전입니다.<br>
+                    - 과정 중 배우는 SQLite3와 PyQt 등도 포함되어 있어 간편한 개발 환경 구성이 가능해집니다.<br>
+                </p>
+            </div>
+            <div class="guide_box">
+                <img class="guide_img" src="img/guide/1.png">
+                <p class="guide_explain">(1) Anaconda Python의 홈페이지에 접속한 뒤 우측 상단의 Get Started를 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/2.png">
+                <p class="guide_explain">(2) Download Anaconda Installers를 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/3.png">
+                <p class="guide_explain">(3) 자신의 컴퓨터 운영체제 맞는 버전을 설치해줍니다.<br>맥북이 아닌 이상, 64-Bit Windows를 설치하면됩니다.</p>
+                <img class="guide_img" src="img/guide/4.png">
+                <p class="guide_explain">(4) Next를 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/5.png">
+                <p class="guide_explain">(5) I Agree를 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/6.png">
+                <p class="guide_explain">(6) 따로 선택할 것 없이 Next를 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/7.png">
+                <p class="guide_explain">(7) Next를 눌러주세요.
+                    <br>간혹 경로에 한글이 들어가면 설치가 되지 않는 경우가 있습니다.
+                    <br>이 경우 한글이 들어있지 않은 다른 경로로 변경해주세요.</p>
+                <img class="guide_img" src="img/guide/8.png">
+                <p class="guide_explain">(8) 꼭 <span>첫 번째 체크박스</span>를 체크하시고 Install을 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/9.png">
+                <p class="guide_explain">(9) 설치가 진행됩니다.</p>
+                <img class="guide_img" src="img/guide/10.png">
+                <p class="guide_explain">(10) Next를 눌러주세요.</p>
+                <img class="guide_img" src="img/guide/11.png">
+                <p class="guide_explain">(11) 설치가 완료되었습니다.</p>
+            </div>
+        </section>
+
+    </main>
 
     <!-- footer part -->
-    <footer>
+    <footer class="black_background">
         <div id="footer_box">
-            <p class="footer_text"><span>우리 모두</span>가 성장하는 무대</p>
-            <p class="footer_text">스테이지어스</p>
+            <p class="footer_text">스테이지어스는 능력 있는 개발자가 되기 위한</p>
+            <p class="footer_text">여러분의 <span>[ 무대 ]</span> 입니다.</p>
+            <a id="footer_button" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
         </div>
         <div id="footer_link_box">
             <a class="footer_link"><img class="footer_img" src="img/facebook.svg"/></a>
@@ -157,18 +158,17 @@
             </div>
         </div>
         <hr id="footer_hr"> 
-        <div id="footer_subvalue_box">   <!-- href script에서 정의 -->
+        <div id="footer_subvalue_box">   <!-- href script에서 href정의 -->
             <p id="footer_index_copyright">Copyright 2021. 스테이지어스. All right reserved.</p>
-            <a class="footer_index_subvalue">스테이지어스</a>
+            <a class="footer_index_subvalue">교육</a>
             <a class="footer_index_subvalue">커리큘럼</a>
             <a class="footer_index_subvalue">FAQ</a>
             <a class="footer_index_subvalue">문의하기</a>
-            <a class="footer_index_subvalue">환불약관</a>
+            <a class="footer_index_subvalue">확불약관</a>
         </div> 
     </footer>
 
     <script src="js/data.js"></script>
-    <script src="js/navEvent.js"></script>
     <script src="js/initData.js"></script>
 
 </body>

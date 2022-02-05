@@ -29,15 +29,15 @@
         <a id="nav_logo" href="/">
             <image id="logo" src="img/logoBlack.png"></image>
         </a>
-        <ul id="nav_menu_box">   <!-- href script에서 정의 -->
-            <li><a class="nav_menu nav_hide">스테이지어스</a></li>
-            <li><a class="nav_menu nav_hide">커리큘럼</a></li>
-            <li><a class="nav_menu nav_hide">FAQ</a></li>
-            <li><a class="nav_menu">문의하기</a></li>
-        </ul> 
-        <input id="nav_menu_cover"type="button" onclick="menuCloseEvent()"></input>
+        <div id="nav_menu_box">
+            <h1><a class="nav_menu">교육</a></h1>   <!-- href script에서 href정의 -->
+            <h1><a class="nav_menu">커리큘럼</a></h1>
+            <h1><a class="nav_menu">FAQ</a></h1>
+            <h1><a class="nav_menu">문의하기</a></li>
+        </div> 
+        <input id="nav_menu_cover" type="button" onclick="menuCloseEvent()"></input>
         <div id="nav_menu_open">
-            <a class="nav_menu_open_item">스테이지어스</a>   <!-- href script에서 href정의 -->
+            <a class="nav_menu_open_item">교육</a>   <!-- href script에서 href정의 -->
             <a class="nav_menu_open_item">커리큘럼</a>
             <a class="nav_menu_open_item">FAQ</a>
             <a class="nav_menu_open_item">문의하기</a>
@@ -46,10 +46,10 @@
     </nav>
 
     <!-- header -->
-    <header id="header">
-        <div id="header_cover"> 
-            <p id="header_text_title">REFUND POLICY</p>
-            <p class="header_text_index">환불 약관</p>
+    <header>
+        <div class="header_cover darken"> 
+            <h1 class="header_text_title">REFUND POLICY</h1>
+            <p class="header_text_index content_subvalue">환불 약관</p>
         </div>
     </header>
 
@@ -115,10 +115,11 @@
     </main>
 
     <!-- footer part -->
-    <footer>
+    <footer class="black_background">
         <div id="footer_box">
-            <p class="footer_text"><span>우리 모두</span>가 성장하는 무대</p>
-            <p class="footer_text">스테이지어스</p>
+            <p class="footer_text">스테이지어스는 능력 있는 개발자가 되기 위한</p>
+            <p class="footer_text">여러분의 <span>[ 무대 ]</span> 입니다.</p>
+            <a id="footer_button" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
         </div>
         <div id="footer_link_box">
             <a class="footer_link"><img class="footer_img" src="img/facebook.svg"/></a>
@@ -152,18 +153,17 @@
             </div>
         </div>
         <hr id="footer_hr"> 
-        <div id="footer_subvalue_box">   <!-- href script에서 정의 -->
+        <div id="footer_subvalue_box">   <!-- href script에서 href정의 -->
             <p id="footer_index_copyright">Copyright 2021. 스테이지어스. All right reserved.</p>
-            <a class="footer_index_subvalue">스테이지어스</a>
+            <a class="footer_index_subvalue">교육</a>
             <a class="footer_index_subvalue">커리큘럼</a>
             <a class="footer_index_subvalue">FAQ</a>
             <a class="footer_index_subvalue">문의하기</a>
-            <a class="footer_index_subvalue">환불약관</a>
+            <a class="footer_index_subvalue">확불약관</a>
         </div> 
     </footer>
 
     <script src="js/data.js"></script>
-    <script src="js/navEvent.js"></script>
     <script src="js/initData.js"></script>
 
 </body>
