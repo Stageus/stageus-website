@@ -154,13 +154,9 @@
 
     /* lecture */
 
-    #lecture_box {
-        width: 41rem;
-        height: 40rem;
-    }
-
-    #lecture_button {
-        width: 39rem;
+    .lecture_index {
+        width: 49%;
+        margin-bottom: 1rem;
     }
 
     /* content_distinction */
@@ -347,20 +343,13 @@
 
     /* lecture */
 
-    #lecture {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    #lecture_box {
-        width: 22rem;
-        height: 58rem;
+    .lecture_box {
+        max-width: 26rem;
     }
 
     .lecture_index {
-        width: 22rem;
-        padding-top: 1.4rem;
-        padding-bottom: 1.4rem;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 
     .lecture_title {
@@ -374,28 +363,19 @@
     }
 
     .lecture_empty {
-        width: 8rem;
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
         font-size: 1rem;
     }
-    .lecture_empty:hover {
-        width: 10rem;
-    }
 
     #lecture_button {
-        width: 24rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        font-size: 1.2rem;
     }
 
     #lecture_notice_box {
         margin-top: 1rem;
-    }
-
-    .lecture_notice {
-        font-size: 0.9rem;
-        margin-top: 0.6rem;
     }
 
     /* content_distinction */
@@ -411,7 +391,6 @@
 
     .distinction_item_title {
         margin-top: 1.5rem;
-        color: #1E2022;
         font-size: 1.4rem;
     }
     
@@ -649,14 +628,9 @@
         padding-right: 1rem;
     }
 
-    #lecture_box {
-        width: 17rem;
-        height: 65rem;
-    }
-
     .lecture_index {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 
     .lecture_title {
@@ -670,17 +644,12 @@
     }
 
     .lecture_empty {
-        width: 8rem;
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
         font-size: 1rem;
     }
-    .lecture_empty:hover {
-        width: 10rem;
-    }
 
     #lecture_button {
-        width: 19rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
         font-size: 1.2rem;
@@ -688,11 +657,6 @@
 
     #lecture_notice_box {
         margin-top: 1rem;
-    }
-
-    .lecture_notice {
-        font-size: 0.9rem;
-        margin-top: 0.6rem;
     }
 
    /* content_distinction */
@@ -708,7 +672,6 @@
 
     .distinction_item_title {
         margin-top: 1.5rem;
-        color: #1E2022;
         font-size: 1.2rem;
     }
     

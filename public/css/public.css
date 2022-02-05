@@ -9,6 +9,15 @@
     src: url('../font/Ikaros-Regular.otf');
 }
 
+/* Color Elements */
+
+:root {
+    --blue: #4088eb;
+    --black: #1E2022;
+    --grey: #f9f9f9;
+    --lightgrey: #888888;
+    --white: #ffffff;
+}
 
 /* Global Elements */
 
@@ -24,10 +33,11 @@ body {
 h1, h2, p, a {
     margin: 0;
     padding: 0;
-    color: #1E2022;
+    color: var(--black);
+    font-family: NanumSquare;
 }
-p > span, h2 > span, label > span {
-    color:#4088eb;
+span {
+    color:var(--blue);
 }
 
 /* Common Elements */
@@ -38,18 +48,13 @@ p > span, h2 > span, label > span {
 }
 
 .content_subtitle {
-    margin: 0rem;
     margin-bottom: 1rem;
-    font-family: NanumSquare;
     font-size: 1.6rem;
     text-align: center;
-    font-weight: 400;
 }
 
 .content_title {
-    margin: 0rem;
     margin-bottom: 5rem;
-    font-family: NanumSquare;
     font-size: 3.2rem;
     text-align: center;
 }
@@ -61,7 +66,6 @@ p > span, h2 > span, label > span {
 }
 
 .content_value {
-    font-family: NanumSquare;
     font-size: 1.6rem;
     text-align: center;
     line-height: 2.2rem;
@@ -70,21 +74,31 @@ p > span, h2 > span, label > span {
     margin-top: 0.6rem;
 }
 
+.content_subvalue {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 2.2rem;
+}
+.content_subvalue + .content_subvalue {
+    margin-top: 0.2rem;
+}
+
 .image_src_border {
     margin: auto;
 }
 
 .grey_background {
-    background-color: #f9f9f9;
+    background-color: var(--grey);
 }
 
 .white_background {
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 .black_background {
-    background-color: #1E2022;
+    background-color: var(--black);
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -106,30 +120,30 @@ p > span, h2 > span, label > span {
     }
     
     .content_title {
-        margin-bottom: 3rem;
+        margin-bottom: 3.2rem;
         font-size: 1.8rem;
     }
 
     .content_explain {
-        margin-bottom: 2rem;
+        margin-bottom: 3.2rem;
     }
 
     .content_value {
-        font-family: NanumSquare;
-        font-size: 1rem;
-        text-align: center;
+        font-size: 1.2rem;
         line-height: 1.4rem;
     }
-    .content_value + .content_value {
-        margin-top: 0.4rem;
+
+    .content_subvalue {
+        font-size: 1rem;
+        line-height: 1.4rem;
     }
 }
 
 @media screen and (max-width: 409px) {
 
     .contents {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 
     .content_subtitle {
@@ -147,12 +161,12 @@ p > span, h2 > span, label > span {
     }
 
     .content_value {
-        font-family: NanumSquare;
         font-size: 1rem;
-        text-align: center;
-        line-height: 1.3rem;
+        line-height: 1.4rem;
     }
-    .content_value + .content_value {
-        margin-top: 0.3rem;
+
+    .content_subvalue {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
     }
 }
