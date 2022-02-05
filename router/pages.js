@@ -32,7 +32,7 @@ router.get('/refund', (req, res) => {
 })
 
 // "팀원 신청서" Page
-router.get('/7265676973746572', (req, res) => {
+router.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '../html/register.html'))
 })
 

@@ -2,31 +2,30 @@
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 100%-8rem;
+    width: 100%;
     height: 6rem;
-    padding-left: 12rem;
-    padding-right: 12rem;
-}
-
-#nav_menu_box {
-    display: flex;
-    align-items: center;
-    list-style: none;
 }
 
 #logo {
     height: 3.5rem;
 }
 
+#nav_menu_box {
+    width: 30%;
+    max-width: 30rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
 .nav_menu {
-    padding: 0.6rem;
-    margin-left: 3.4rem;
     text-decoration: none;
-    color: var(--black);
     font-size: 1.2rem;
-    font-weight: 600;
     border-bottom: 0 solid #ffffffff;
     transition-property: border-color;
     transition-duration: 0.3s;
@@ -34,6 +33,8 @@ nav {
 .nav_menu:hover {
     border-bottom: 0.2rem solid var(--blue);
 }
+
+/* opened nav */
 
 #nav_menu_cover {
     display: none;
@@ -52,8 +53,8 @@ nav {
     width: 30%;
     height: 160%;
     position: fixed;
-    left: 110%;
     top: 0;
+    left: 110%;
     padding-top: 0.8rem;
     background-color: white;
     box-shadow: -0.6rem 0rem 0.6rem #00000022;
@@ -112,96 +113,87 @@ header {
 
 #header_cover {
     background-color: #00000022;
-    height: 50rem;
+    height: 100%;
 }
 
-#header_text_title {
-    padding-top: 30rem;
-    padding-left: 10rem;
+.header_text_title {
+    padding-top: 31rem;
+    padding-left: 8%;
     margin-bottom: 1.2rem;
     font-size: 5.5rem;
-    font-weight: 600;
     color:white;    
 }
 
 .header_text_index {
-    padding-left: 10rem;
-    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 8%;
     color:white;
-}
-.header_text_index + .header_text_index {
-    margin-top: 0.8rem;
 }
 
 /* intro */
 
 #intro_content {
+    width: 90%;
+    max-width: 80rem;
+    height: fit-content;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    width:fit-content;
+    padding: 0;
+    margin: 0;
     margin-right: auto;
     margin-left: auto;
 }
 
 #intro_image {
-    display: inline-block;
-    width: 40rem;
-    margin-right: 7rem;
+    width: 50%;
 }
 
 #intro_box {
-    display: inline-block;
-}
-
-.intro_text {
-    
-    font-size: 1.6rem;
-    font-style: italic;
-    font-weight: normal;
-}
-.intro_text + .intro_text {
-    margin-top: 0.8rem;
+    width: 50%;
 }
 
 .intro_title {
-    
-    font-size: 2.6rem;
     color: var(--blue);
+    margin: 0;
     margin-top: 2.6rem;
 }
 
 /* introduction */
 
 #introduction_box {
+    width: 80%;
+    max-width: 80rem;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    width: 76rem;
     padding: 0;
+    margin: 0;
     margin-right: auto;
     margin-left: auto;
     list-style: none;
-    border-radius: 0.6rem;
 }
 
 .introduction_text {
-    width: 16rem;
+    width: 20%;
     padding-top: 4rem;
     padding-bottom: 4rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: center;
-    color: var(--black);
-    font-size: 1.5rem;
-    
-    border-radius: 0.4rem;
+    padding-left: 2%;
+    padding-right: 2%;
     border: 0.1rem solid var(--blue);
-    transition-property: background-color, color;
+    border-radius: 0.6rem;
+    transition-property: background-color;
     transition-duration: 0.2s;
 }
 .introduction_text:hover {
     background-color: var(--blue);
+}
+.introduction_text > .content_value {
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+.introduction_text:hover > .content_value {
     color: white;
 }
 
@@ -211,11 +203,9 @@ header {
 .lecture_box_title {
     width: 100%;
     max-width: 80rem;
-    font-size: 1.6rem;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 1rem;
-    text-align: center;
     border-bottom: 3px solid var(--grey);
 }
 
@@ -223,10 +213,10 @@ header {
     width: 100%;
     max-width: 80rem;
     height: fit-content;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 0;
     margin: 0;
     margin-right: auto;
     margin-left: auto;

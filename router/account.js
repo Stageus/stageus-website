@@ -1,6 +1,4 @@
-const path = require('path');
 const router = require('express').Router();
-const pg = require('pg');
 const dbControl = require("../module/dbControl")
 
 router.get('/', async (req, res) => {

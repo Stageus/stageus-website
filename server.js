@@ -43,8 +43,8 @@ const pagesApi = require('./router/pages');
 app.use('/', pagesApi);
 
 // Register Middleware API
-const registerApi = require('./router/register');
-app.use('/register', registerApi);
+const accountApi = require('./router/account');
+app.use('/account', accountApi);
 
 // Admin Auth Middleware API
 const authApi = require("./router/auth");

@@ -1,57 +1,5 @@
 @media screen and (min-width: 1025px) and (max-width: 1300px) {
 
-    /* nav */
-
-    nav {
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
-
-    /* header */
-
-    header {
-        height: 40rem;
-    }
-
-    #header_text_title {
-        padding-top: 23rem;
-        padding-left: 6rem;
-    }
-
-    .header_text_index {
-        padding-left: 6rem;
-    }
-
-    /* intro */
-    #intro_image {
-        width: 30rem;
-        margin-right: 3rem;
-    }
-
-    .intro_text {
-        font-size: 1.4rem;
-    }
-
-    .intro_title {
-        font-size: 2.3rem;
-    }
-
-    /* introduction */
-
-    #introduction_box {
-        display: flex;
-        width: 68rem;
-        padding: 0;
-        margin-right: auto;
-        margin-left: auto;
-        list-style: none;
-        border-radius: 0.6rem;
-    }
-
-    .introduction_text {
-        width: 14rem;
-        font-size: 1.5rem;
-    }
 
     /* content_distinction */
 
@@ -84,8 +32,11 @@
     /* nav */
 
     nav {
-        padding-left: 6rem;
-        padding-right: 6rem;
+        height: 5rem;
+    }
+
+    #logo {
+        height: 3rem;
     }
 
     #nav_menu_box {
@@ -93,7 +44,7 @@
     }
 
     #nav_menu_button {
-        display: inline-block;
+        display: block;
     }
 
     /* header */
@@ -102,20 +53,9 @@
         height: 35rem;
     }
 
-    #header_cover {
-        height: 35rem;
-    }
-
-    #header_text_title {
-        padding-top: 19rem;
-        padding-left: 6rem;
-        margin-bottom: 1.2rem;
-        font-size: 5rem;
-    }
-
-    .header_text_index {
-        padding-left: 6rem;
-        font-size: 1.3rem;
+    .header_text_title {
+        padding-top: 18rem;
+        font-size: 5.5rem;
     }
 
     /* intro */
@@ -126,30 +66,23 @@
 
     #intro_image {
         display: block;
-        width: 40rem;
-        margin-left: auto;
-        margin-right: auto;
+        width: 80%;
+        max-width: 48rem;
     }
 
     #intro_box {
         display: block;
+        width: 100%;
         margin-top: 3rem;
-    }
-
-    .intro_text {
-        text-align: center;
     }
 
     /* introduction */
 
-    #introduction {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-
-    #introduction_box {
-        width: 37.5rem;
-        height: 26.5rem;
+    .introduction_text {
+        width: 45%;
+        margin-bottom: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     /* lecture */
@@ -250,10 +183,7 @@
      /* nav */
 
     nav {
-        width: 100%-4rem;
         height: 4rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
     }
 
     #logo {
@@ -271,26 +201,12 @@
     /* header */
 
     header {
-        height: 18rem;
+        height: 20rem;
     }
 
-    #header_cover {
-        height: 35rem;
-    }
-
-    #header_text_title {
-        padding-top: 9rem;
-        padding-left: 2.2rem;
-        margin-bottom: 0.8rem;
-        font-size: 2.2rem;
-    }
-
-    .header_text_index {
-        padding-left: 2.2rem;
-        font-size: 1.1rem;
-    }
-    .header_text_index + .header_text_index {
-        margin-top: 0.4rem;
+    .header_text_title {
+        padding-top: 10rem;
+        font-size: 2.6rem;
     }
 
     /* intro */
@@ -301,44 +217,27 @@
 
     #intro_image {
         display: block;
-        width: 24rem;
-        margin-left: auto;
-        margin-right: auto;
+        width: 90%;
+        max-width: 28rem;
     }
 
     #intro_box {
         display: block;
+        width: 100%;
         margin-top: 3rem;
-    }
-
-    .intro_text {
-        font-size: 1.1rem;
-        text-align: center;
-    }
-
-    .intro_title {
-        font-size: 1.8rem;
-        text-align: center;
-        line-height: 2.6rem;
     }
 
     /* introduction */
 
-    #introduction {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     #introduction_box {
-        width: 22rem;
-        height: 26rem;
+        max-width: 32rem;
     }
 
     .introduction_text {
-        width: 20rem;
+        width: 96%;
+        margin-bottom: 1rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        font-size: 1.2rem;
     }
 
     /* lecture */
@@ -528,14 +427,11 @@
     /* nav */
 
     nav {
-        width: 100%-4rem;
         height: 4rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
     }
 
     #logo {
-    height: 2.5rem;
+        height: 2.5rem;
     }
 
     #nav_menu_box {
@@ -546,29 +442,15 @@
         display: inline-block;
     }
 
-   /* header */
+    /* header */
 
     header {
         height: 14rem;
     }
 
-    #header_cover {
-        height: 14rem;
-    }
-
-    #header_text_title {
-        padding-top: 7rem;
-        padding-left: 2rem;
-        margin-bottom: 0.8rem;
-        font-size: 1.5rem;
-    }
-
-    .header_text_index {
-        padding-left: 2rem;
-        font-size: 1rem;
-    }
-    .header_text_index + .header_text_index {
-        margin-top: 0.4rem;
+    .header_text_title {
+        padding-top: 5.6rem;
+        font-size: 2.2rem;
     }
 
     /* intro */
@@ -579,58 +461,38 @@
 
     #intro_image {
         display: block;
-        width: 20rem;
-        margin-left: auto;
-        margin-right: auto;
+        width: 90%;
+        max-width: 32rem;
     }
 
     #intro_box {
         display: block;
-        margin-top: 3rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .intro_text {
-        font-size: 1.1rem;
-        text-align: center;
+        width: 100%;
+        margin-top: 2rem;
     }
 
     .intro_title {
-        font-size: 1.3rem;
-        text-align: center;
-        line-height: 1.8rem;
+        margin-top: 1.4rem;
     }
 
    /* introduction */
 
-    #introduction {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    #introduction_box {
-        width: 20rem;
-        height: 22rem;
-    }
-
     .introduction_text {
-        width: 18rem;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        font-size: 1.1rem;
+        width: 96%;
+        margin-bottom: 0.8rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
     }
 
    /* lecture */
 
-    #lecture {
-        padding-left: 1rem;
-        padding-right: 1rem;
+   .lecture_box + .lecture_box_title {
+        margin-top: 1.6rem;
     }
 
     .lecture_index {
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
     }
 
     .lecture_title {
@@ -648,6 +510,7 @@
         padding-bottom: 0.3rem;
         font-size: 1rem;
     }
+    
 
     #lecture_button {
         padding-top: 1rem;

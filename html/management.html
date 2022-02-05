@@ -143,7 +143,7 @@
             document.getElementById("contents_box").style.display = "block";
             document.getElementById("auth_box").style.display = "none";
 
-            const response = await fetch("/register")
+            const response = await fetch("/account")
             const result = await response.json()
 
             for(let a = 0; a < result.list.length; a++) {
@@ -237,7 +237,7 @@
 
                 const list = document.getElementsByClassName("table_column_input");
 
-                const response = await fetch("/register", {
+                const response = await fetch("/account", {
                     method: "PUT", 
                     headers: {
                         "Content-Type": "application/json",
@@ -273,7 +273,7 @@
             
             if (confirmDialog == true) {
 
-                const response = await fetch("/register", {
+                const response = await fetch("/account", {
                     method: "DELETE", 
                     headers: {
                         "Content-Type": "application/json",

@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/index_mobile.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- 구글 웹마스터 도구 통계 전송 코드 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206153151-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -26,6 +26,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-206153151-1');
     </script>
+
 </head>
 <body>
 
@@ -34,12 +35,12 @@
         <a id="nav_logo" href="/">
             <image id="logo" src="img/logoBlack.png"></image>
         </a>
-        <ul id="nav_menu_box">
-            <li><a class="nav_menu nav_hide">교육</a></li>   <!-- href script에서 href정의 -->
-            <li><a class="nav_menu nav_hide">커리큘럼</a></li>
-            <li><a class="nav_menu nav_hide">FAQ</a></li>
-            <li><a class="nav_menu">문의하기</a></li>
-        </ul> 
+        <div id="nav_menu_box">
+            <h1><a class="nav_menu">교육</a></h1>   <!-- href script에서 href정의 -->
+            <h1><a class="nav_menu">커리큘럼</a></h1>
+            <h1><a class="nav_menu">FAQ</a></h1>
+            <h1><a class="nav_menu">문의하기</a></li>
+        </div> 
         <input id="nav_menu_cover"type="button" onclick="menuCloseEvent()"></input>
         <div id="nav_menu_open">
             <a class="nav_menu_open_item">교육</a>   <!-- href script에서 href정의 -->
@@ -53,9 +54,9 @@
     <!-- header -->
     <header>
         <div id="header_cover"> 
-            <p id="header_text_title">스테이지어스</p>
-            <p class="header_text_index">코딩을 잘하는 것 만으론 부족합니다.</p>
-            <p class="header_text_index">능력 있는 개발자가 될 수 있어야 합니다.</p>
+            <h1 class="header_text_title">스테이지어스</h1>
+            <p class="header_text_index content_subvalue">코딩을 잘하는 것 만으론 부족합니다.</p>
+            <p class="header_text_index content_subvalue">능력 있는 개발자가 될 수 있어야 합니다.</p>
         </div>
     </header>
 
@@ -65,17 +66,17 @@
         <!-- section intro -->
         <section class="contents white_background">
             <div id="intro_content">
-                <img id="intro_image" class="image_src_border" src="img/introductionImage.jpg">
+                <img id="intro_image" src="img/introductionImage.jpg">
                 <div id="intro_box">
-                    <h1 class="intro_text">" 공부를 해도 이해가 안돼. 재능이 없는 걸까? "</h1>
-                    <h1 class="intro_text">" 프로젝트를 해보려고 해도 뭐부터 시작해야할지 모르겠어 "</h1>
-                    <h1 class="intro_text">" 내가 이대로 취직해서 성공할 수 있을까? "</h1>
-                    <h1 class="intro_title">아직 제대로 배워보지 않았기 때문입니다.</h1>
+                    <p class="content_subvalue italic"> 공부를 해도 이해가 안돼. 재능이 없는 걸까? "</p>
+                    <p class="content_subvalue italic"> 프로젝트를 해보려고 해도 뭐부터 시작해야할지 모르겠어 "</p>
+                    <p class="content_subvalue italic"> 내가 이대로 취직해서 성공할 수 있을까? "</p>
+                    <h2 class="content_subtitle intro_title">아직 제대로 배워보지 않았기 때문입니다.</h2>
                 </div>
             </div>
         </section>
 
-        <!-- section goal -->
+        <!-- section introduction -->
         <section class="contents grey_background">
             <h2 class="content_subtitle">스테이지어스 목표</h2>
             <h1 class="content_title">능력 있는 개발자를 육성합니다.</h1>
@@ -86,10 +87,10 @@
                 <p class="content_value"><span>스테이지어스</span>에서 다양한 경험을 하고 실무에서 인정 받는 개발자가 되세요.</p>
             </div>
             <ul id="introduction_box">
-                <li class="introduction_text"><p>근거를 찾고 논리적인 선택을 하는 능력</p></li>
-                <li class="introduction_text"><p>문제 상황에 대한 원인 파악과 해결 능력</p></li>
-                <li class="introduction_text"><p>누구한테나 뛰어난 커뮤니케이션 능력</p></li>
-                <li class="introduction_text"><p>유지보수가 용이한 코드를 짜는 능력</p></li>
+                <li class="introduction_text"><p class="content_value">근거를 찾고 논리적인 선택을 하는 능력</p></li>
+                <li class="introduction_text"><p class="content_value">문제 상황에 대한 원인 파악과 해결 능력</p></li>
+                <li class="introduction_text"><p class="content_value">누구한테나 뛰어난 커뮤니케이션 능력</p></li>
+                <li class="introduction_text"><p class="content_value">유지보수가 용이한 코드를 짜는 능력</p></li>
             </ul>
         </section>
 
@@ -100,10 +101,10 @@
             <div class="content_explain">
                 <p class="content_value">기초 과정에서 심화 과정으로 이어지는 Step by Step 커리큘럼</p>
                 <p class="content_value">기초 10주, 심화 12주의 구성으로 이루어진 총 <span>5개월 + 2주간</span>의 교육 과정</p>
-                <p class="content_value"><span>코드 리뷰</span>와 <span>모의 외주</span>, <span>협업 프로젝트</span>를 통해 성공하는 개발자의 습관 학습</p>
+                <p class="content_value"><span>코드 심층 리뷰</span>와 <span>모의 외주</span>, <span>협업 프로젝트</span>를 통해 성공하는 개발자의 습관 학습</p>
             </div>
             <div class="content_explain">
-                <h2 class="lecture_box_title"><span>기초</span> 과정 일정</h2>
+                <h2 class="lecture_box_title content_value"><span>기초</span> 과정 일정</h2>
                 <ul class="lecture_box">
                     <li class="lecture_index grey_background">
                         <h1 class="lecture_title"></h1>
@@ -121,7 +122,7 @@
                         <a class="lecture_empty" href="file/curriculum.pdf" onmouseover="lectureMouseOverEvent(2)" onmouseout="lectureMouseLeaveEvent(2)"></a>
                     </li>
                 </ul>
-                <h2 class="lecture_box_title"><span>심화</span> 과정 일정</h2>
+                <h2 class="lecture_box_title content_value"><span>심화</span> 과정 일정</h2>
                 <ul class="lecture_box">
                     <li class="lecture_index grey_background">
                         <h1 class="lecture_title"></h1>
@@ -145,7 +146,7 @@
             </div>
             <div id="lecture_notice_box">
                 <p class="content_subvalue">※ 기초 과정은 <span>1년에 6회</span> 운영됩니다. ( 매 홀수 월 )</p>
-                <p class="content_subvalue">※ 심화 과정은 <span>1년에 4회</span> 운영됩니다. ( 2월, 5월, 8월, 11월 )</p>
+                <p class="content_subvalue">※ 심화 과정은 <span>1년에 4회</span> 운영됩니다. ( 2월, 6월, 8월, 12월 )</p>
                 <p class="content_subvalue">※ 대학생 시험기간이 포함된 기수는 <span>쉬는주 2주</span>가 포함됩니다.</p>
             </div>
         </section>
@@ -172,7 +173,7 @@
                 </div>
                 <div class="distinction_item">
                     <img class="distinction_item_image" src="img/monitor.svg">
-                    <h2 class="distinction_item_title">코드 리뷰</h2>
+                    <h2 class="distinction_item_title">코드 심층 리뷰</h2>
                     <p class="distinction_item_text">빠른 코드를 짜는 것 뿐만 아니라, 깔끔한 코드를 짜는 법을 집중적으로 피드백합니다.</p>
                 </div>
                 <div class="distinction_item">
@@ -237,7 +238,7 @@
             <h2 class="content_subtitle">멘토진</h2>
             <h1 class="content_title">책임감을 가지고 교육하겠습니다.</h1>
             <div id="mentor_box">
-                <img id="mentor_image" class="image_src_border" src="img/mentor.jpg">
+                <img id="mentor_image" src="img/mentor.jpg">
                 <div id="mentor_info_box">
                     <div id="mentor_personal_box">
                         <h2 class="mentor_title">이름</h2>
@@ -267,7 +268,7 @@
                 <p class="content_value">편한 의자와 전좌석 개발용 <span>확장 모니터</span> 비치 & 개발 집중도를 높여줄 <span>음료수</span>와 <span>커피</span> 무한 제공</p>
             </div>
             <div id="office_box">
-                <iframe id="map" class="image_src_border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.3736338616172!2d126.6522885160645!3d37.45189923844134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b794e10b52b07%3A0x5dc168b0a05eecdd!2z7Iqk7YWM7J207KeA7Ja07IqkIC0g6rCc67Cc7J6QIOycoeyEsSDshLzthLA!5e0!3m2!1sko!2skr!4v1630181210520!5m2!1sko!2skr" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.3736338616172!2d126.6522885160645!3d37.45189923844134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b794e10b52b07%3A0x5dc168b0a05eecdd!2z7Iqk7YWM7J207KeA7Ja07IqkIC0g6rCc67Cc7J6QIOycoeyEsSDshLzthLA!5e0!3m2!1sko!2skr!4v1630181210520!5m2!1sko!2skr" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <p id="office_addr">(22207) 인천광역시 미추홀구 인하로55 B1</p>
         </section>

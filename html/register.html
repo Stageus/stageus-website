@@ -188,7 +188,15 @@
                 const tmpSpan = document.createElement("span");
                 tmpSpan.innerHTML = lecture.information[index].name;
                 item.appendChild(tmpSpan);
-                item.innerHTML += " - " + lecture.information[index].duration;
+                
+                // 열리지 않은 과목 예외처리
+                if (lecture.information[index].number == 0) {
+                    item.innerHTML += " - " + lecture.information[index].duration;
+                } else if (lecture.information[index].number == -1) {
+                    item.innerHTML += " - 모집 마감"
+                } else if (lecture.information[index].number == -2) {
+                    item.innerHTML += " - 오픈 예정"
+                }
             });
         }
 
@@ -233,7 +241,7 @@
             })
 
             if (nameValue != "" && contactValue != "" && jobValue != "" && optionValue != "" && subjectValue != -1) {
-                const response = await fetch("register", {
+                const response = await fetch("/account", {
                     method: "POST", 
                     headers: {
                         "Content-Type": "application/json",
