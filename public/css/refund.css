@@ -8,24 +8,22 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
+    text-align: left;
 }
 
 .refund_line {
     width: 80%;
     max-width: 100rem;
     background-color: var(--black);
-    margin-bottom: 2.6rem;
+    margin-bottom: 2.2rem;
 }
 
 .refund_value {
     width: 80%;
-    height: fit-content;
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    font-size: 1.3rem;
-    line-height: 2.6rem;
+    text-align: left;
 }
 
 #refund_table {
@@ -33,10 +31,7 @@
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 3rem;
-    font-size: 1.3rem;
-    font-family: NanumSquare;
-    color: var(--black);
+    margin-top: 2.2rem;
     border-spacing: 0;
 }
 
@@ -47,17 +42,14 @@
 .table_title {
     background-color: var(--blue);
     color: var(--white);
-    font-size: 1.4rem;
 }
 
 .refund_table_title {
     width: 40%;
-    text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
 .refund_table_value {
     width: 20%;
-    text-align: center;
 }

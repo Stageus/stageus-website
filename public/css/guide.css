@@ -8,43 +8,33 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
-    font-weight: 400;
+    text-align: left;
 }
 
 .guide_line {
     width: 80%;
     max-width: 100rem;
     background-color: var(--black);
-    margin-bottom: 2.6rem;
+    margin-bottom: 2.2rem;
 }
 
 .guide_value {
     width: 80%;
-    height: fit-content;
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    font-size: 1.3rem;
-    font-weight: 400;
-    line-height: 2.6rem;
+    text-align: left;
 }
 
 .guide_img {
     display: block;
-    width: 50rem;
-    height: auto;
+    width: 80%;
+    max-width: 50rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .guide_explain {
-    width: fit-content;
-    height: fit-content;
-    margin-right: auto;
-    margin-left: auto;
     padding-top: 0.6rem;
     padding-bottom: 2rem;
-    font-size: 1.3rem;
-    line-height: 2.6rem;
 }

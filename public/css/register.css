@@ -23,28 +23,28 @@ main {
 }
 
 .register_title {
+    text-align: left;
     margin-bottom: 1.6rem;
-    font-size: 1.6rem;
 }
 
 .register_value {
     max-width: 100rem;
-    font-size: 1.3rem;
+    text-align: left;
 }
 .register_value + .register_value {
-    margin-top: 1rem;
+    margin-top: 0.6rem;
 }
 
 /* Register Form */
 
 .register_input_text {
     display: block;
-    width: 36rem;
-    height: 3rem;
+    width: 90%;
+    max-width: 42rem;
+    height: 2.8rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    margin-top: 1.8rem;
-    font-size: 1.3rem;
+    text-align: left;
     outline: 0;
     border: 1px solid grey;
     border-radius: 0.4rem;
@@ -64,7 +64,6 @@ main {
 }
 
 .register_radio_label {
-    font-size: 1.3rem;
     cursor: pointer;
 }
 
@@ -74,9 +73,9 @@ main {
 
 #register_button {
     display: block;
-    width: 30rem;
+    max-width: 34rem;
+    width: 90%;
     margin-top: 6rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    font-size: 1.6rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 }

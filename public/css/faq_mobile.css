@@ -10,7 +10,6 @@
 
     .faq_title {
         margin-bottom: 0.6rem;
-        font-size: 1.2rem;
     }
 
     .faq_line {
@@ -28,22 +27,21 @@
     }
 
     .faq_question {
+        width: 94%;
         height: fit-content;
-        font-size: 1rem;
+        padding: 3%;
     }
 
     .faq_answer {
-        font-size: 1rem;
-        line-height: 1.8rem;
+        width: 92%;
+        padding: 4%;
     }
-
 }
 
 @media screen and (max-width: 409px) {
 
     .faq_title {
         margin-bottom: 0.5rem;
-        font-size: 1.2rem;
     }
 
     .faq_line {
@@ -60,13 +58,13 @@
     }
 
     .faq_question {
+        width: 94%;
         height: fit-content;
-        font-size: 0.8rem;
+        padding: 3%;
     }
 
     .faq_answer {
-        font-size: 0.9rem;
-        line-height: 1.6rem;
+        width: 94%;
+        padding: 3%;
     }
-
 }

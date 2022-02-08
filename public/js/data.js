@@ -10,26 +10,26 @@ const lecture = {
         {
             "name": "웹 기초 과정",
             "duration": "3월 9일 ~ 5월 25일 (수 18시)",
-            "number": 0
+            "number": 1
         },
         {
             "name": "웹 기초 과정",
             "duration": "3월 10일 ~ 5월 26일 (목 18시)",
-            "number": 0
+            "number": 1
         },
         {
             "name": "웹 프론트엔드 과정",
-            "duration": "6월 20일 ~ 9월 5일 (미정)",
+            "duration": "3월 28일 ~ 7월 11일 (월 18시)",
             "number": -2
         },
         {
             "name": "백엔드 서버 과정",
-            "duration": "6월 20일 ~ 9월 5일 (미정)",
+            "duration": "4월 1일 ~ 7월 15일 (금 18시)",
             "number": -2
         },
         {
             "name": "안드로이드 앱 과정",
-            "duration": "6월 20일 ~ 9월 5일 (미정)",
+            "duration": "4월 2일 ~ 7월 16일 (토 18시)",
             "number": -2
         }
     ]

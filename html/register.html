@@ -49,7 +49,8 @@
     <header>
         <div class="header_cover darken"> 
             <h1 class="header_text_title">REGISTER</h1>
-            <p class="header_text_index content_subvalue">팀원 신청서</p>
+            <p class="header_text_index content_subvalue">팀원 신청서 작성 양식 입니다.</p>
+            <p class="header_text_index content_subvalue">신청 후 적어주신 번호로 연락드리겠습니다.</p>
         </div>
     </header>
 
@@ -58,74 +59,74 @@
 
         <!-- section notice -->
         <section class="register_box" class="contents">
-            <h2 class="register_title">시작하기 전 아래 내용을 꼭 숙지하여주시면 감사하겠습니다.</h2>
-            <p class="register_value">1. 스테이지어스의 강의는 사무실에서 <span>오프라인</span>으로 진행됩니다.</p>
-            <p class="register_value">2. 소수정예로 운영되기에, 강의에 대한 모든 제반사항을 <span>탄력적</span>으로 운영할 수 있습니다.</p>
-            <p class="register_value">3. 팀원은 수업 시간 외에, 개인 공부로 <span>40시간 이상</span> 투자할 수 있어야 합니다.</p>
-            <p class="register_value">4. 개발 환경을 위해 개인 <span>노트북</span>이 필요합니다.</p>
-            <p class="register_value">5. 스테이지어스 사무실은 <span>상시 개방</span>되어 있으며, 자유롭게 이용하실 수 있습니다.</p>
+            <h2 class="register_title content_value">시작하기 전 아래 내용을 꼭 숙지하여주시면 감사하겠습니다.</h2>
+            <p class="register_value content_subvalue">1. 스테이지어스의 강의는 사무실에서 <span>오프라인</span>으로 진행됩니다.</p>
+            <p class="register_value content_subvalue">2. 소수정예로 운영되기에, 강의에 대한 모든 제반사항을 <span>탄력적</span>으로 운영할 수 있습니다.</p>
+            <p class="register_value content_subvalue">3. 팀원은 수업 시간 외에, 개인 공부로 <span>40시간 이상</span> 투자할 수 있어야 합니다.</p>
+            <p class="register_value content_subvalue">4. 개발 환경을 위해 개인 <span>노트북</span>이 필요합니다.</p>
+            <p class="register_value content_subvalue">5. 스테이지어스 사무실은 <span>상시 개방</span>되어 있으며, 자유롭게 이용하실 수 있습니다.</p>
         </section>
 
         <!-- section register -->
         <section class="register_box" class="contents">
             <div class="register_form">
-                <h2 class="register_title">이름</h2>
-                <input id="register_name_value" class="register_input_text" maxlength="5" type="text" placeholder="최민석" required>
+                <h2 class="register_title content_value">이름</h2>
+                <input id="register_name_value" class="register_input_text content_subvalue" maxlength="5" type="text" placeholder="최민석" required>
             </div>
             <div class="register_form">
-                <h2 class="register_title">연락처</h2>
-                <input id="register_contact_value" class="register_input_text" maxlength="11" type="text" placeholder="01087439598" required>
+                <h2 class="register_title content_value">연락처</h2>
+                <input id="register_contact_value" class="register_input_text content_subvalue" maxlength="11" type="text" placeholder="01087439598" required>
             </div>
             <div class="register_form">
-                <h2 class="register_title">직업</h2>
+                <h2 class="register_title content_value">직업</h2>
                 <div class="register_form_contents">
                     <input id="job_1" class="register_radio register_job_value" type="radio" name="job" value="중/고등학생" onclick="jobRadioEvent(0)">
-                    <label class="register_radio_label" for="job_1">중/고등학생</label><br>
+                    <label class="register_radio_label content_subvalue" for="job_1">중/고등학생</label><br>
                     <input id="job_2" class="register_radio register_job_value" type="radio" name="job" value="대학/대학원생" onclick="jobRadioEvent(1)">
-                    <label class="register_radio_label" for="job_2">대학/대학원생</label><br>
+                    <label class="register_radio_label content_subvalue" for="job_2">대학/대학원생</label><br>
                     <input id="job_3" class="register_radio register_job_value" type="radio" name="job" value="휴학/무직" onclick="jobRadioEvent(2)">
-                    <label class="register_radio_label" for="job_3">휴학/무직</label><br>
+                    <label class="register_radio_label content_subvalue" for="job_3">휴학/무직</label><br>
                     <input id="job_4" class="register_radio register_job_value" type="radio" name="job" value="직장인" onclick="jobRadioEvent(2)">
-                    <label class="register_radio_label" for="job_4">직장인</label><br>
+                    <label class="register_radio_label content_subvalue" for="job_4">직장인</label><br>
                 </div>
             </div>
 
             <div class="register_form option_form">
-                <h2 class="register_title">학년</h2>
-                <input id="register_grade_value" class="register_input_text" maxlength="1" type="text" placeholder="1" required>
+                <h2 class="register_title content_value">학년</h2>
+                <input id="register_grade_value" class="register_input_text content_subvalue" maxlength="1" type="text" placeholder="1" required>
             </div>
             <div class="register_form option_form">
-                <h2 class="register_title">학과/학번</h2>
-                <input id="register_student_value" class="register_input_text" maxlength="20" type="text" placeholder="컴퓨터공학과 14" required>
+                <h2 class="register_title content_value">학과/학번</h2>
+                <input id="register_student_value" class="register_input_text content_subvalue" maxlength="20" type="text" placeholder="컴퓨터공학과 14" required>
             </div>
             <div class="register_form option_form">
-                <h2 class="register_title">전공 여부</h2>
+                <h2 class="register_title content_value">전공 여부</h2>
                 <div class="register_form_contents">
                     <input id="option_major_1" class="register_radio register_major_value" type="radio" value="전공자" name="option_major">
-                    <label class="register_radio_label" for="option_major_1">전공자</label><br>
+                    <label class="register_radio_label content_subvalue" for="option_major_1">전공자</label><br>
                     <input id="option_major_2" class="register_radio register_major_value" type="radio" value="비전공자" name="option_major">
-                    <label class="register_radio_label" for="option_major_2">비전공자</label><br>
+                    <label class="register_radio_label content_subvalue" for="option_major_2">비전공자</label><br>
                 </div>
             </div>
 
             <div class="register_form">
-                <h2 class="register_title">신청 과정</h2>
+                <h2 class="register_title content_value">신청 과정</h2>
                 <div class="register_form_contents">
                     <input id="subject_1" class="register_radio register_subject_value" type="radio" name="subject">
-                    <label class="register_radio_label subject" for="subject_1"></label><br>
+                    <label class="register_radio_label content_subvalue subject" for="subject_1"></label><br>
                     <input id="subject_2" class="register_radio register_subject_value" type="radio" name="subject">
-                    <label class="register_radio_label subject" for="subject_2"></label><br>
+                    <label class="register_radio_label content_subvalue subject" for="subject_2"></label><br>
                     <input id="subject_3" class="register_radio register_subject_value" type="radio" name="subject">
-                    <label class="register_radio_label subject" for="subject_3"></label><br>
+                    <label class="register_radio_label content_subvalue subject" for="subject_3"></label><br>
                     <input id="subject_4" class="register_radio register_subject_value" type="radio" name="subject">
-                    <label class="register_radio_label subject" for="subject_4"></label><br>
+                    <label class="register_radio_label content_subvalue subject" for="subject_4"></label><br>
                     <input id="subject_5" class="register_radio register_subject_value" type="radio" name="subject">
-                    <label class="register_radio_label subject" for="subject_5"></label><br>
+                    <label class="register_radio_label content_subvalue subject" for="subject_5"></label><br>
                     <input id="subject_6" class="register_radio register_subject_value" type="radio" name="subject">
-                    <label class="register_radio_label subject" for="subject_6"></label><br>
+                    <label class="register_radio_label content_subvalue subject" for="subject_6"></label><br>
                 </div>
             </div>
-            <input id="register_button" class="contents_button" type="button" value="신청하기" onclick="registerEvent()">
+            <input id="register_button" class="contents_button content_value" type="button" value="신청하기" onclick="registerEvent()">
         </section>
 
     </main>
