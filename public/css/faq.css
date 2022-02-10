@@ -58,4 +58,5 @@
     padding: 5%;
     background-color: var(--grey);
     border-radius: 0.4rem;
+    text-align: left;
 }
