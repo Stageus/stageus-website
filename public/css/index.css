@@ -1,3 +1,41 @@
+/* nav scroll */
+
+#nav_scroll {
+    position: fixed;
+    background-color: var(--white);
+    opacity: 0.0;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.05rem 3rem 0 #dddddd;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+#progress_bar {
+    width: 90%;
+    max-width: 80rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: #dddddd;
+}
+
+#progress_point {
+    width: 0rem;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: #28aee3;
+}
+
+.scroll_point {
+    display: inline-block;
+    position: relative;
+    top: -1.4rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+    background-color: #dddddd;
+}
+
 /* intro */
 
 #intro_content {

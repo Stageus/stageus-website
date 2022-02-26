@@ -53,6 +53,17 @@
         <input id="nav_menu_button" type="button" onclick="menuOpenEvent()">
     </nav>
 
+    <!-- scroll nav -->
+    <nav id="nav_scroll">
+        <div id="progress_bar">
+            <div id="progress_point"></div>
+            <a id="toIntroduction" class="scroll_point" href="#introduction"></a>
+            <a id="toLecture" class="scroll_point" href="#lecture"></a>
+            <a id="todistinctione" class="scroll_point" href="#distinction"></a>
+            <a id="toBenefit" class="scroll_point" href="#benefit"></a>
+        </div>
+    </nav>
+
     <!-- header -->
     <header>
         <div class="header_cover"> 
@@ -79,7 +90,7 @@
         </section>
 
         <!-- section introduction -->
-        <section class="contents grey_background">
+        <section id="introduction" class="contents grey_background">
             <p class="content_subtitle">스테이지어스 목표</p>
             <h1 class="content_title">능력 있는 개발자를 육성합니다.</h1>
             <div class="content_explain">
@@ -97,7 +108,7 @@
         </section>
 
         <!-- section lecture -->
-        <section class="contents white_background">
+        <section id="lecture" class="contents white_background">
             <p class="content_subtitle">과정 소개</p>
             <h1 id="lecture_generation" class="content_title"></h1>
             <div class="content_explain">
@@ -154,7 +165,7 @@
         </section>
 
         <!-- section distinction -->
-        <section class="contents grey_background">
+        <section id="distinction" class="contents grey_background">
             <p class="content_subtitle">차별점</p>
             <h1 class="content_title">스테이지어스의 교육은 다릅니다.</h1>
             <div id="distinction_box">
@@ -192,7 +203,7 @@
         </section>
 
         <!-- section benefit -->
-        <section class="contents white_background">
+        <section id="benefit" class="contents white_background">
             <p class="content_subtitle">팀원 혜택</p>
             <h1 class="content_title">이런 혜택을 받을 수 있습니다.</h1>
             <div id="benefit_box">
@@ -327,6 +338,7 @@
 
     <script src="js/data.js"></script>
     <script src="js/initData.js"></script>
+    <script src="js/navEvent.js"></script>
     <script>        
         window.onload = () => {
 
@@ -351,6 +363,9 @@
             [...lectureNumber].forEach((item, index) => {
                 setLectureNumber(item, index);
             })
+
+            // 초기 nav_scroll 설정
+            scrollEvent()
         }
 
         // Lecture Mouse Enter Event
