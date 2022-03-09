@@ -191,7 +191,7 @@
                 item.appendChild(tmpSpan);
                 
                 // 열리지 않은 과목 예외처리
-                if (lecture.information[index].number == 0) {
+                if (lecture.information[index].number >= 0) {
                     item.innerHTML += " - " + lecture.information[index].duration;
                 } else if (lecture.information[index].number == -1) {
                     item.innerHTML += " - 모집 마감"

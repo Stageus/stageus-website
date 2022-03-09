@@ -27,11 +27,12 @@
 }
 
 .scroll_point {
-    display: inline-block;
     position: relative;
     top: -1.4rem;
+    left: -1rem;
     width: 2rem;
     height: 2rem;
+    border: none;
     border-radius: 0.6rem;
     background-color: #dddddd;
 }

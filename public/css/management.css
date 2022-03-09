@@ -3,7 +3,7 @@ main {
 }
 
 section {
-    background-color: #f9f9f9;
+    background-color: var(--grey);
 }
 
 #auth_box {
@@ -22,8 +22,8 @@ section {
     font-size: 1.4rem;
     font-family: NanumSquare;
     font-weight: 400;
-    color: #1E2022;
-    border: 1px solid #1E2022;
+    color: var(--black);
+    border: 1px solid var(--black);
     border-radius: 0.4rem;
 }
 .auth_input + .auth_input {
@@ -38,8 +38,8 @@ section {
     font-size: 1.4rem;
     font-family: NanumSquare;
     font-weight: 400;
-    color: white;
-    background-color: #4088eb;
+    color: var(--white);
+    background-color: var(--blue);
     border: none;
     border-radius: 0.4rem;
 }
@@ -47,27 +47,33 @@ section {
     cursor: pointer;
 }
 
-#auth_logout {
-    display: block;
+#logout_box {
+    width: 94%;
+    max-width: 140rem;
     margin-left: auto;
-    margin-right: 10%;
+    margin-right: auto;
+    text-align: right;
+}
+
+#logout {
     width: 10rem;
     height: 2.6rem;
-    background-color: white;
-    color: #1E2022;
-    border: 1px solid #4088eb;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--blue);
     border-radius: 0.4rem;
+    cursor: pointer;
     transition-property: background-color, color;
     transition-duration: 0.2s;
 }
 #auth_logout:hover {
-    background-color: #4088eb;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
     cursor: pointer;
 }
 
 .contents_title {
-    width: 80%;
+    width: 94%;
     max-width: 140rem;
     margin-bottom: 2rem;
     margin-left: auto;
@@ -79,12 +85,12 @@ section {
 }
 
 #membem_list {
-    width: 80%;
+    width: 94%;
     max-width: 140rem;
     margin-right: auto;
     margin-left: auto;
-    background-color: white;
-    color: #1E2022;
+    background-color: var(--white);
+    color: var(--black);
     font-size: 1.3rem;
     font-family: NanumSquare;
     font-weight: 400;
@@ -92,12 +98,12 @@ section {
 }
 
 .table_row {
-    background-color: #4088eb;
+    background-color: var(--blue);
 }
 
 .table_column_title {
-    background-color: #4088eb;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 .table_column {
@@ -110,14 +116,14 @@ section {
     width: fit-content;
     height: 3rem;
     text-align: center;
-    border-bottom: 2px solid #4088eb;
+    border-bottom: 2px solid var(--blue);
 }
 
 .table_column_degree_divide {
     width: fit-content;
     height: 3rem;
     text-align: center;
-    border-bottom: 1px solid #1E2022;
+    border-bottom: 1px solid var(--black);
 }
 
 .table_column_input {
@@ -126,7 +132,7 @@ section {
     font-size: 1.3rem;
     font-family: NanumSquare;
     font-weight: 400;
-    color : #4088eb;
+    color : var(--blue);
     border: none;
 }
 
@@ -135,16 +141,16 @@ section {
     padding-bottom: 0.5rem;
     padding-right: 0.8rem;
     padding-left: 0.8rem;
-    background-color: white;
-    border: 1px solid #4088eb;
+    background-color: var(--white);
+    border: 1px solid var(--blue);
     border-radius: 0.4rem;
-    color: #1E2022;
+    color: var(--black);
     transition-property: background-color, color;
     transition-duration: 0.2s;
 }
 .table_column_button:hover {
-    background-color: #4088eb;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
     cursor: pointer;
 }
 .table_column_button + .table_column_button {

@@ -16,46 +16,25 @@
     <link rel="canonical" href="https://www.stageus.co.kr">
     <link rel="icon" type="image/x-icon" href="img/logoMark.png" >
     <link rel="stylesheet" type="text/css" href="css/public.css">
-    <link rel="stylesheet" type="text/css" href="css/header_footer_template.css">
-    <link rel="stylesheet" type="text/css" href="css/header_footer_template_mobile.css">
     <link rel="stylesheet" type="text/css" href="css/management.css">
-    
 </head>
 <body>
 
-    <!-- nav -->
-    <nav>
-        <a id="nav_logo" href="/">
-            <image id="logo" src="img/logoBlack.png"></image>
-        </a>
-        <ul id="nav_menu_box">   <!-- href script에서 정의 -->
-            <li><a class="nav_menu nav_hide">스테이지어스</a></li>
-            <li><a class="nav_menu nav_hide">커리큘럼</a></li>
-            <li><a class="nav_menu nav_hide">FAQ</a></li>
-            <li><a class="nav_menu">문의하기</a></li>
-        </ul> 
-        <input id="nav_menu_cover"type="button" onclick="menuCloseEvent()"></input>
-        <div id="nav_menu_open">
-            <a class="nav_menu_open_item">스테이지어스</a>   <!-- href script에서 href정의 -->
-            <a class="nav_menu_open_item">커리큘럼</a>
-            <a class="nav_menu_open_item">FAQ</a>
-            <a class="nav_menu_open_item">문의하기</a>
-        </div>
-        <input id="nav_menu_button" type="button" onclick="menuOpenEvent()">
-    </nav>
-
-    <div id="auth_box">
+    <!-- login form -->
+    <section id="auth_box">
         <input id="auth_id_input" class="auth_input" type="text" placeholder="아이디">
         <input id="auth_pw_input" class="auth_input" type="text" placeholder="비밀번호">
         <input class="auth_button" type="button" value="관리자 인증" onclick="authEvent()">
-    </div>
+    </section>
 
     <!-- main -->
     <main id="contents_box">
 
         <!-- section Member List -->
         <section class="contents">
-            <input id="auth_logout" type="button" value="LOGOUT" onclick="logoutEvent()">
+            <div id="logout_box">
+                <input id="logout" type="button" value="LOGOUT" onclick="logoutEvent()">
+            </div>
             <h1 class="contents_title">팀원 목록</h1>
             <table id="membem_list">
                 <tr class="table_row">
@@ -73,16 +52,13 @@
                 </tr>
             </table>
         </section>
+
     </main>
 
-    <script src="js/data.js"></script>
-    <script src="js/navEvent.js"></script>
-    <script src="js/initData.js"></script>
     <script>
-
-        const editButtonValue = "E";
-        const confirmButtonValue = "C";
-        const deleteButtonValue = "D";
+        const editButtonValue = "Edit";
+        const confirmButtonValue = "Okay";
+        const deleteButtonValue = "Del";
 
         window.onload = async () => {
 
@@ -155,7 +131,8 @@
                 for (let num = 0; num < result.list[a].length - 1; num++) {
                     let items = document.createElement("td");
                     items.innerHTML = result.list[a][num];
-                    if (a+1 != result.list.length) {
+
+                    if (a+1 != result.list.length) {   // 마지막 row가 아니라면
                         if (result.list[a][4] != result.list[a+1][4]){   // 직전 row와 generation 비교
                             items.className = "table_column_generation_divide";
                             isDivider = "generation";

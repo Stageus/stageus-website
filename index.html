@@ -54,15 +54,19 @@
     </nav>
 
     <!-- scroll nav -->
-    <nav id="nav_scroll">
+    <!-- <nav id="nav_scroll">
         <div id="progress_bar">
             <div id="progress_point"></div>
-            <a id="toIntroduction" class="scroll_point" href="#introduction"></a>
-            <a id="toLecture" class="scroll_point" href="#lecture"></a>
-            <a id="todistinctione" class="scroll_point" href="#distinction"></a>
-            <a id="toBenefit" class="scroll_point" href="#benefit"></a>
+            <input type="button" id="toTop" class="scroll_point""></input>
+            <input type="button" id="toIntroduction" class="scroll_point"></input>
+            <input type="button" id="toLecture" class="scroll_point"></input>
+            <input type="button" id="toDistinction" class="scroll_point""></input>
+            <input type="button" id="toBenefit" class="scroll_point"></input>
+            <input type="button" id="toMentor" class="scroll_point"></input>
+            <input type="button" id="toOffice" class="scroll_point"></input>
+            <input type="button" id="toBottom" class="scroll_point"></input>
         </div>
-    </nav>
+    </nav> -->
 
     <!-- header -->
     <header>
@@ -77,7 +81,7 @@
     <main>
 
         <!-- section intro -->
-        <section class="contents white_background">
+        <section id="intro" class="contents white_background">
             <div id="intro_content">
                 <img id="intro_image" src="img/introductionImage.jpg">
                 <div id="intro_box">
@@ -247,7 +251,7 @@
         </section>
 
         <!-- section mentor -->
-        <section class="contents grey_background">
+        <section id="mentor" class="contents grey_background">
             <p class="content_subtitle">멘토진</p>
             <h1 class="content_title">책임감을 가지고 교육하겠습니다.</h1>
             <div id="mentor_box">
@@ -273,7 +277,7 @@
         </section>
 
         <!-- section office -->
-        <section class="contents white_background">
+        <section id="office" class="contents white_background">
             <p class="content_subtitle">사무실 환경</p>
             <h1 class="content_title">여러분들이 성장할 공간 입니다.</h1>
             <div class="content_explain">
@@ -338,7 +342,7 @@
 
     <script src="js/data.js"></script>
     <script src="js/initData.js"></script>
-    <script src="js/navEvent.js"></script>
+    <!-- <script src="js/navEvent.js"></script> -->
     <script>        
         window.onload = () => {
 
@@ -365,7 +369,7 @@
             })
 
             // 초기 nav_scroll 설정
-            scrollEvent()
+            // scrollEvent()
         }
 
         // Lecture Mouse Enter Event
@@ -387,7 +391,7 @@
             } else if (lecture.information[index].number == -2) {
                 item.innerHTML = "개강 예정";
             } else if (lecture.information[index].number == 5) {
-                item.innerHTML = "신청 마감";
+                item.innerHTML = "모집 마감";
             } else {
                 item.innerHTML = (lecture.information[index].number) + "/5";
             }

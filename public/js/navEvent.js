@@ -39,6 +39,54 @@ const scrollEvent = () => {
     } else if (scrollY < 100) {
         navScroll.style.opacity = 0.0
     }
+
+    // const navHeight = document.getElementsByTagName("nav")
+    // console.log(navHeight[0].clientHeight)
+
+    // const headerHeight = document.getElementsByTagName("header")
+    // console.log(headerHeight[0].clientHeight)
+
+    // const introHeight = document.getElementById("intro")
+    // console.log(introHeight.clientHeight)
+
+
+
+    const progressBarWidth = document.getElementById("progress_bar").offsetWidth
+    const scrollTotalHeight = document.documentElement.scrollHeight + window.innerHeight
+
+    const toTopBtn = document.getElementById("toTop")
+
+    const introductionLocation = document.getElementById("introduction").offsetTop
+    const toIntroductionBtn = document.getElementById("toIntroduction")
+    toIntroductionBtn.style.marginLeft = (introductionLocation / scrollTotalHeight * progressBarWidth).toString() + "px"
+
+    const lectureLocation = document.getElementById("lecture").offsetTop
+    const lectureHeight = lectureLocation - introductionLocation
+    const toLectureBtn = document.getElementById("toLecture")
+    toLectureBtn.style.marginLeft = (lectureHeight / scrollTotalHeight * progressBarWidth).toString() + "px"
+
+    const distinctionLocation = document.getElementById("distinction").offsetTop
+    const distinctionHeight = distinctionLocation - lectureLocation
+    const toDistinctionBtn = document.getElementById("toDistinction")
+    toDistinctionBtn.style.marginLeft = (distinctionHeight / scrollTotalHeight * progressBarWidth).toString() + "px"
+
+    const benefitLocation = document.getElementById("benefit").offsetTop
+    const benefitHeight = benefitLocation - distinctionLocation
+    const benefitBtn = document.getElementById("toBenefit")
+    benefitBtn.style.marginLeft = (benefitHeight / scrollTotalHeight * progressBarWidth).toString() + "px"
+
+    const mentorLocation = document.getElementById("mentor").offsetTop
+    const mentorHeight = mentorLocation - benefitLocation
+    const mentorBtn = document.getElementById("toMentor")
+    mentorBtn.style.marginLeft = (mentorHeight / scrollTotalHeight * progressBarWidth).toString() + "px"
+
+    const officeLocation = document.getElementById("office").offsetTop
+    const officeHeight = officeLocation - mentorLocation
+    const officeBtn = document.getElementById("toOffice")
+    officeBtn.style.marginLeft = (officeHeight / scrollTotalHeight * progressBarWidth).toString() + "px"
+
+    // const toBottomBtn = document.getElementById("toBottom")
+    // toBottomBtn.style.marginLeft = (document.documentElement.scrollHeight / scrollTotalHeight * progressBarWidth).toString() + "px"
 }
 
 // 스크롤 이벤트 등록
