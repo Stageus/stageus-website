@@ -297,13 +297,12 @@
 
 #mentor_image {
     display: inline-block;
-    width: 20rem;
+    width: 24rem;
     margin-right: 7rem;
 }
 
 #mentor_info_box {
     display: inline-block;
-    margin-top: 4rem;
 }
 
 #mentor_personal_box {
