@@ -73,6 +73,7 @@ main {
 
 #register_button {
     display: block;
+    border: none;
     max-width: 34rem;
     width: 90%;
     margin-top: 6rem;

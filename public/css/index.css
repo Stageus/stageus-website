@@ -143,20 +143,10 @@
 
 .lecture_empty {
     display: inline-block;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--white);
-    font-size: 1.2rem;
+    width: 50%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
     text-decoration: none;
-    background-color: var(--blue);
-    border-radius: 0.4rem;
-    transition-property: width;
-    transition-duration: 0.2s;
-}
-.lecture_empty:hover {
-    width: 80%;
-    cursor: pointer;
 }
 
 #lecture_button_box {

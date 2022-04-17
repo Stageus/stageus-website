@@ -38,16 +38,8 @@
     width: 90%;
     height: 1.6rem;
     padding: 5%;
-    background-color: var(--blue);
-    border-radius: 0.4rem;
-    color: var(--white);
 }
-.faq_question:hover {
-    background-color: #5494eb;
-}
-.faq_question:active {
-    background-color: #3c7dd6;
-}
+
 
 .faq_answer {
     display: none;

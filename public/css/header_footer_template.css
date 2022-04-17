@@ -161,21 +161,11 @@ footer {
 #footer_button {
     display: inline-block;
     width: 30rem;
-    background-color: var(--blue);
     margin-top: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-radius: 0.4rem;
-    color: var(--white);
     font-size: 2.4rem;
     text-decoration: none;
-    text-align: center;
-    transition-property: width;
-    transition-duration: 0.2s;
-}
-#footer_button:hover {
-    width: 35rem;
-    cursor: pointer;
 }
 
 #footer_link_box {
