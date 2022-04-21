@@ -1,10 +1,4 @@
-// Footer 데이터 삽입 함수
-const link = document.getElementsByClassName("footer_index_value");
-[...link].forEach((item, index) => {
-    item.innerHTML = footer_data[index];
-});
-
-// nav, nav_open, footer 링크 삽입 함수
+// nav, nav_open링크 삽입 함수
 const link1 = document.getElementsByClassName("nav_menu");
 [...link1].forEach((item, index) => {
     item.href = path[index];
@@ -13,16 +7,6 @@ const link2 = document.getElementsByClassName("nav_menu_open_item");
 [...link2].forEach((item, index) => {
     item.href = path[index];
 });
-const link3 = document.getElementsByClassName("footer_index_subvalue");
-[...link3].forEach((item, index) => {
-    item.href = path[index];
-});
-
-// footer 링크 이미지 삽입 함수
-const img_link = document.getElementsByClassName("footer_link");
-[...img_link].forEach((item, index) => {
-    item.href = footer_img[index];
-})
 
 // Navigation 열림 이벤트
 const menuOpenEvent = () => {
@@ -48,3 +32,22 @@ const menuCloseEvent = () => {
     const cover = document.getElementById("nav_menu_cover");
     cover.style.display = "none";
 }
+
+// footer 링크 이미지 삽입 함수
+const img_link = document.getElementsByClassName("footer_link");
+[...img_link].forEach((item, index) => {
+    item.href = footer_img[index];
+})
+
+// Footer 데이터 삽입 함수
+const link = document.getElementsByClassName("footer_index_value");
+[...link].forEach((item, index) => {
+    item.innerHTML = footer_data[index];
+});
+
+// Footer 링크 삽입 함수
+const link3 = document.getElementsByClassName("footer_index_subvalue");
+[...link3].forEach((item, index) => {
+    if (index > 0) 
+        item.href = path[index-1];
+});

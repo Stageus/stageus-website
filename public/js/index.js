@@ -1,3 +1,28 @@
+// Lecture Mouse Enter Event
+const lectureMouseOverEvent = (index) => {
+    let list = document.getElementsByClassName("lecture_count");
+    list[index].innerHTML = "상세 커리큘럼";
+}
+
+// Lecture Moude Leave Event
+const lectureMouseLeaveEvent = (index) => {
+    let list = document.getElementsByClassName("lecture_count");
+    setLectureNumber(list[index], index);
+}
+
+// 수강 인원 삽입 함수
+const setLectureNumber = (item, index) => {
+    if (lecture.information[index].number == -1) {
+        item.innerHTML = "휴강";
+    } else if (lecture.information[index].number == -2) {
+        item.innerHTML = "개강 예정";
+    } else if (lecture.information[index].number == 5) {
+        item.innerHTML = "모집 마감";
+    } else {
+        item.innerHTML = "잔여 " + (5 - (lecture.information[index].number))
+    }
+}
+
 // 스크롤 이벤트 최적화를 위한 Closure
 const scrollTick = (scrollEvent) => {
     let scrollTimeout = false
@@ -89,12 +114,6 @@ const scrollEvent = () => {
     // toBottomBtn.style.marginLeft = (document.documentElement.scrollHeight / scrollTotalHeight * progressBarWidth).toString() + "px"
 }
 
-// 스크롤 이벤트 등록
-window.addEventListener('scroll', scrollTick(scrollEvent), { passive : true })
-
-
-
-
 // 각 포인트들, 스크롤 위치에 맞게 동적으로 위치 변동되도록
 // 포인트에 도착하면 회색에서 파란색으로 색 변경
 // 전체적으로 media-query 적용하기
@@ -103,3 +122,48 @@ window.addEventListener('scroll', scrollTick(scrollEvent), { passive : true })
 // 현재 출력 중인 이름에 포인트 디자인 주기
 
 // top 버튼 하나 만들기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 페이지 로드시 실행
+window.onload = () => {
+
+    // lecutre 기수 삽입
+    const lectureGeneration = document.getElementById("lecture_generation");
+    lectureGeneration.innerHTML = lecture.generation + "기 " + lecture.degree + "차 개강 과정"
+
+    // Lecture 명 삽입
+    const lectureName = document.getElementsByClassName("lecture_title");
+    [...lectureName].forEach((item, index) => {
+        item.innerHTML = lecture.information[index].name;
+    })
+
+    // Lecture 기간 삽입
+    const lectureDuration = document.getElementsByClassName("lecture_info");
+    [...lectureDuration].forEach((item, index) => {
+        item.innerHTML = lecture.information[index].duration;
+    })
+
+    // Lecture 수강 인원 삽입
+    const lectureNumber = document.getElementsByClassName("lecture_count");
+    [...lectureNumber].forEach((item, index) => {
+        setLectureNumber(item, index);
+    })
+
+    // 스크롤 이벤트 등록
+    // window.addEventListener('scroll', scrollTick(scrollEvent), { passive : true })
+
+    // 초기에 한 번 실행
+    // scrollEvent()
+}
