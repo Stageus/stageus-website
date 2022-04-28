@@ -17,6 +17,7 @@
     --grey: #f7f7f7;
     --lightgrey: #888888;
     --white: #ffffff;
+    --darken: #00000088;
 }
 
 /* Global Style */
@@ -72,6 +73,7 @@ span {
 
 .content_value {
     font-size: 1.6rem;
+    line-height: 2.4rem;
     text-align: center;
 }
 
@@ -93,27 +95,27 @@ span {
 /* Margin Style */
 
 .margin_top_medium {
-    margin-top: 2.6rem;
+    margin-top: 2.8rem;
 }
 
 .margin_top_small {
-    margin-top: 1.5rem;
+    margin-top: 1.3rem;
 }
 
 .margin_top_extra_small {
-    margin-top: 1rem;
+    margin-top: 0.6rem;
 }
 
 .spacing_medium + .spacing_medium {
-    margin-top: 2.6rem
+    margin-top: 2.8rem
 }
 
 .spacing_small + .spacing_small {
-    margin-top: 1.5rem
+    margin-top: 1.3rem
 }
 
 .spacing_extra_small + .spacing_extra_small {
-    margin-top: 1rem
+    margin-top: 0.6rem
 }
 
 /* Button Style */
@@ -197,7 +199,7 @@ span {
 }
 
 .darken_background {
-    background-color: #00000088;
+    background-color: var(--darken);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -228,6 +230,7 @@ span {
 
     .content_value {
         font-size: 1.4rem;
+        line-height: 1.9rem;
     }
 
     /* Margin Style */
@@ -241,7 +244,7 @@ span {
     }
 
     .margin_top_extra_small {
-        margin-top: 0.8rem;
+        margin-top: 0.6rem;
     }
 
     .spacing_medium + .spacing_medium {
@@ -256,7 +259,7 @@ span {
     }
 
     .spacing_extra_small + .spacing_extra_small {
-        margin-top: 0.8rem
+        margin-top: 0.6rem
     }
 }
 
@@ -306,6 +309,7 @@ span {
 
     .content_value {
         font-size: 1.1rem;
+        line-height: 1.6rem;
     }
 
     /* Margin Style */
@@ -319,7 +323,7 @@ span {
     }
 
     .margin_top_extra_small {
-        margin-top: 0.6rem;
+        margin-top: 0.5rem;
     }
 
     .spacing_medium + .spacing_medium {
@@ -337,7 +341,7 @@ span {
     }
 
     .spacing_extra_small + .spacing_extra_small {
-        margin-top: 0.6rem
+        margin-top: 0.5rem
     }
 }
 
@@ -371,6 +375,7 @@ span {
 
     .content_value {
         font-size: 1rem;
+        line-height: 1.4rem;
     }
 
     /* Text Align Style */

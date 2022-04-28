@@ -43,7 +43,6 @@
                     <td class="table_column table_column_title">직업</td>
                     <td class="table_column table_column_title">옵션</td>
                     <td class="table_column table_column_title">기수</td>
-                    <td class="table_column table_column_title">차수</td>
                     <td class="table_column table_column_title">과정명</td>
                     <td class="table_column table_column_title">기간</td>
                     <td class="table_column table_column_title">가입일</td>
@@ -137,10 +136,7 @@
                             items.className = "table_column_generation_divide";
                             isDivider = "generation";
                         } 
-                        else if (result.list[a][5] != result.list[a+1][5]) {   // 직전 row와 degree 비교
-                            items.className = "table_column_degree_divide";
-                            isDivider = "degree";
-                        } else {
+                        else {
                             items.className = "table_column";
                         }
                     } else {
@@ -225,10 +221,9 @@
                         "jobValue": list[2].value,
                         "optionValue": list[3].value,
                         "generationValue": list[4].value,
-                        "degreeValue": list[5].value,
-                        "subjectValue": list[6].value,
-                        "durationValue": list[7].value,
-                        "memoValue": list[8].value,
+                        "subjectValue": list[5].value,
+                        "durationValue": list[6].value,
+                        "memoValue": list[7].value,
                         "seqValue": seq
                     })
                 })

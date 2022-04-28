@@ -28,8 +28,8 @@
     }
 
     .lecture_count {
-        padding-top: 0.42rem;
-        padding-bottom: 0.42rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
     }
 
     /* content_distinction */
@@ -120,11 +120,18 @@
         margin-right: auto;
     }
 
-    /* lecture */
+    /* introduction */
 
-    .lecture_box {
-        max-width: 26rem;
+    .introduction_box {
+        width: 90%;
     }
+
+    .introduction_text {
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
+    }
+
+    /* lecture */
 
     .lecture_index {
         width: 100%;
@@ -133,8 +140,8 @@
     }
 
     .lecture_count {
-        padding-top: 0.38rem;
-        padding-bottom: 0.38rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
     }
 
     .lecture_button_box {
@@ -244,6 +251,11 @@
         width: 90%;
     }
 
+    .introduction_text {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
    /* lecture */
 
     .lecture_index {
@@ -253,8 +265,8 @@
     }
 
     .lecture_count {
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
     }
 
     .lecture_button_box {

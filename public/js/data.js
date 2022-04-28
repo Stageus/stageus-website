@@ -1,38 +1,37 @@
 const lecture = {
-    "generation": 2,
-    "degree": 3,
+    "generation": 9,
     "information": [
         {
             "name": "파이썬 응용 프로그램 과정",
             "duration": "5월 2일 ~ 7월 18일 (월 18시)",
-            "number": 2
+            "number": 3
         },
         {
             "name": "웹 기초 과정",
             "duration": "5월 3일 ~ 7월 19일 (화 18시)",
-            "number": 0
+            "number": 5
         },
         {
             "name": "웹 기초 과정",
             "duration": "5월 7일 ~ 7월 23일 (토 18시)",
-            "number": 0
+            "number": 5
         },
         {
             "name": "웹 프론트엔드 과정",
             // "duration": "4월 11일 ~ 7월 25일 (월 18시)",
-            "duration": "2기 5차 시기에 개강 예정",
+            "duration": "10기 개강 예정",
             "number": -2
         },
         {
             "name": "백엔드 서버 과정",
             // "duration": "4월 8일 ~ 7월 22일 (금 18시)",
-            "duration": "2기 5차 시기에 개강 예정",
+            "duration": "10기 개강 예정",
             "number": -2
         },
         {
             "name": "안드로이드 앱 과정",
             // "duration": "4월 9일 ~ 7월 23일 (토 14시)",
-            "duration": "2기 5차 시기에 개강 예정",
+            "duration": "10기 개강 예정",
             "number": -2
         }
     ]

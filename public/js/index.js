@@ -141,7 +141,7 @@ window.onload = () => {
 
     // lecutre 기수 삽입
     const lectureGeneration = document.getElementById("lecture_generation");
-    lectureGeneration.innerHTML = lecture.generation + "기 " + lecture.degree + "차 개강 과정"
+    lectureGeneration.innerHTML = lecture.generation + "기 개강 과정"
 
     // Lecture 명 삽입
     const lectureName = document.getElementsByClassName("lecture_title");

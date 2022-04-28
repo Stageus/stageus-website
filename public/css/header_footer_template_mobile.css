@@ -98,14 +98,6 @@
         height: 2.8rem;
     }
 
-    .footer_index_box {
-        width: 90%;
-    }
-
-    .footer_subvalue_box {
-        width: 90%;
-    }
-
     .footer_index_subvalue {
         margin-top: 0.5rem;
     }
@@ -167,14 +159,6 @@
     .footer_img {
         width: 2.4rem;
         height: 2.4rem;
-    }
-
-    .footer_index_box {
-        width: 90%;
-    }
-
-    .footer_subvalue_box {
-        width: 90%;
     }
 
     .footer_index_subvalue {

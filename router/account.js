@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
      
     rowList.forEach((elem, index) => {
         list.push([
-            elem.name, elem.contact, elem.job, elem.option, elem.generation, elem.degree,
+            elem.name, elem.contact, elem.job, elem.option, elem.generation,
             elem.subject, elem.duration, elem.register_date, elem.memo, elem.seq
         ])
     })
@@ -31,7 +31,6 @@ router.post('/', async (req, res) => {
     const optionValue = req.body.optionValue
     const subjectValue = req.body.subjectValue
     const generationValue = req.body.generationValue   // 나중에 DB에서 가져오는 걸로 변경 요망 (Javascript Injection)
-    const degreeValue = req.body.degreeValue   // 나중에 DB에서 가져오는 걸로 변경 요망 (Javascript Injection)
     const durationValue = req.body.durationValue   // 나중에 DB에서 가져오는 걸로 변경 요망 (Javascript Injection)
 
     // Cal timestamp
@@ -45,8 +44,8 @@ router.post('/', async (req, res) => {
         console.log("EmptyValueError: ", err)
     } else {
         const queryResult = await dbControl(
-            "INSERT INTO homepage.register(name, contact, job, option, register_date, generation, duration, memo, subject, degree) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
-            [nameValue, contactValue, jobValue, optionValue, newTime.toISOString(), generationValue, durationValue, "", subjectValue, degreeValue]
+            "INSERT INTO homepage.register(name, contact, job, option, register_date, generation, duration, memo, subject) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)",
+            [nameValue, contactValue, jobValue, optionValue, newTime.toISOString(), generationValue, durationValue, "", subjectValue]
         )
 
         res.send(queryResult)
@@ -62,14 +61,13 @@ router.put('/', async (req, res) => {
     const optionValue = req.body.optionValue
     const subjectValue = req.body.subjectValue
     const generationValue = req.body.generationValue
-    const degreeValue = req.body.degreeValue
     const durationValue = req.body.durationValue
     const memoValue = req.body.memoValue
     const seqValue = req.body.seqValue
 
     const queryResult = await dbControl(
-        "UPDATE homepage.register set name=$1, contact=$2, job=$3, option=$4, generation=$5, subject=$6, duration=$7, memo=$8, degree=$9 WHERE seq = $10",
-        [nameValue, contactValue, jobValue, optionValue, generationValue, subjectValue, durationValue, memoValue, degreeValue, seqValue]
+        "UPDATE homepage.register set name=$1, contact=$2, job=$3, option=$4, generation=$5, subject=$6, duration=$7, memo=$8 WHERE seq = $9",
+        [nameValue, contactValue, jobValue, optionValue, generationValue, subjectValue, durationValue, memoValue, seqValue]
     )
 
     res.send(queryResult)

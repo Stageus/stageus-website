@@ -166,8 +166,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
-    max-width: 100rem;
+    width: 90%;
+    max-width: 94rem;
     height: fit-content;
     margin-right: auto;
     margin-left: auto;
@@ -181,10 +181,12 @@ footer {
 .footer_index_title {
     display: inline;
     margin-right: 1rem;
+    font-size: 1rem;
 }
 
 .footer_index_value {
     display: inline;
+    font-size: 1rem;
 }
 
 .footer_hr {
@@ -197,8 +199,8 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 80%;
-    max-width: 54rem;
+    width: 90%;
+    max-width: 46rem;
     margin-right: auto;
     margin-left: auto;
 }
@@ -208,4 +210,5 @@ footer {
     margin-right: 0.4rem;
     margin-top: 0.8rem;
     text-decoration: none;
+    font-size: 1rem;
 }
