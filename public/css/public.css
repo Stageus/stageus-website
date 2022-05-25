@@ -5,6 +5,10 @@
     src: url('../font/NanumSquareR.ttf');
 }
 @font-face {
+    font-family: '경기천년제목 Light';
+    src: url('../font/경기천년제목_LIGHT.TTF');
+}
+@font-face {
     font-family: 'Ikaros';
     src: url('../font/Ikaros-Regular.otf');
 }
@@ -17,7 +21,8 @@
     --grey: #f7f7f7;
     --lightgrey: #888888;
     --white: #ffffff;
-    --darken: #00000088;
+    --darken: #00000055;
+    --more_darken: #00000099;
 }
 
 /* Global Style */
@@ -52,70 +57,6 @@ span {
 .content_explain {
     padding-right: 10%;
     padding-left: 10%;
-}
-
-/* Text Size Style */
-
-.content_name {
-    font-size: 6rem;
-    text-align: center;
-}
-
-.content_title {
-    font-size: 3.2rem;
-    text-align: center;
-}
-
-.content_subtitle {
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-.content_value {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    text-align: center;
-}
-
-.content_subvalue {
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-/* Display Style */
-
-.desktop {
-    display: block;
-}
-
-.mobile {
-    display: none;
-}
-
-/* Margin Style */
-
-.margin_top_medium {
-    margin-top: 2.8rem;
-}
-
-.margin_top_small {
-    margin-top: 1.3rem;
-}
-
-.margin_top_extra_small {
-    margin-top: 0.6rem;
-}
-
-.spacing_medium + .spacing_medium {
-    margin-top: 2.8rem
-}
-
-.spacing_small + .spacing_small {
-    margin-top: 1.3rem
-}
-
-.spacing_extra_small + .spacing_extra_small {
-    margin-top: 0.6rem
 }
 
 /* Button Style */
@@ -200,6 +141,71 @@ span {
 
 .darken_background {
     background-color: var(--darken);
+}
+
+/* ============================================================================================ */
+
+/* Display Style */
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Text Size Style */
+
+.content_name {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.content_title {
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.content_subtitle {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.content_value {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    text-align: center;
+}
+
+/* Margin Style */
+
+.margin_top_large {
+    margin-top: 5rem;
+}
+
+.margin_top_medium {
+    margin-top: 2.8rem;
+}
+
+.margin_top_small {
+    margin-top: 1.3rem;
+}
+
+.margin_top_extra_small {
+    margin-top: 0.6rem;
+}
+
+.spacing_medium + .spacing_medium {
+    margin-top: 2.8rem
+}
+
+.spacing_small + .spacing_small {
+    margin-top: 1.3rem
+}
+
+.spacing_extra_small + .spacing_extra_small {
+    margin-top: 0.6rem
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -296,7 +302,7 @@ span {
     /* Text Size Style */
 
     .content_name {
-        font-size: 3.6rem;
+        font-size: 2.2rem;
     }
     
     .content_title {
@@ -304,22 +310,22 @@ span {
     }
 
     .content_subtitle {
-        font-size: 1.3rem;
+        font-size: 1.16rem;
     }
 
     .content_value {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.6rem;
     }
 
     /* Margin Style */
 
     .margin_top_medium {
-        margin-top: 2.1rem;
+        margin-top: 1.7rem;
     }
 
     .margin_top_small {
-        margin-top: 1.1rem;
+        margin-top: 0.9rem;
     }
 
     .margin_top_extra_small {
@@ -334,14 +340,14 @@ span {
     }
 
     .spacing_small + .spacing_small {
-        margin-top: 1.1rem
+        margin-top: 0.9rem
     }
     .mobile_spacing_small + .mobile_spacing_small {
-        margin-top: 1.1rem
+        margin-top: 0.9rem
     }
 
     .spacing_extra_small + .spacing_extra_small {
-        margin-top: 0.5rem
+        margin-top: 0.4rem
     }
 }
 
@@ -362,7 +368,7 @@ span {
     /* Text Size Style */
 
     .content_name {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 
     .content_title {
@@ -370,11 +376,11 @@ span {
     }
 
     .content_subtitle {
-        font-size: 1.2rem;
+        font-size: 1.06rem;
     }
 
     .content_value {
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 1.4rem;
     }
 
@@ -397,11 +403,11 @@ span {
     /* Margin Style */
 
     .margin_top_medium {
-        margin-top: 2rem;
+        margin-top: 1.4rem;
     }
 
     .margin_top_small {
-        margin-top: 1rem;
+        margin-top: 0.8rem;
     }
 
     .margin_top_extra_small {
@@ -416,16 +422,13 @@ span {
     }
 
     .spacing_small + .spacing_small {
-        margin-top: 1rem;
+        margin-top: 0.8rem;
     }
     .mobile_spacing_small + .mobile_spacing_small {
-        margin-top: 1rem;
+        margin-top: 0.8rem;
     }
 
     .spacing_extra_small + .spacing_extra_small {
-        margin-top: 0.5rem
-    }
-    .mobile_spacing_extra_small + .mobile_spacing_extra_small {
-        margin-top: 0.5rem
+        margin-top: 0.4rem
     }
 }

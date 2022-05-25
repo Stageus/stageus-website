@@ -20,12 +20,6 @@
         height: 2rem;
     }
 
-    /* header */
-
-    .header_box {
-        margin-bottom: 3.6rem;
-    }
-
     /* footer */
 
     .footer_button {
@@ -35,8 +29,8 @@
     }
 
     .footer_img {
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 3.4rem;
+        height: 3.4rem;
     }
 }
 
@@ -68,8 +62,16 @@
         height: 30rem;
     }
 
-    .header_box {
-        margin-bottom: 1.8rem;
+    .header_video {
+        left: -20%;
+        min-width: 70rem;
+    }
+
+    .header_button {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     /* footer */
@@ -91,6 +93,10 @@
 
     .footer_link_box {
         margin-top: 6rem;
+    }
+
+    .footer_link + .footer_link {
+        margin-left: 0.5rem;
     }
 
     .footer_img {
@@ -131,8 +137,16 @@
         height: 27rem;
     }
 
-    .header_box {
-        margin-bottom: 1.6rem;
+    .header_video {
+        left: -40%;
+        min-width: 48rem;
+    }
+
+    .header_button {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
    /* footer */
@@ -154,6 +168,10 @@
 
     .footer_link_box {
         margin-top: 4.8rem;
+    }
+
+    .footer_link + .footer_link {
+        margin-left: 0.4rem;
     }
 
     .footer_img {

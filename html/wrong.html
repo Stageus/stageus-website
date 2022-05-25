@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>잘못된 접근</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <meta name="description" content="개발자 육성 센터 스테이지어스 - 기술을 많이 배웠다고 돈을 많이 버는 개발자가 될 수는 없습니다. 성공한 개발자들은 스스로 성장할 수 있는 개발자의 습관을 가지고 있습니다. 그 습관을 가지고있는 개발자만이 어디 서든 인정 받는 능력 있는 개발자가 됩니다. 스테이지어스는 다양한 경험을 제공하고 실무에서 인정 받는 개발자로 만들어드립니다.">
-    <meta name="keywords" content="코딩, 프로그래밍, 개발자 육성 센터, 코딩 학원, 프로그래밍 학원, 개발자, 웹 프론트엔드, 백엔드, 서버, 웹서버, 앱, 안드로이드, 리액트, 노드, 자바스크립트">
-    <meta name="robots" content="noindex"> 
+    <meta name="description" content="인정 받는 개발자 | 부트 캠프 스테이지어스 - 인정 받는 개발가 되기 위해선 언어와 기술에 집착하면 안됩니다. 이러한 지식은 주입식 교육으로도 언젠가 충분히 얻을 수 있습니다. 개발 분야는 항상 정답이 없는 100% 응용 분야로, 검색과 고민을 통해 논리적인 근거를 정해 행동하는 능력이 필요합니다. 다양한 경험으로 이 능력을 만들어 드리겠습니다.">
+    <meta name="keywords" content="코딩, 프로그래밍, 개발자, 부트캠프, 코딩학원, 개발학원, 프론트엔드, 백엔드, 서버, 웹서버, 앱, 안드로이드, 리액트, 노드, 자바스크립트">
     <meta property="og:type" content="website"> 
     <meta property="og:site_name" content="스테이지어스">
     <meta property="og:title" content="스테이지어스">
-    <meta property="og:description" content="개발자 육성 센터 스테이지어스 - 기술을 많이 배웠다고 돈을 많이 버는 개발자가 될 수는 없습니다. 성공한 개발자들은 스스로 성장할 수 있는 개발자의 습관을 가지고 있습니다. 그 습관을 가지고있는 개발자만이 어디 서든 인정 받는 능력 있는 개발자가 됩니다. 스테이지어스는 다양한 경험을 제공하고 실무에서 인정 받는 개발자로 만들어드립니다.">
+    <meta property="og:description" content="인정 받는 개발자 | 부트 캠프 스테이지어스 - 인정 받는 개발가 되기 위해선 언어와 기술에 집착하면 안됩니다. 이러한 지식은 주입식 교육으로도 언젠가 충분히 얻을 수 있습니다. 개발 분야는 항상 정답이 없는 100% 응용 분야로, 검색과 고민을 통해 논리적인 근거를 정해 행동하는 능력이 필요합니다. 다양한 경험으로 이 능력을 만들어 드리겠습니다.">
     <meta property="og:image" content="img/logoBlack.png">
+    <meta name="robots" content="noindex"> 
     <meta property="og:url" content="https://www.stageus.co.kr">
     <link rel="canonical" href="https://www.stageus.co.kr">
     <link rel="icon" type="image/x-icon" href="img/logoMark.png" >
@@ -21,93 +21,96 @@
 </head>
 <body>
 
-    <!-- nav -->
-    <nav>
-        <a id="nav_logo" href="/">
-            <image class="logo" src="img/logoBlack.png"></image>
-        </a>
-        <div class="nav_menu_box">
-            <h1><a class="nav_menu">교육</a></h1>   <!-- href script에서 href정의 -->
-            <h1><a class="nav_menu">커리큘럼</a></h1>
-            <h1><a class="nav_menu">FAQ</a></h1>
-            <h1><a class="nav_menu">문의하기</a></li>
-        </div> 
-        <input id="nav_menu_cover" class="nav_menu_cover darken_background" type="button" onclick="menuCloseEvent()"></input>
-        <div id="nav_menu_open" class="nav_menu_open white_background">
-            <a class="nav_menu_open_item">교육</a>   <!-- href script에서 href정의 -->
-            <a class="nav_menu_open_item">커리큘럼</a>
-            <a class="nav_menu_open_item">FAQ</a>
-            <a class="nav_menu_open_item">문의하기</a>
-        </div>
-        <input id="nav_menu_button" class="nav_menu_button" type="button" onclick="menuOpenEvent()">
-    </nav>
-
-    <!-- header -->
     <header>
-        <div class="header_cover"> 
+        <video autoplay loop muted class="header_video">
+            <source src="img/header.mp4"  type="video/mp4">
+            <strong>Video does not supported. Please Change your browser.</strong>
+        </video>
+        <nav>
+            <a id="nav_logo" href="/">
+                <image class="logo" src="img/stageus_logo_white.png"></image>
+            </a>
+            <div class="nav_menu_box">
+                <a class="nav_menu content_value white_font">교육</a>   <!-- href script에서 href정의 -->
+                <a class="nav_menu content_value white_font">커리큘럼</a>
+                <a class="nav_menu content_value white_font">FAQ</a>
+                <a class="nav_menu content_value white_font">문의하기</a>
+            </div> 
+            <input id="nav_menu_cover" class="nav_menu_cover darken_background" type="button" onclick="menuCloseEvent()"></input>
+            <div id="nav_menu_open" class="nav_menu_open white_background">
+                <a class="nav_menu_open_item">교육</a>   <!-- href script에서 href정의 -->
+                <a class="nav_menu_open_item">커리큘럼</a>
+                <a class="nav_menu_open_item">FAQ</a>
+                <a class="nav_menu_open_item">문의하기</a>
+            </div>
+            <input id="nav_menu_button" class="nav_menu_button" type="button" onclick="menuOpenEvent()">
+        </nav>
+        <div class="header_cover darken_background"> 
             <div class="header_box">
-                <h1 class="white_font content_name text_left">404 Not Found</h1>
-                <div class="margin_top_small">
-                    <p class="text_left white_font content_value spacing_extra_small">잘못된 주소로 접근하셨습니다.</p>
-                    <p class="text_left white_font content_value spacing_extra_small">위쪽 메뉴를 통해 홈페이지에 방문해주세요.</p>
+                <h1 class="white_font content_name text_left">인정받는 개발자</h1>
+                <div class="margin_top_medium">
+                    <p class="text_left white_font content_subtitle">온라인으로도 배울 수 있는 언어와 기술에 집착하면 안됩니다.</p>
+                    <p class="text_left white_font content_subtitle margin_top_extra_small">논리적인 근거를 정해 행동하는 능력이 필요합니다.</p>
                 </div>
             </div>
+            <a class="header_button contents_button content_value margin_top_medium" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
         </div>
     </header>
 
     <!-- section -->
-    <section>
-        <br><br><br><br><br><br>
+    <section style="padding: 10rem;">
+        <h1 class="content_title">잘못된 페이지로 접근하셨습니다.</h1>
+        <p class="content_subtitle margin_top_small">위 메뉴를 통해 <span>스테이지어스 사이트</span>로 접근해주세요.</p>
     </section>
 
-<!-- footer part -->
-<footer class="black_background">
-    <div class="footer_box">
-        <p class="content_title white_font text_left">스테이지어스는 능력 있는 개발자가 되기 위한</p>
-        <p class="content_title white_font text_left margin_top_extra_small">여러분의 <span>[ 무대 ]</span> 입니다.</p>
-        <a id="footer_button" class="footer_button content_subtitle contents_button margin_top_small" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
-    </div>
-    <div class="footer_link_box">
-        <a class="footer_link"><img class="footer_img" src="img/facebook.svg"/></a>
-        <a class="footer_link"><img class="footer_img" src="img/youtube.svg"/></a>
-        <a class="footer_link"><img class="footer_img" src="img/instagram.svg"/></a>
-    </div>
-    <div class="footer_index_box margin_top_small">   <!-- innerText script에서 정의 -->
-        <div class="footer_index margin_top_small">
-            <h2 class="footer_index_title content_value white_font">법인명</h2>
-            <p class="footer_index_value content_value white_font"></p>
+    <!-- footer part -->
+    <footer class="black_background">
+        <div class="footer_box">
+            <p class="content_title white_font text_left">스테이지어스는 능력 있는 개발자가 되기 위한</p>
+            <p class="content_title white_font text_left margin_top_extra_small">여러분의 <span>[ 무대 ]</span> 입니다.</p>
+            <a id="footer_button" class="footer_button content_subtitle contents_button margin_top_small" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
         </div>
-        <div class="footer_index margin_top_small">
-            <h2 class="footer_index_title content_value white_font">사업자등록번호</h2>
-            <p class="footer_index_value content_value white_font"></p>
+        <div class="footer_link_box">
+            <a class="footer_link"><img class="footer_img" src="img/facebook.svg"/></a>
+            <a class="footer_link"><img class="footer_img" src="img/youtube.svg"/></a>
+            <a class="footer_link"><img class="footer_img" src="img/instagram.svg"/></a>
         </div>
-        <div class="footer_index margin_top_small">
-            <h2 class="footer_index_title content_value white_font">주소</h2>
-            <p class="footer_index_value content_value white_font"></p>
+        <div class="footer_index_box margin_top_small">   <!-- innerText script에서 정의 -->
+            <div class="footer_index margin_top_small">
+                <h2 class="footer_index_title content_value white_font">법인명</h2>
+                <p class="footer_index_value content_value white_font"></p>
+            </div>
+            <div class="footer_index margin_top_small">
+                <h2 class="footer_index_title content_value white_font">사업자등록번호</h2>
+                <p class="footer_index_value content_value white_font"></p>
+            </div>
+            <div class="footer_index margin_top_small">
+                <h2 class="footer_index_title content_value white_font">주소</h2>
+                <p class="footer_index_value content_value white_font"></p>
+            </div>
+            <div class="footer_index margin_top_small">
+                <h2 class="footer_index_title content_value white_font">대표</h2>
+                <p class="footer_index_value content_value white_font"></p>
+            </div>
+            <div class="footer_index margin_top_small">
+                <h2 class="footer_index_title content_value white_font">연락처</h2>
+                <p class="footer_index_value content_value white_font"></p>
+            </div>
+            <div class="footer_index margin_top_small">
+                <h2 class="footer_index_title content_value white_font">이메일</h2>
+                <p class="footer_index_value content_value white_font"></p>
+            </div>
         </div>
-        <div class="footer_index margin_top_small">
-            <h2 class="footer_index_title content_value white_font">대표</h2>
-            <p class="footer_index_value content_value white_font"></p>
-        </div>
-        <div class="footer_index margin_top_small">
-            <h2 class="footer_index_title content_value white_font">연락처</h2>
-            <p class="footer_index_value content_value white_font"></p>
-        </div>
-        <div class="footer_index margin_top_small">
-            <h2 class="footer_index_title content_value white_font">이메일</h2>
-            <p class="footer_index_value content_value white_font"></p>
-        </div>
-    </div>
-    <hr class="footer_hr margin_top_medium light_grey_background"> 
-    <div class="footer_subvalue_box">   <!-- href script에서 href정의 -->
-        <p class="footer_index_subvalue content_value light_grey_font">Copyright 2021. 스테이지어스. All right reserved.</p>
-        <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">교육</a>
-        <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">커리큘럼</a>
-        <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">FAQ</a>
-        <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">문의하기</a>
-        <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">확불약관</a>
-    </div> 
-</footer>
+        <hr class="footer_hr margin_top_medium light_grey_background"> 
+        <div class="footer_subvalue_box">   <!-- href script에서 href정의 -->
+            <p class="footer_index_subvalue content_value light_grey_font">Copyright 2021. 스테이지어스. All right reserved.</p>
+            <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">교육</a>
+            <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">커리큘럼</a>
+            <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">FAQ</a>
+            <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">문의하기</a>
+            <a class="footer_index_subvalue content_value light_grey_font hover_blue_font">확불약관</a>
+        </div> 
+    </footer>
 
     <script src="js/data.js"></script>
     <script src="js/initData.js"></script>

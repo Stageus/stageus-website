@@ -3,43 +3,35 @@
     max-width: 83rem;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 1rem;
 }
 
 .faq_line {
     width: 80%;
     max-width: 83rem;
-    margin-bottom: 2.6rem;
 }
 
 .faq {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 80%;
     max-width: 83rem;
     height: fit-content;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .faq_box {
     width: 49%;
     height: fit-content;
-    margin-bottom: 2rem;
     cursor: pointer;
 }
 
 .faq_question {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 90%;
-    height: 1.6rem;
+    height: fit-content;
     padding: 5%;
 }
-
 
 .faq_answer {
     display: none;

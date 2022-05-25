@@ -8,27 +8,12 @@
 
 @media screen and (min-width: 410px) and (max-width: 767px) {
 
-    .faq_title {
-        margin-bottom: 0.6rem;
-    }
-
-    .faq_line {
-        margin-bottom: 1.4rem;
-    }
-
-    .faq {
-        max-width: 36rem;
-        margin-bottom: 1.8rem;
-    }
-
     .faq_box {
         width: 100%;
-        margin-bottom: 0.8rem;
     }
 
     .faq_question {
         width: 94%;
-        height: fit-content;
         padding: 3%;
     }
 
@@ -40,31 +25,17 @@
 
 @media screen and (max-width: 409px) {
 
-    .faq_title {
-        margin-bottom: 0.5rem;
-    }
-
-    .faq_line {
-        margin-bottom: 1.2rem;
-    }
-
-    .faq {
-        margin-bottom: 1.6rem;
-    }
-
     .faq_box {
         width: 100%;
-        margin-bottom: 0.6rem;
     }
 
     .faq_question {
         width: 94%;
-        height: fit-content;
         padding: 3%;
     }
 
     .faq_answer {
-        width: 94%;
-        padding: 3%;
+        width: 92%;
+        padding: 4%;
     }
 }

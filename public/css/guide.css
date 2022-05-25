@@ -1,21 +1,13 @@
-.guide_box + .guide_box {
-    margin-top: 4rem;
-}
-
 .guide_title {
     width: 80%;
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 1rem;
-    text-align: left;
 }
 
 .guide_line {
     width: 80%;
     max-width: 100rem;
-    background-color: var(--black);
-    margin-bottom: 2.2rem;
 }
 
 .guide_value {
@@ -23,18 +15,12 @@
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    text-align: left;
 }
 
 .guide_img {
     display: block;
     width: 80%;
     max-width: 50rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.guide_explain {
-    padding-top: 0.6rem;
-    padding-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }

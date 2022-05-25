@@ -2,15 +2,15 @@
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
-    <title>스테이지어스 - 개발자 육성 센터</title>
+    <title>스테이지어스 - 인정받는 개발자를 만드는 곳</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <meta name="description" content="개발자 육성 센터 스테이지어스 - 기술을 많이 배웠다고 돈을 많이 버는 개발자가 될 수는 없습니다. 성공한 개발자들은 스스로 성장할 수 있는 개발자의 습관을 가지고 있습니다. 그 습관을 가지고있는 개발자만이 어디 서든 인정 받는 능력 있는 개발자가 됩니다. 스테이지어스는 다양한 경험을 제공하고 실무에서 인정 받는 개발자로 만들어드립니다.">
-    <meta name="keywords" content="코딩, 프로그래밍, 개발자 육성 센터, 개발자, 부트캠프, 코딩 학원, 프로그래밍 학원, 개발자, 웹 프론트엔드, 백엔드, 서버, 웹서버, 앱, 안드로이드, 리액트, 노드, 자바스크립트">
+    <meta name="description" content="인정받는 개발자 | 부트캠프 스테이지어스 - 언제까지 언어와 기술에 집착하실 건가요? 인정받는 개발자에게 필요한 능력은 이러한 것들이 아닙니다.">
+    <meta name="keywords" content="코딩, 프로그래밍, 개발자, 부트캠프, 코딩학원, 개발학원, 프론트엔드, 백엔드, 서버, 웹서버, 앱, 안드로이드, 리액트, 노드, 자바스크립트">
     <meta property="og:type" content="website"> 
     <meta property="og:site_name" content="스테이지어스">
     <meta property="og:title" content="스테이지어스">
-    <meta property="og:description" content="개발자 육성 센터 스테이지어스 - 기술을 많이 배웠다고 돈을 많이 버는 개발자가 될 수는 없습니다. 성공한 개발자들은 스스로 성장할 수 있는 개발자의 습관을 가지고 있습니다. 그 습관을 가지고있는 개발자만이 어디 서든 인정 받는 능력 있는 개발자가 됩니다. 스테이지어스는 다양한 경험을 제공하고 실무에서 인정 받는 개발자로 만들어드립니다.">
-    <meta property="og:image" content="img/logoBlack.png">
+    <meta property="og:description" content="인정받는 개발자 | 부트캠프 스테이지어스 - 언제까지 언어와 기술에 집착하실 건가요? 인정받는 개발자에게 필요한 능력은 이러한 것들이 아닙니다.">
+    <meta property="og:image" content="img/logoMark.png">
     <meta property="og:url" content="https://www.stageus.co.kr">
     <link rel="canonical" href="https://www.stageus.co.kr">
     <link rel="icon" type="image/x-icon" href="img/logoMark.png">
@@ -32,26 +32,41 @@
 </head>
 <body>
 
-    <!-- nav -->
-    <nav>
-        <a id="nav_logo" href="/">
-            <image class="logo" src="img/logoBlack.png"></image>
-        </a>
-        <div class="nav_menu_box">
-            <h1><a class="nav_menu">교육</a></h1>   <!-- href script에서 href정의 -->
-            <h1><a class="nav_menu">커리큘럼</a></h1>
-            <h1><a class="nav_menu">FAQ</a></h1>
-            <h1><a class="nav_menu">문의하기</a></li>
-        </div> 
-        <input id="nav_menu_cover" class="nav_menu_cover darken_background" type="button" onclick="menuCloseEvent()"></input>
-        <div id="nav_menu_open" class="nav_menu_open white_background">
-            <a class="nav_menu_open_item">교육</a>   <!-- href script에서 href정의 -->
-            <a class="nav_menu_open_item">커리큘럼</a>
-            <a class="nav_menu_open_item">FAQ</a>
-            <a class="nav_menu_open_item">문의하기</a>
+    <header>
+        <video autoplay loop muted class="header_video">
+            <source class="video" src="img/header.mp4" type="video/mp4">
+            <strong>Video does not supported. Please Change your browser.</strong>
+        </video>
+        <nav>
+            <a id="nav_logo" href="/">
+                <image class="logo" src="img/stageus_logo_white.png"></image>
+            </a>
+            <div class="nav_menu_box">
+                <a class="nav_menu content_value white_font">교육</a>   <!-- href script에서 href정의 -->
+                <a class="nav_menu content_value white_font">커리큘럼</a>
+                <a class="nav_menu content_value white_font">FAQ</a>
+                <a class="nav_menu content_value white_font">문의하기</a>
+            </div> 
+            <input id="nav_menu_cover" class="nav_menu_cover darken_background" type="button" onclick="menuCloseEvent()"></input>
+            <div id="nav_menu_open" class="nav_menu_open white_background">
+                <a class="nav_menu_open_item">교육</a>   <!-- href script에서 href정의 -->
+                <a class="nav_menu_open_item">커리큘럼</a>
+                <a class="nav_menu_open_item">FAQ</a>
+                <a class="nav_menu_open_item">문의하기</a>
+            </div>
+            <input id="nav_menu_button" class="nav_menu_button" type="button" onclick="menuOpenEvent()">
+        </nav>
+        <div class="header_cover darken_background"> 
+            <div class="header_box">
+                <h1 class="white_font content_name text_left">인정받는 개발자</h1>
+                <div class="margin_top_medium">
+                    <p class="text_left white_font content_subtitle">온라인으로도 배울 수 있는 언어와 기술에 집착하면 안됩니다.</p>
+                    <p class="text_left white_font content_subtitle margin_top_extra_small">논리적인 근거를 정해 행동하는 능력이 필요합니다.</p>
+                </div>
+            </div>
+            <a class="header_button contents_button content_value margin_top_medium" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
         </div>
-        <input id="nav_menu_button" class="nav_menu_button" type="button" onclick="menuOpenEvent()">
-    </nav>
+    </header>
 
     <!-- scroll nav -->
     <!-- <nav id="nav_scroll">
@@ -68,20 +83,6 @@
         </div>
     </nav> -->
 
-    <!-- header -->
-    <header>
-        <div class="header_cover"> 
-            <div class="header_box">
-                <h1 class="white_font content_name text_left">스테이지어스</h1>
-                <div class="margin_top_small">
-                    <p class="text_left white_font content_value spacing_extra_small">코딩을 잘하는 것 만으론 부족합니다.</p>
-                    <p class="text_left white_font content_value spacing_extra_small">능력 있는 개발자가 될 수 있어야 합니다.</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- main -->
     <main>
 
         <!-- section intro -->
@@ -89,9 +90,9 @@
             <div class="intro_content">
                 <img class="intro_image mobile_spacing_medium" src="img/introductionImage.jpg">
                 <div class="intro_box mobile_spacing_medium">
-                    <p class="content_value italic spacing_extra_small"> 공부를 해도 이해가 안돼. 재능이 없는 걸까? "</p>
-                    <p class="content_value italic spacing_extra_small"> 프로젝트를 해보려고 해도 뭐부터 시작해야할지 모르겠어 "</p>
-                    <p class="content_value italic spacing_extra_small"> 내가 이대로 취직해서 성공할 수 있을까? "</p>
+                    <p class="content_value italic "> 공부를 해도 이해가 안돼. 재능이 없는 걸까? "</p>
+                    <p class="content_value italic "> 프로젝트를 해보려고 해도 뭐부터 시작해야할지 모르겠어 "</p>
+                    <p class="content_value italic "> 내가 이대로 취직해서 성공할 수 있을까? "</p>
                     <h2 class="content_subtitle blue_font margin_top_medium">아직 제대로 배워보지 않았기 때문입니다.</h2>
                 </div>
             </img>
@@ -100,15 +101,15 @@
         <!-- section introduction -->
         <section class="contents grey_background">
             <p class="content_subtitle">스테이지어스 목표</p>
-            <h1 class="content_title margin_top_extra_small">능력 있는 개발자를 육성합니다.</h1>
+            <h1 class="content_title margin_top_extra_small">인정받는 개발자를 만듭니다.</h1>
             <div class="content_explain margin_top_medium">
-                <p class="content_value mobile_text_left spacing_extra_small">기술을 많이 배웠다고 돈을 많이 버는 개발자가 될 수는 없습니다.</p>
-                <p class="content_value mobile_text_left spacing_extra_small">성공한 개발자들은 스스로 성장할 수 있는 <span>개발자의 습관</span>을 가지고 있습니다.</p>
-                <p class="content_value mobile_text_left spacing_extra_small">그 습관을 가지고 있는 개발자만이 어디 서든 인정 받는 <span>능력 있는 개발자</span>가 됩니다.</p>
-                <p class="content_value mobile_text_left spacing_extra_small"><span>스테이지어스</span>에서 다양한 경험을 하고 실무에서 인정 받는 개발자가 되세요.</p>
+                <p class="content_value mobile_text_left ">기술을 많이 배웠다고 돈을 많이 버는 개발자가 될 수는 없습니다.</p>
+                <p class="content_value mobile_text_left ">성공한 개발자들은 스스로 성장할 수 있는 <span>개발자의 습관</span>을 가지고 있습니다.</p>
+                <p class="content_value mobile_text_left ">그 습관을 가지고 있는 개발자만이 어디 서든 <span>인정받는 개발자</span>가 됩니다.</p>
+                <p class="content_value mobile_text_left "><span>스테이지어스</span>에서 다양한 경험을 하고 실무에서 인정받는 개발자가 되세요.</p>
             </div>
             <div class="introduction_box">
-                <p class="content_subtitle margin_top_medium">스테이지어스의 3개 원칙</p>
+                <p class="content_subtitle margin_top_medium">인정받는 개발자 3개 원칙</p>
                 <div class="margin_top_small">
                     <div class="introduction_text_box blue_background spacing_small">
                         <p class="introduction_text white_background content_value">작업에 대한 근거를 명확하게 정한 뒤, 최적화된 선택을 하는 원칙</p>
@@ -128,26 +129,26 @@
             <p class="content_subtitle">과정 소개</p>
             <h1 id="lecture_generation" class="content_title margin_top_extra_small"></h1>
             <div class="content_explain margin_top_medium">
-                <p class="content_value mobile_text_left spacing_extra_small">기초 과정에서 심화 과정으로 이어지는 Step by Step 커리큘럼</p>
-                <p class="content_value mobile_text_left spacing_extra_small">기초 10주, 심화 12주의 구성으로 이루어진 총 <span>5개월 + 2주간</span>의 교육 과정</p>
-                <p class="content_value mobile_text_left spacing_extra_small"><span>코드 심층 리뷰</span>와 <span>모의 외주</span>, <span>협업 프로젝트</span>를 통해 성공하는 개발자의 습관 학습</p>
+                <p class="content_value mobile_text_left ">기초 과정에서 심화 과정으로 이어지는 Step by Step 커리큘럼</p>
+                <p class="content_value mobile_text_left ">인정 받는 개발자가 되는 <span>6개월</span>의 교육 과정</p>
+                <p class="content_value mobile_text_left "><span>코드 심층 리뷰</span>와 <span>모의 외주</span>, <span>협업 프로젝트</span>를 통해 성공하는 개발자의 습관 학습</p>
             </div>
             <div class="content_explain margin_top_medium">
                 <h2 class="lecture_box_title content_subtitle"><span>기초</span> 과정 일정</h2>
                 <div class="lecture_box margin_top_small">
                     <div class="lecture_index mobile_spacing_small grey_background">
                         <h1 class="lecture_title content_subtitle"></h1>
-                        <p class="lecture_info margin_top_extra_small content_value"></p>
+                        <p class="lecture_info  content_value"></p>
                         <a class="lecture_count margin_top_small content_value contents_button" href="file/curriculum.pdf" onmouseover="lectureMouseOverEvent(0)" onmouseout="lectureMouseLeaveEvent(0)"></a>
                     </div>
                     <div class="lecture_index mobile_spacing_small grey_background">
                         <h1 class="lecture_title content_subtitle"></h1>
-                        <p class="lecture_info margin_top_extra_small content_value"></p>
+                        <p class="lecture_info  content_value"></p>
                         <a class="lecture_count margin_top_small content_value contents_button" href="file/curriculum.pdf" onmouseover="lectureMouseOverEvent(1)" onmouseout="lectureMouseLeaveEvent(1)"></a>
                     </div>
                     <div class="lecture_index mobile_spacing_small grey_background">
                         <h1 class="lecture_title content_subtitle"></h1>
-                        <p class="lecture_info margin_top_extra_small content_value"></p>
+                        <p class="lecture_info  content_value"></p>
                         <a class="lecture_count margin_top_small content_value contents_button" href="file/curriculum.pdf" onmouseover="lectureMouseOverEvent(2)" onmouseout="lectureMouseLeaveEvent(2)"></a>
                     </div>
                 </div>
@@ -157,28 +158,28 @@
                 <div class="lecture_box margin_top_small">
                     <div class="lecture_index mobile_spacing_small grey_background">
                         <h1 class="lecture_title content_subtitle"></h1>
-                        <p class="lecture_info margin_top_extra_small content_value"></p>
+                        <p class="lecture_info  content_value"></p>
                         <a class="lecture_count margin_top_small content_value contents_button" href="file/curriculum.pdf" onmouseover="lectureMouseOverEvent(3)" onmouseout="lectureMouseLeaveEvent(3)"></a>                       
                     </div>
                     <div class="lecture_index mobile_spacing_small grey_background">
                         <h1 class="lecture_title content_subtitle"></h1>
-                        <p class="lecture_info margin_top_extra_small content_value"></p>
+                        <p class="lecture_info  content_value"></p>
                         <a class="lecture_count margin_top_small content_value contents_button" href="file/curriculum.pdf" onmouseover="lectureMouseOverEvent(4)" onmouseout="lectureMouseLeaveEvent(4)"></a>
                     </div>
                     <div class="lecture_index mobile_spacing_small grey_background">
                         <h1 class="lecture_title content_subtitle"></h1>
-                        <p class="lecture_info margin_top_extra_small content_value"></p>
+                        <p class="lecture_info  content_value"></p>
                         <a class="lecture_count margin_top_small content_value contents_button" href="file/curriculum.pdf" onmouseover="lectureMouseOverEvent(5)" onmouseout="lectureMouseLeaveEvent(5)"></a>
                     </div>
                 </div>
             </div>
-            <div class="margin_top_medium content_explain ">
-                <p class="content_value mobile_text_left spacing_extra_small">※ 기초 과정은 <span>1년에 6회</span> 운영됩니다. ( 매 홀수 월 )</p>
-                <p class="content_value mobile_text_left spacing_extra_small">※ 심화 과정은 <span>1년에 4회</span> 운영됩니다.</p>
-                <p class="content_value mobile_text_left spacing_extra_small">※ 대학생 시험기간이 포함된 기수는 <span>쉬는주 2주</span>가 포함됩니다.</p>
+            <div class="margin_top_small content_explain ">
+                <p class="content_value mobile_text_left ">※ 스테이지어스 교육 과정은 <span>1년에 6회</span> 운영됩니다.</p>
+                <p class="content_value mobile_text_left ">※ 개강 대상 월 : 1월, 3월, 5월, 7월, 9월, 11월
+                <p class="content_value mobile_text_left ">※ 대학생 시험기간에는 <span>쉬는주 1주</span>가 포함됩니다.</p>
             </div>
-            <div class="lecture_button_box margin_top_small">
-                <a id="lecture_button" class="lecture_button contents_button content_value" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
+            <div class="lecture_button_box margin_top_medium">
+                <a class="lecture_button contents_button content_value" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
             </div>
         </section>
 
@@ -229,36 +230,36 @@
                     <img class="benefit_img" src="img/benefit_1.jpg"></img>
                     <div class="benefit_content margin_top_small">
                         <h2 class="content_subtitle text_left">무료 청강</h2>
-                        <p class="content_value margin_top_extra_small text_left">수강 등록 전 현재 진행 중인 기수의 강의를 1회 무료로 청강할 수 있습니다. 강의를 들어보시고 신중하게 결정하세요.</p>
+                        <p class="content_value margin_top_small text_left">수강 등록 전 현재 진행 중인 기수의 강의를 1회 무료로 청강할 수 있습니다. 강의를 들어보시고 신중하게 결정하세요.</p>
                     </div>
                 </div>
                 <div class="benefit_item mobile_spacing_medium">
                     <div class="benefit_content desktop">
                         <h2 class="content_subtitle text_right">재수강 시스템</h2>
-                        <p class="content_value margin_top_extra_small text_right">강의 수강 중 노력에 비해 성취도가 부족한 팀원은 무료로 재수강을 지도합니다. 진도가 조금 늦어질 뿐 확실하게 배우는 좋은 방법입니다.</p>
+                        <p class="content_value margin_top_small text_right">강의 수강 중 노력에 비해 성취도가 부족한 팀원은 무료로 재수강을 지도합니다. 진도가 조금 늦어질 뿐 확실하게 배우는 좋은 방법입니다.</p>
                     </div>
                     <img class="benefit_img" src="img/benefit_2.jpg">
                     <div class="benefit_content margin_top_small mobile">
                         <h2 class="content_subtitle text_left">재수강 시스템</h2>
-                        <p class="content_value margin_top_extra_small text_left">강의 수강 중 노력에 비해 성취도가 부족한 팀원은 무료로 재수강을 지도합니다. 진도가 조금 늦어질 뿐 확실하게 배우는 좋은 방법입니다.</p>
+                        <p class="content_value margin_top_small text_left">강의 수강 중 노력에 비해 성취도가 부족한 팀원은 무료로 재수강을 지도합니다. 진도가 조금 늦어질 뿐 확실하게 배우는 좋은 방법입니다.</p>
                     </div>
                 </div>
                 <div class="benefit_item mobile_spacing_medium">
                     <img class="benefit_img" src="img/benefit_3.jpg">
                     <div class="benefit_content margin_top_small">
                         <h2 class="content_subtitle text_left">커뮤니티</h2>
-                        <p class="content_value margin_top_extra_small text_left">팀원간의 네트워크를 형성하고 기술을 공유하여 서로 부족한 부분을 채울 수 있습니다. 오프라인 사무실과 온라인 커뮤니티를 통해 이를 지원합니다.</p>
+                        <p class="content_value margin_top_small text_left">팀원간의 네트워크를 형성하고 기술을 공유하여 서로 부족한 부분을 채울 수 있습니다. 오프라인 사무실과 온라인 커뮤니티를 통해 이를 지원합니다.</p>
                     </div>
                 </div>
                 <div class="benefit_item mobile_spacing_medium">
                     <div class="benefit_content desktop">
                         <h2 class="content_subtitle text_right">자율 멘토링</h2>
-                        <p class="content_value margin_top_extra_small text_right">강의 내용 외 여러 개발 이야기와 최근 동향, 꿀팁, 진로 멘토링 등을 들을 수 있습니다. 평소 궁금하던 내용에 대해 언제든지 친절하게 답해드리겠습니다.</p>
+                        <p class="content_value margin_top_small text_right">강의 내용 외 여러 개발 이야기와 최근 동향, 꿀팁, 진로 멘토링 등을 들을 수 있습니다. 평소 궁금하던 내용에 대해 언제든지 친절하게 답해드리겠습니다.</p>
                     </div>
                     <img class="benefit_img"  src="img/benefit_4.jpg">
                     <div class="benefit_content margin_top_small mobile">
                         <h2 class="content_subtitle text_left">자율 멘토링</h2>
-                        <p class="content_value margin_top_extra_small text_left">강의 내용 외 여러 개발 이야기와 최근 동향, 꿀팁, 진로 멘토링 등을 들을 수 있습니다. 평소 궁금하던 내용에 대해 언제든지 친절하게 답해드리겠습니다.</p>
+                        <p class="content_value margin_top_small text_left">강의 내용 외 여러 개발 이야기와 최근 동향, 꿀팁, 진로 멘토링 등을 들을 수 있습니다. 평소 궁금하던 내용에 대해 언제든지 친절하게 답해드리겠습니다.</p>
                     </div>
                 </div>
             </div>
@@ -273,19 +274,19 @@
                 <div class="mentor_info_box">
                     <div class="spacing_small">
                         <h2 class="content_subtitle">이름</h2>
-                        <p class="content_value margin_top_extra_small">Choi Minseok | 최민석</p>
+                        <p class="content_value ">Choi Minseok | 최민석</p>
                     </div>
                     <div class="spacing_small">
                         <h2 class="content_subtitle">직급</h2>
-                        <p class="content_value margin_top_extra_small">스테이지어스 대표 & 교육 팀장</p>
+                        <p class="content_value ">스테이지어스 대표 & 교육 팀장</p>
                     </div>
                     <div class="spacing_small">
                         <h2 class="content_subtitle">학력</h2>
-                        <p class="content_value margin_top_extra_small">인하대학교 컴퓨터공학과(학사/석사)</p>
+                        <p class="content_value ">인하대학교 컴퓨터공학과(학사/석사)</p>
                     </div>
                     <div class="spacing_small">
                         <h2 class="content_subtitle">이메일</h2>
-                        <p class="content_value margin_top_extra_small">cono@stageus.co.kr</h1>
+                        <p class="content_value ">cono@stageus.co.kr</h1>
                     </div>
                     <div class="mentor_aditional_box margin_top_medium">
                         <a class="mentor_career content_subtitle contents_button" href="file/career.pdf">Career</a>
@@ -301,20 +302,20 @@
             <p class="content_subtitle">스터디 센터</p>
             <h1 class="content_title margin_top_extra_small">팀원들이 성장할 공간 입니다.</h1>
             <div class="content_explain margin_top_medium">
-                <p class="content_value mobile_text_left spacing_extra_small"><span>소수정예</span>로 진행될 수 있는 오프라인 강의 공간과 20명 이상이 넉넉하게 공부할 수 있는 <span>자습 공간</span></p>
-                <p class="content_value mobile_text_left spacing_extra_small">편한 의자와 전좌석 개발용 <span>확장 모니터</span> 비치 & 개발 집중도를 높여줄 <span>음료수</span>와 <span>커피</span> 무한 제공</p>
+                <p class="content_value mobile_text_left "><span>소수정예</span>로 진행될 수 있는 오프라인 강의 공간과 20명 이상이 넉넉하게 공부할 수 있는 <span>자습 공간</span></p>
+                <p class="content_value mobile_text_left ">편한 의자와 전좌석 개발용 <span>확장 모니터</span> 비치 & 개발 집중도를 높여줄 <span>음료수</span>와 <span>커피</span> 무한 제공</p>
             </div>
             <div class="office_box margin_top_medium">
                 <iframe class="office_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.3736338616172!2d126.6522885160645!3d37.45189923844134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b794e10b52b07%3A0x5dc168b0a05eecdd!2z7Iqk7YWM7J207KeA7Ja07IqkIC0g6rCc67Cc7J6QIOycoeyEsSDshLzthLA!5e0!3m2!1sko!2skr!4v1630181210520!5m2!1sko!2skr" loading="lazy"></iframe>
             </div>
-            <p class="content_value margin_top_extra_small">(22207) 인천광역시 미추홀구 인하로55 B1</p>
+            <p class="content_value ">(22207) 인천광역시 미추홀구 인하로55 B1</p>
         </section>
     </main>
 
     <!-- footer part -->
     <footer class="black_background">
         <div class="footer_box">
-            <p class="content_title white_font text_left">스테이지어스는 능력 있는 개발자가 되기 위한</p>
+            <p class="content_title white_font text_left">스테이지어스는 인정받는 개발자가 되기 위한</p>
             <p class="content_title white_font text_left margin_top_extra_small">여러분의 <span>[ 무대 ]</span> 입니다.</p>
             <a id="footer_button" class="footer_button content_subtitle contents_button margin_top_medium" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
         </div>

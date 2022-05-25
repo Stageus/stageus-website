@@ -1,21 +1,13 @@
-.refund_box + .refund_box {
-    margin-top: 6rem;
-}
-
 .refund_title {
     width: 80%;
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 1rem;
-    text-align: left;
 }
 
 .refund_line {
     width: 80%;
     max-width: 100rem;
-    background-color: var(--black);
-    margin-bottom: 2.2rem;
 }
 
 .refund_value {
@@ -23,33 +15,30 @@
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    text-align: left;
 }
 
-#refund_table {
+.refund_table {
     width: 80%;
     max-width: 100rem;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 2.2rem;
     border-spacing: 0;
 }
 
 .refund_row {
+    display: flex;
+    align-items: center;
+    width: 100%;
     height: 3.6rem;
 }
 
-.table_title {
-    background-color: var(--blue);
-    color: var(--white);
+.refund_column {
+    width: 50%;
 }
 
-.refund_table_title {
-    width: 40%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.refund_table_value {
-    width: 20%;
+@media screen and (max-width: 767px) {
+    
+    .refund_row {
+        height: 2.8rem;
+    }
 }
