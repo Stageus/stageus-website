@@ -9,7 +9,7 @@ const lecture = {
         {
             "name": "웹 기초 과정",
             "duration": "7월 2일 ~ 9월 3일 (토 14시)",
-            "number": 1
+            "number": 2
         },
         {
             "name": "파이썬 응용 프로그램 과정",
