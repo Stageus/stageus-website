@@ -10,7 +10,7 @@
         height: 3rem;
     }
 
-    .nav_menu_box {
+    .nav_menu_box, .nav_login {
         display: none;
     }
 
@@ -46,7 +46,7 @@
         height: 2.5rem;
     }
 
-    .nav_menu_box {
+    .nav_menu_box, .nav_login {
         display: none;
     }
 
@@ -121,7 +121,7 @@
         height: 2.5rem;
     }
 
-    .nav_menu_box {
+    .nav_menu_box, .nav_login {
         display: none;
     }
 

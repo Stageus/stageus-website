@@ -1,10 +1,7 @@
-const secretKey = "THISISOURSTAGE-STAGEUS";
-
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
-const pg = require('pg');
-
 const dbControl = require("../module/dbControl")
+require('dotenv').config()
 
 // Insert register api
 router.post('/', async (req, res) => {
@@ -12,6 +9,9 @@ router.post('/', async (req, res) => {
     // request AJAX data
     let idValue = req.body.idValue
     let pwValue = req.body.pwValue
+
+    // JWT Secret Key
+    const secretKey = process.env.SECRET_KEY
 
     const queryResult = await dbControl(
         "select * from homepage.account WHERE id=$1 and pw=$2",
@@ -49,6 +49,9 @@ router.post('/', async (req, res) => {
 // Insert register api
 router.post('/varify', (req, res) => {
 
+    // JWT Secret Key
+    const secretKey = process.env.SECRET_KEY
+
     // Init response data
     const result = {
         "success" : false,
@@ -66,8 +69,9 @@ router.post('/varify', (req, res) => {
             result.message = "InvalidToken"
             console.log("InvalidToken: ", err);
         }
+    } finally {
+        res.send(result);
     }
-    res.send(result);
 });
 
 module.exports = router;

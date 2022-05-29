@@ -47,6 +47,16 @@
                 <a class="nav_menu content_value white_font">FAQ</a>
                 <a class="nav_menu content_value white_font">문의하기</a>
             </div> 
+            <input type="button" id="login_box_close" class="nav_login content_value white_font" value="로그인" onclick="loginOpenEvent(this)">
+
+            <!-- Login 창-->
+            <div id="login_box" class="login_box white_background">
+                <input id="login_id" class="login_value content_value text_left" type="text" placeholder="아이디">
+                <input id="login_pw" style="font-family: Arial, Helvetica, sans-serif;" class="login_value content_value text_left margin_top_extra_small" type="password" placeholder="비밀번호">
+                <input class="login_button content_value contents_button margin_top_small" type="button" value="로그인" onclick="loginEvent()">
+            </div>
+
+            <!-- 숨겨진 Nav -->
             <input id="nav_menu_cover" class="nav_menu_cover darken_background" type="button" onclick="menuCloseEvent()"></input>
             <div id="nav_menu_open" class="nav_menu_open white_background">
                 <a class="nav_menu_open_item">교육</a>   <!-- href script에서 href정의 -->
@@ -55,6 +65,7 @@
                 <a class="nav_menu_open_item">문의하기</a>
             </div>
             <input id="nav_menu_button" class="nav_menu_button" type="button" onclick="menuOpenEvent()">
+            
         </nav>
         <div class="header_cover darken_background"> 
             <div class="header_box">

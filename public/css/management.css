@@ -1,157 +1,48 @@
-main {
-    display: none;
-}
-
 section {
-    background-color: var(--grey);
-}
-
-#auth_box {
-    width: fit-content;
-    margin-top: 18rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.auth_input {
-    display: block;
-    width: 40rem;
-    height: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 1.4rem;
-    font-family: NanumSquare;
-    font-weight: 400;
-    color: var(--black);
-    border: 1px solid var(--black);
-    border-radius: 0.4rem;
-}
-.auth_input + .auth_input {
-    margin-top: 1rem;
-}
-
-.auth_button {
-    display: block;
-    width: 42.16rem;
-    height: 3.8rem;
-    margin-top: 1rem;
-    font-size: 1.4rem;
-    font-family: NanumSquare;
-    font-weight: 400;
-    color: var(--white);
-    background-color: var(--blue);
-    border: none;
-    border-radius: 0.4rem;
-}
-.auth_button {
-    cursor: pointer;
-}
-
-#logout_box {
     width: 94%;
     max-width: 140rem;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: right;
 }
 
-#logout {
+.member_box {
+    width: 94%;
+    max-width: 140rem;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout_button {
     width: 10rem;
-    height: 2.6rem;
-    background-color: var(--white);
-    color: var(--black);
-    border: 1px solid var(--blue);
-    border-radius: 0.4rem;
-    cursor: pointer;
-    transition-property: background-color, color;
-    transition-duration: 0.2s;
-}
-#auth_logout:hover {
-    background-color: var(--blue);
-    color: var(--white);
-    cursor: pointer;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
 }
 
-.contents_title {
-    width: 94%;
-    max-width: 140rem;
-    margin-bottom: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: NanumSquare;
-    font-size: 1.6rem;
-    text-align: left;
-    font-weight: 400;
-}
-
-#membem_list {
-    width: 94%;
-    max-width: 140rem;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: var(--white);
-    color: var(--black);
-    font-size: 1.3rem;
-    font-family: NanumSquare;
-    font-weight: 400;
+.membem_list {
+    width: 100%;
+    height: fit-content;
     border-spacing: 0;
+    border-collapse: collapse;
 }
 
 .table_row {
-    background-color: var(--blue);
-}
-
-.table_column_title {
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-.table_column {
-    width: fit-content;
-    height: 3rem;
-    text-align: center;
-}
-
-.table_column_generation_divide {
-    width: fit-content;
-    height: 3rem;
-    text-align: center;
-    border-bottom: 2px solid var(--blue);
-}
-
-.table_column_degree_divide {
-    width: fit-content;
-    height: 3rem;
-    text-align: center;
-    border-bottom: 1px solid var(--black);
+    height: 100%;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
 }
 
 .table_column_input {
-    height: 100%;
-    text-align: center;
-    font-size: 1.3rem;
-    font-family: NanumSquare;
-    font-weight: 400;
-    color : var(--blue);
-    border: none;
+    border-radius: 0.4rem;
 }
 
 .table_column_button {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-right: 0.8rem;
-    padding-left: 0.8rem;
-    background-color: var(--white);
-    border: 1px solid var(--blue);
-    border-radius: 0.4rem;
-    color: var(--black);
-    transition-property: background-color, color;
-    transition-duration: 0.2s;
+    width: 4rem;
+    height: 80%;
 }
 .table_column_button:hover {
-    background-color: var(--blue);
-    color: var(--white);
     cursor: pointer;
+    box-shadow: none;
 }
 .table_column_button + .table_column_button {
     margin-left: 0.6rem;

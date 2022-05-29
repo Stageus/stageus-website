@@ -79,6 +79,47 @@ nav {
     border-bottom: 0.2rem solid var(--blue);
 }
 
+.nav_login {
+    background: none;
+    border: 0.2rem solid #00000000;
+    transition-property: border-bottom;
+    transition-duration: 0.3s;
+}
+.nav_login:hover {
+    cursor: pointer;
+    border-bottom: 0.2rem solid var(--blue);
+}
+
+/* login */
+
+.login_box {
+    position: absolute;
+    right: -36rem;
+    top: 8rem;
+    padding: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 0.4rem;
+    transition-property: right;
+    transition-duration: 0.3s;
+    box-shadow: 0rem 0rem 1.2rem var(--more_darken);
+}
+
+.login_value {
+    display: block;
+    width: 22rem;
+    height: 2.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid var(--black);
+    border-radius: 0.4rem;
+}
+
+.login_button {
+    display: block;
+    width: 24.16rem;
+    height: 3.2rem;
+}
 
 /* opened nav */
 

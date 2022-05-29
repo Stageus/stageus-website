@@ -1,12 +1,13 @@
-const pg = require('pg');
+const pg = require('pg')
+require('dotenv').config()
 
 // PostgreSQL Database Account Configuration
 const dbUser = {
-    user: "ubuntu",
-    host: "localhost",
-    database: "stageus",
-    password: "stageus0104",
-    prot: 5432
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT
 }
 
 const dbControl = async (sql, values) => {
