@@ -15,53 +15,51 @@
     <meta property="og:url" content="https://www.stageus.co.kr">
     <link rel="canonical" href="https://www.stageus.co.kr">
     <link rel="icon" type="image/x-icon" href="img/logoMark.png" >
+    <link rel="stylesheet" type="text/css" href="css/header_footer_template.css">
     <link rel="stylesheet" type="text/css" href="css/public.css">
     <link rel="stylesheet" type="text/css" href="css/management.css">
 </head>
 <body>
 
-    <!-- login form -->
-    <section id="auth_box">
-        <input id="auth_id_input" class="auth_input" type="text" placeholder="아이디">
-        <input id="auth_pw_input" class="auth_input" type="text" placeholder="비밀번호">
-        <input class="auth_button" type="button" value="관리자 인증" onclick="authEvent()">
-    </section>
+    <nav>
+        <a id="nav_logo" href="/">
+            <image class="logo" src="img/stageus_logo_white.png"></image>
+        </a>
+        <div class="nav_menu_box">
+            <a class="nav_menu content_value white_font">교육</a>   <!-- href script에서 href정의 -->
+            <a class="nav_menu content_value white_font">커리큘럼</a>
+            <a class="nav_menu content_value white_font">FAQ</a>
+            <a class="nav_menu content_value white_font">문의하기</a>
+        </div> 
+    </nav>
 
-    <!-- main -->
-    <main id="contents_box">
-
-        <!-- section Member List -->
-        <section class="contents">
-            <div id="logout_box">
-                <input id="logout" type="button" value="LOGOUT" onclick="logoutEvent()">
-            </div>
-            <h1 class="contents_title">팀원 목록</h1>
-            <table id="membem_list">
-                <tr class="table_row">
-                    <td class="table_column table_column_title">이름</td>
-                    <td class="table_column table_column_title">연락처</td>
-                    <td class="table_column table_column_title">직업</td>
-                    <td class="table_column table_column_title">옵션</td>
-                    <td class="table_column table_column_title">기수</td>
-                    <td class="table_column table_column_title">과정명</td>
-                    <td class="table_column table_column_title">기간</td>
-                    <td class="table_column table_column_title">가입일</td>
-                    <td class="table_column table_column_title">메모</td>
-                    <td class="table_column table_column_title">관리</td>
+    <main class="grey_background">
+        <div class="member_box align_center">
+            <h2 class="content_subtitle">팀원 목록</h2>
+            <input class="logout_button contents_button content_value" type="button" value="LOGOUT" onclick="logoutEvent()">
+        </div>
+        <section class="contents align_center">
+            <table id="membem_list" class="membem_list white_background content_value">
+                <tr class="blue_background">
+                    <td class="table_row white_font">이름</td>
+                    <td class="table_row white_font">연락처</td>
+                    <td class="table_row white_font">직업</td>
+                    <td class="table_row white_font">옵션</td>
+                    <td class="table_row white_font">기수</td>
+                    <td class="table_row white_font">과정명</td>
+                    <td class="table_row white_font">기간</td>
+                    <td class="table_row white_font">가입일</td>
+                    <td class="table_row white_font">메모</td>
+                    <td class="table_row white_font">관리</td>
                 </tr>
             </table>
         </section>
-
     </main>
 
     <script>
-        const editButtonValue = "Edit";
-        const confirmButtonValue = "Okay";
-        const deleteButtonValue = "Del";
-
         window.onload = async () => {
 
-            // 토큰 존재시 검증 과정
+            // Auth 검증
             if (localStorage.getItem("management_token")) {
                 const response = await fetch("/auth/varify", {
                     "method": "POST",
@@ -71,89 +69,55 @@
                 })
                 const result = await response.json()
 
-                if (result.success) {
-                    loadData();
-                } else if (!result.success) {
-                    alert(result.message);
+                if (!result.success) {
                     localStorage.removeItem("management_token");
+                    location.href = "/"
+                } else {
+                    loadData()
                 }
+            } else {
+                location.href = "/"
             }
         }
 
         // 로그아웃 이벤트
         const logoutEvent = () => {
             localStorage.removeItem("management_token");
-            location.reload();
-        }
-
-        // 관리자 계정 인증 이벤트
-        const authEvent = async () => {
-            const idValue = document.getElementById("auth_id_input").value;
-            const pwValue = document.getElementById("auth_pw_input").value;
-
-            const response = await fetch("/auth", {
-                method: "POST", 
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify ({   
-                    "idValue": idValue,
-                    "pwValue": pwValue,
-                })
-            })
-            const result = await response.json()
-
-            if (result.success) {
-                localStorage.setItem("management_token", result.token);
-                loadData();
-            }
-            else if (!result.success) {
-                alert(result.message);
-            }
+            location.href = "/"
         }
 
         // 회원 정보 로드 함수
         const loadData = async () => {
 
-            document.getElementById("contents_box").style.display = "block";
-            document.getElementById("auth_box").style.display = "none";
-
+            // 팀원 정보 불러오기
             const response = await fetch("/account")
             const result = await response.json()
 
-            for(let a = 0; a < result.list.length; a++) {
+            for (let a = 0; a < result.list.length; a++) {
 
-                let isDivider = "no";   // 기수를 기준으로 마지막 row인지 체크
-
+                // row 생성
                 const tmpTr = document.createElement("tr");
 
+                // 마지막 row 이전이라면
+                if (a < result.list.length - 1) {
+                    if (result.list[a][4] != result.list[a+1][4]){   // [4] : 기수 데이터
+                        tmpTr.className += " light_grey_border_bottom";
+                    } 
+                }
+
+                // 값의 개수만큼 column 추가
                 for (let num = 0; num < result.list[a].length - 1; num++) {
+
+                    // column 생성
                     let items = document.createElement("td");
                     items.innerHTML = result.list[a][num];
+                    items.className = "table_row"
 
-                    if (a+1 != result.list.length) {   // 마지막 row가 아니라면
-                        if (result.list[a][4] != result.list[a+1][4]){   // 직전 row와 generation 비교
-                            items.className = "table_column_generation_divide";
-                            isDivider = "generation";
-                        } 
-                        else {
-                            items.className = "table_column";
-                        }
-                    } else {
-                        items.className = "table_column_generation_divide";
-                        isDivider = "generation";
-                    }
                     tmpTr.appendChild(items);
                 }
 
+                // 각 row에 버튼 추가
                 const btnItem = document.createElement("td");
-                if (isDivider == "generation") {   // 설정 버튼들의 밑줄 결정
-                    btnItem.className = "table_column_generation_divide"
-                } else if (isDivider == "degree") {
-                    btnItem.className = "table_column_degree_divide";
-                } else {
-                    btnItem.className = "table_column"
-                }
                 createButton(btnItem, tmpTr, result.list[a])
                 tmpTr.appendChild(btnItem);
 
@@ -161,37 +125,37 @@
             }
         }
 
+        // 조작 버튼 추가
         const createButton = (btnItem, tmpTr, item) => {
 
-            const editBtn = document.createElement("input");
-            editBtn.id = item[item.length - 1];
-            editBtn.type = "button";
-            editBtn.className = "table_column_button";
-            editBtn.value = editButtonValue;
-            editBtn.addEventListener("click", () => {
-                editBtn.value == editButtonValue ? editBtn.value = confirmButtonValue : editBtn.value = editButtonValue;
-                memberEditEvent(item[item.length - 1], tmpTr, editBtn.value);
-            });
-            btnItem.appendChild(editBtn);
+            const editBtn = document.createElement("input")
+            editBtn.type = "button"
+            editBtn.className = "table_column_button contents_button grey_background black_font"
+            editBtn.value = "Edit"
+            editBtn.addEventListener("click", (event) => {
+                memberEditEvent(item[item.length - 1], tmpTr, event.target)   // [item.length - 1] : seq
+            })
+            btnItem.appendChild(editBtn)
 
-            const delBtn = document.createElement("input");
-            delBtn.id = item[item.length - 1];
-            delBtn.type = "button";
-            delBtn.className = "table_column_button";
-            delBtn.value = deleteButtonValue;
+            const delBtn = document.createElement("input")
+            delBtn.type = "button"
+            delBtn.className = "table_column_button contents_button grey_background black_font"
+            delBtn.value = "Del"
             delBtn.addEventListener("click", () => {
-                memberDeleteEvent(item[item.length - 1]);
-            });
-            btnItem.appendChild(delBtn);
+                memberDeleteEvent(item[item.length - 1])   // [item.length - 1] : seq
+            })
+            btnItem.appendChild(delBtn)
         }
 
         // 회원 정보 수정 이벤트
-        const memberEditEvent = async (seq, tr, flag) => {
+        const memberEditEvent = async (seq, tr, trigger) => {
 
-            if (flag == confirmButtonValue) {
+            if (trigger.value == "Edit") {
+
+                trigger.value = "Okay" 
+                trigger.className += "font_white light_grey_background"
             
                 const list = tr.children;
-
                 [...list].forEach((item, index) => {
 
                     if (index != list.length - 1 && index != list.length - 3) {
@@ -199,14 +163,15 @@
                         const tmp = document.createElement("input")
                         tmp.type = "text";
                         tmp.value = item.innerHTML;
-                        tmp.className = "table_column_input";
+                        tmp.className = "table_column_input content_value white_font light_grey_background";
                         tmp.style.width = window.getComputedStyle(item).width;
 
                         item.innerHTML = "";
                         item.appendChild(tmp);
                     }
                 })
-            } else if (flag == editButtonValue) {
+            } 
+            else if (trigger.value == "Okay") {
 
                 const list = document.getElementsByClassName("table_column_input");
 
@@ -265,5 +230,7 @@
             }
         }
     </script>
+    <script src="js/data.js"></script>
+    <script src="js/initData.js"></script>
 
 </body>

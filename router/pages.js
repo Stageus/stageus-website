@@ -37,7 +37,7 @@ router.get('/register', (req, res) => {
 })
 
 // "관리자" Page
-router.get('/6d656d6265724c697374', (req, res) => {
+router.get('/management', (req, res) => {
     res.sendFile(path.join(__dirname, '../html/management.html'))
 })
 

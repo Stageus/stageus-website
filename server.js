@@ -22,7 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', (req, res, next) => {
 
     const protocol = req.headers['x-forwarded-proto'] || req.protocol;
-    console.log(protocol);
 
     if (protocol == 'https') {
         next();
@@ -31,7 +30,6 @@ app.get('*', (req, res, next) => {
         let from = protocol + "://" + req.hostname + req.url; 
         let to = "https://" + req.hostname + req.url; 
 
-        console.log(from + "->" + to); 
         res.redirect(to);
     }
 });

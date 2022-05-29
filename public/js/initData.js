@@ -8,6 +8,47 @@ const link2 = document.getElementsByClassName("nav_menu_open_item");
     item.href = path[index];
 });
 
+// Login 창 열림 이벤트
+const loginOpenEvent = (trigger) => {
+
+    const target = document.getElementById("login_box")
+
+    if (trigger.id == "login_box_close") {
+        target.style.right = "2.4rem"
+        trigger.id = "login_box_open"
+    } else if (trigger.id == "login_box_open") {
+        target.style.right = "-36rem"
+        trigger.id = "login_box_close"
+    }
+}
+
+// login 이벤트
+const loginEvent = async () => {
+
+    const idValue = document.getElementById("login_id").value;
+    const pwValue = document.getElementById("login_pw").value;
+
+    const response = await fetch("/auth", {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify ({   
+            "idValue": idValue,
+            "pwValue": pwValue,
+        })
+    })
+    const result = await response.json()
+
+    if (result.success) {
+        localStorage.setItem("management_token", result.token);
+        location.href = "/management"
+    }
+    else if (!result.success) {
+        alert(result.message);
+    }
+}
+
 // Navigation 열림 이벤트
 const menuOpenEvent = () => {
     const target = document.getElementById("nav_menu_open");
