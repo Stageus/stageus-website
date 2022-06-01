@@ -54,6 +54,9 @@ router.post('/', async (req, res) => {
 
 router.put('/', async (req, res) => {
 
+    // Auth 예외 처리
+    if (!req.session.user) res.redirect("/")
+
     // request AJAX data
     const nameValue = req.body.nameValue
     const contactValue = req.body.contactValue
@@ -74,6 +77,9 @@ router.put('/', async (req, res) => {
 });
 
 router.delete('/', async (req, res) => {
+
+    // Auth 예외 처리
+    if (!req.session.user) res.redirect("/")
 
     // request AJAX data
     const seqValue = req.body.seqValue;

@@ -41,7 +41,6 @@ const loginEvent = async () => {
     const result = await response.json()
 
     if (result.success) {
-        localStorage.setItem("management_token", result.token);
         location.href = "/management"
     }
     else if (!result.success) {

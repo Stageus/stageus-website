@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const jwt = require('jsonwebtoken');
 const dbControl = require("../module/dbControl")
 require('dotenv').config()
 
@@ -9,9 +8,6 @@ router.post('/', async (req, res) => {
     // request AJAX data
     let idValue = req.body.idValue
     let pwValue = req.body.pwValue
-
-    // JWT Secret Key
-    const secretKey = process.env.SECRET_KEY
 
     const queryResult = await dbControl(
         "select * from homepage.account WHERE id=$1 and pw=$2",
@@ -26,52 +22,29 @@ router.post('/', async (req, res) => {
     }
 
     if (queryResult.list.length > 0) {
-        const jwtToken = jwt.sign(
-            {
-                id: idValue,
-                role: queryResult.list[0].role,
-                name: queryResult.list[0].name
-            }, 
-            secretKey,
-            {
-                expiresIn: "30d",
-                issuer: "stageus"
-            }
-        )
+
+        req.session.user = {
+            id: idValue,
+            role: queryResult.list[0].role,
+            name: queryResult.list[0].name
+        }
+        console.log(req.session)
+  
         result.success = queryResult.success;
         result.message = queryResult.message;
-        result.token = jwtToken;
+    } 
+    else {
+        result.message = "로그인 정보가 올바르지 않습니다."
     }
             
     res.send(result);
 });
 
-// Insert register api
-router.post('/varify', (req, res) => {
+router.post("/logout", async (req, res) => {
 
-    // JWT Secret Key
-    const secretKey = process.env.SECRET_KEY
-
-    // Init response data
-    const result = {
-        "success" : false,
-        "message": ""
-    };
-
-    try {
-        jwt.verify(req.headers.auth, secretKey);
-        result.success = true;
-    } catch (err) {
-        if (err.name == "TokenExpiredError") {
-            result.message = "TokenExpiredError"
-            console.log("TokenExpiredError: ", err);
-        } else {
-            result.message = "InvalidToken"
-            console.log("InvalidToken: ", err);
-        }
-    } finally {
-        res.send(result);
-    }
-});
+    req.session.destroy(() => {
+        res.redirect('/');
+    });
+})
 
 module.exports = router;

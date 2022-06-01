@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const path = require('path');
+const tokenVerify = require("../module/tokenVarify")
 
 // Main Page
 router.get('/', (req, res) => {
@@ -38,7 +39,13 @@ router.get('/register', (req, res) => {
 
 // "관리자" Page
 router.get('/management', (req, res) => {
-    res.sendFile(path.join(__dirname, '../html/management.html'))
+
+    if(req.session.user) {
+        console.log(req.sessionID)
+        res.sendFile(path.join(__dirname, '../html/management.html'))
+    } else {
+        res.redirect("/")
+    }
 })
 
 module.exports = router

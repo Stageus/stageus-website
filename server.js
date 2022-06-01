@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const https = require('https');
+const session = require('express-session')
+require("dotenv").config()
 
 const httpPort = process.env.PORT || 80;
 const httpsPort = process.env.PORT || 443;
@@ -10,11 +12,23 @@ const SSLOptions = {
     key: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.key.pem')),
     cert: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.crt.pem')),
     ca: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.ca-bundle.pem')),
-};
+}
 
-const app = express();
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+const app = express()
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.json())
+app.use(
+    session({
+        name: "AUTH_LOGIN",
+        secret: process.env.SECRET_KEY,
+        resave: false,
+        saveUninitialized: true,
+        cookie: {
+            httpOnly: true,
+            secure: true
+        },
+    })
+)
 
 // =======================================================================================
 
@@ -27,10 +41,8 @@ app.get('*', (req, res, next) => {
         next();
     }
     else {
-        let from = protocol + "://" + req.hostname + req.url; 
-        let to = "https://" + req.hostname + req.url; 
-
-        res.redirect(to);
+        let destination = "https://" + req.hostname + req.url; 
+        res.redirect(destination);
     }
 });
 

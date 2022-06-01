@@ -57,37 +57,9 @@
     </main>
 
     <script>
-        window.onload = async () => {
-
-            // Auth 검증
-            if (localStorage.getItem("management_token")) {
-                const response = await fetch("/auth/varify", {
-                    "method": "POST",
-                    "headers": {
-                        "auth": localStorage.getItem("management_token")
-                    }
-                })
-                const result = await response.json()
-
-                if (!result.success) {
-                    localStorage.removeItem("management_token");
-                    location.href = "/"
-                } else {
-                    loadData()
-                }
-            } else {
-                location.href = "/"
-            }
-        }
-
-        // 로그아웃 이벤트
-        const logoutEvent = () => {
-            localStorage.removeItem("management_token");
-            location.href = "/"
-        }
 
         // 회원 정보 로드 함수
-        const loadData = async () => {
+        window.addEventListener('DOMContentLoaded', async function() {
 
             // 팀원 정보 불러오기
             const response = await fetch("/account")
@@ -123,6 +95,14 @@
 
                 document.getElementById("membem_list").appendChild(tmpTr);
             }
+        })
+
+        // 로그아웃 이벤트
+        const logoutEvent = () => {
+            fetch("/auth/logout", {
+                "method": "POST"
+            })
+            location.href = "/"
         }
 
         // 조작 버튼 추가
