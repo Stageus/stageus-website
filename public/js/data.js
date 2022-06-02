@@ -14,7 +14,7 @@ const lecture = {
         {
             "name": "파이썬 응용 프로그램 과정",
             "duration": "7월 2일 ~ 9월 3일 (토 18시)",
-            "number": 0
+            "number": 1
         },
         {
             "name": "웹 프론트엔드 과정",

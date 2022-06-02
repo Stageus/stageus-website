@@ -28,7 +28,6 @@ router.post('/', async (req, res) => {
             role: queryResult.list[0].role,
             name: queryResult.list[0].name
         }
-        console.log(req.session)
   
         result.success = queryResult.success;
         result.message = queryResult.message;
