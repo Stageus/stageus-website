@@ -188,10 +188,11 @@ nav {
 
 /* footer */
 
-footer {
-    width: 100%;
-    padding-top: 8rem;
-    padding-bottom: 3rem;
+.footer_background {
+    background-image: linear-gradient(var(--more_darken), var(--more_darken)), url('../img/6.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .footer_box {
@@ -211,7 +212,6 @@ footer {
 .footer_link_box {
     width: 100%;
     text-align: center;
-    margin-top: 8rem;
 }
 
 .footer_link {

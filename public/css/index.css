@@ -40,7 +40,7 @@
 /* status */
 
 .status_background {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/status_background.jpg'); 
+    background-image: linear-gradient(var(--more_darken), var(--more_darken)), url('../img/status_background.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -49,7 +49,7 @@
 .status_content {
     display: flex;
     width: 90%;
-    max-width: 90rem;
+    max-width: 110rem;
     height: fit-content;
 }
 

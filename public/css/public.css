@@ -198,6 +198,11 @@ span {
     text-align: center;
 }
 
+.content_extra_value {
+    font-size: 1rem;
+    text-align: center;
+}
+
 /* Margin Style */
 
 .margin_top_large {
