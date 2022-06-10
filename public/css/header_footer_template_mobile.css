@@ -143,10 +143,13 @@
     }
 
     .header_button {
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .header_button + .header_button {
+        margin-left: 0.4rem;
     }
 
    /* footer */

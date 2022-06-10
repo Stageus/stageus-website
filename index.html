@@ -53,7 +53,7 @@
             <!-- Login 창-->
             <div id="login_box" class="login_box white_background">
                 <input id="login_id" class="login_value content_value text_left" type="text" placeholder="아이디">
-                <input id="login_pw" style="font-family: Arial, Helvetica, sans-serif;" class="login_value content_value text_left margin_top_extra_small" type="password" placeholder="비밀번호">
+                <input id="login_pw" style="font-family: Arial, Helvetica, sans-serif;" class="login_value content_value text_left margin_top_extra_small" type="password" placeholder="비밀번호" onkeyup="loginKeyPressEvent()">
                 <input class="login_button content_value contents_button margin_top_small" type="button" value="로그인" onclick="loginEvent()">
             </div>
 
@@ -76,7 +76,10 @@
                     <p class="text_left white_font content_subtitle margin_top_extra_small">논리적인 근거를 정해 행동하는 능력이 필요합니다.</p>
                 </div>
             </div>
-            <a class="header_button contents_button content_value margin_top_medium" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
+            <div class="margin_top_medium">
+                <a class="header_button contents_button content_value" href="https://open.kakao.com/o/sFu0jAwd">문의하기</a>
+                <a class="header_button contents_button_ghost content_value" href="/register">신청하기</a>
+            </div>
         </div>
     </header>
 

@@ -34,6 +34,10 @@ header {
     padding-left: 3.8rem;
     padding-right: 3.8rem;
     margin-left: 0;
+    text-decoration: none;
+}
+.header_button + .header_button {
+    margin-left: 1rem;
 }
 
 .header_video {

@@ -6,7 +6,7 @@ main {
 
 .register_box {
     width: 70%;
-    max-width: 50rem;
+    max-width: 58.8rem;
     padding: 5rem;
     background-color: white;
     margin-left: auto;
@@ -36,8 +36,7 @@ main {
 .register_button {
     display: block;
     border: none;
-    max-width: 34rem;
-    width: 90%;
+    width: 100%;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
 }
