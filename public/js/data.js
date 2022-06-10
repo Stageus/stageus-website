@@ -14,7 +14,7 @@ const lecture = {
         {
             "name": "프로그래밍 기초 과정",
             "duration": "7월 2일 ~ 9월 3일 (토 18시)",
-            "number": 1
+            "number": 1 // test
         },
         {
             "name": "웹 프론트엔드 과정",
