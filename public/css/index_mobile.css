@@ -120,6 +120,22 @@
         margin-right: auto;
     }
 
+    /* status */
+
+    .status_content {
+        flex-wrap: wrap;
+    }
+
+    .status_column {
+        flex-basis: auto;
+        width: 50%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .status_column + .status_column {
+        margin-left: 0rem;
+    }
+
     /* introduction */
 
     .introduction_box {
@@ -243,6 +259,22 @@
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* status */
+
+    .status_content {
+        flex-wrap: wrap;
+    }
+
+    .status_column {
+        flex-basis: auto;
+        width: 50%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .status_column + .status_column {
+        margin-left: 0rem;
     }
 
     /* introduction */

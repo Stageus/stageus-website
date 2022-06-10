@@ -76,11 +76,6 @@
 
     /* footer */
 
-    footer {
-        padding-top: 5rem;
-        padding-bottom: 3rem;
-    }
-
     .footer_index {
         margin-top: 0.5rem;
     }
@@ -89,10 +84,6 @@
         width: 12rem;
         padding-top: 0.7rem;
         padding-bottom: 0.7rem;
-    }
-
-    .footer_link_box {
-        margin-top: 6rem;
     }
 
     .footer_link + .footer_link {
@@ -154,11 +145,6 @@
 
    /* footer */
 
-    footer {
-        padding-top: 4rem;
-        padding-bottom: 2rem;
-    }
-
     .footer_index {
         margin-top: 0.5rem;
     }
@@ -167,10 +153,6 @@
         width: 10rem;
         padding-top: 0.6rem;
         padding-bottom: 0.6rem;
-    }
-
-    .footer_link_box {
-        margin-top: 4.8rem;
     }
 
     .footer_link + .footer_link {

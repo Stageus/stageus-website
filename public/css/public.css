@@ -361,6 +361,11 @@ span {
         line-height: 1.6rem;
     }
 
+    .content_extra_value {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
     /* Margin Style */
 
     .margin_top_medium {
@@ -425,6 +430,11 @@ span {
     .content_value {
         font-size: 0.9rem;
         line-height: 1.4rem;
+    }
+
+    .content_extra_value {
+        font-size: 0.8rem;
+        text-align: center;
     }
 
     /* Text Align Style */

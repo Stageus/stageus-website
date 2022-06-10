@@ -49,13 +49,14 @@
 .status_content {
     display: flex;
     width: 90%;
-    max-width: 110rem;
+    max-width: 80rem;
+    /* max-width: 110rem; */
     height: fit-content;
 }
 
 .status_column {
-    flex-basis: 100%;
-    border-radius: 0.6rem;
+    width: 25%;
+    /* width: 16.67%; */
     padding-top: 2rem;
     padding-bottom: 2rem;
 }

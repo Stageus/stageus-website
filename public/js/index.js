@@ -98,6 +98,13 @@ window.onload = () => {
         setLectureNumber(item, index);
     })
 
+    // Status Section 디데이 계산
+    const standardDate = new Date("2021-01-04T00:00:00+0900")
+    const nowDate = new Date()
+    const distance = nowDate.getTime() - standardDate.getTime()
+    const day = Math.floor(distance/(1000*60*60*24)) + 1   // 1월 4일을 포함해야 하므로 1 증가
+    document.getElementById("status_dday").innerHTML = `${day}일`
+
     // 스크롤 이벤트 등록
     // window.addEventListener('scroll', scrollTick(scrollEvent), { passive : true })
 
