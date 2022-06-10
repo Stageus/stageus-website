@@ -37,6 +37,32 @@
     background-color: #dddddd;
 } */
 
+/* status */
+
+.status_background {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/status_background.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.status_content {
+    display: flex;
+    width: 90%;
+    max-width: 90rem;
+    height: fit-content;
+}
+
+.status_column {
+    flex-basis: 100%;
+    border-radius: 0.6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.status_column + .status_column {
+    margin-left: 1rem;
+}
+
 /* intro */
 
 .intro_content {

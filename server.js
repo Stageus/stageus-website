@@ -42,6 +42,7 @@ app.get('*', (req, res, next) => {
     }
     else {
         let destination = "https://" + req.hostname + req.url; 
+        
         res.redirect(destination);
     }
 });

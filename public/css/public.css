@@ -151,6 +151,18 @@ span {
     background-color: var(--darken);
 }
 
+/* Border Style */
+
+.border_bottom_grey {
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--grey);
+}
+
+.border_bottom_white {
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--white);
+}
+
 /* ============================================================================================ */
 
 /* Display Style */
