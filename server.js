@@ -5,8 +5,8 @@ const https = require('https');
 const session = require('express-session')
 require("dotenv").config()
 
-const httpPort = process.env.PORT || 80;
-const httpsPort = process.env.PORT || 443;
+const httpPort = process.env.PORT || 8000;
+const httpsPort = process.env.PORT || 8443;
 
 const SSLOptions = {
     key: fs.readFileSync(path.join(__dirname, '../sslKeys/stageus.co.kr_20210611J992.key.pem')),
