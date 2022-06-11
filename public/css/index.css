@@ -122,7 +122,7 @@
 
 .lecture_box_title {
     width: 100%;
-    max-width: 80rem;
+    max-width: 90rem;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 1rem;
@@ -134,7 +134,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 80rem;
+    max-width: 90rem;
     height: fit-content;
     margin-right: auto;
     margin-left: auto;
@@ -142,7 +142,7 @@
 }
 
 .lecture_index {
-    width: 32.2%;
+    width: 24%;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     border-radius: 0.4rem;
