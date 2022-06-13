@@ -3,7 +3,7 @@ const lecture = {
     "information": [
         {
             "name": "웹 기초 과정",
-            "duration": "7월 2일 ~ 9월 3일 (목 18시)",
+            "duration": "6월 30일 ~ 9월 1일 (목 18시)",
             "number": 0
         },
         {
@@ -19,7 +19,7 @@ const lecture = {
         {
             "name": "프로그래밍 기초 과정",
             "duration": "7월 2일 ~ 9월 3일 (토 18시)",
-            "number": 1 // test
+            "number": 1
         },
         {
             "name": "Web Frontend 과정",
