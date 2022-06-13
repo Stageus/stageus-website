@@ -140,10 +140,14 @@
                     <label class="cursor_pointer content_value subject" for="subject_3"></label><br>
                     <input id="subject_4" class="register_subject_value margin_top_extra_small cursor_pointer" type="radio" name="subject">
                     <label class="cursor_pointer content_value subject" for="subject_4"></label><br>
-                    <input id="subject_5" class="register_subject_value margin_top_extra_small cursor_pointer" type="radio" name="subject">
+                    <input id="subject_5" class="register_subject_value margin_top_small cursor_pointer" type="radio" name="subject">
                     <label class="cursor_pointer content_value subject" for="subject_5"></label><br>
                     <input id="subject_6" class="register_subject_value margin_top_extra_small cursor_pointer" type="radio" name="subject">
                     <label class="cursor_pointer content_value subject" for="subject_6"></label><br>
+                    <input id="subject_7" class="register_subject_value margin_top_extra_small cursor_pointer" type="radio" name="subject">
+                    <label class="cursor_pointer content_value subject" for="subject_7"></label><br>
+                    <input id="subject_8" class="register_subject_value margin_top_extra_small cursor_pointer" type="radio" name="subject">
+                    <label class="cursor_pointer content_value subject" for="subject_8"></label><br>
                     <p class="content_value text_left margin_top_small">※ 기초 과정 없이 심화 과정 신청의 경우 별도 문의 부탁드리겠습니다.</p>
                 </div>
             </div>
@@ -216,13 +220,13 @@
                 item.appendChild(tmpSpan);
                 
                 // 열리지 않은 과목 예외처리
-                if (lecture.information[index].number >= 0) {
-                    item.innerHTML += " - " + lecture.information[index].duration;
-                } else if (lecture.information[index].number == -1) {
+                if (lecture.information[index].number == 5) {
                     item.innerHTML += " - 모집 마감"
                 } else if (lecture.information[index].number == -2) {
                     item.innerHTML += " - 오픈 예정"
-                }
+                } else {
+                    item.innerHTML += " - " + lecture.information[index].duration
+                } 
             });
         }
 
