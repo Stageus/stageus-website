@@ -11,7 +11,7 @@ const httpsPort = process.env.PORT || 443;
 const SSLOptions = {
     key: fs.readFileSync(path.join(__dirname, '../ssl_keys/stageus.co.kr_202206131C1FE.key.pem')),
     cert: fs.readFileSync(path.join(__dirname, '../ssl_keys/stageus.co.kr_202206131C1FE.crt.pem')),
-    ca: fs.readFileSync(path.join(__dirname, '../ssl_keys/stageus.co.kr_202206131C1FE.ca-bundle.pem'))
+    ca: fs.readFileSync(path.join(__dirname, '../ssl_keys/stageus.co.kr_202206131C1FE.ca-bundle.pem')),
 }
 
 const app = express()
